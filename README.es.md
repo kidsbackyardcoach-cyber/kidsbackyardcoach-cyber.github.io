@@ -2,7 +2,7 @@
 
 [English](README.md) · [中文](README.zh.md) · **Español**
 
-**Planes de práctica de 12 semanas para papás y mamás que entrenan fútbol, t-ball y flag football a niños de 3 a 5 años — aunque nunca hayas jugado el deporte.**
+**Planes de práctica de 12 semanas para papás y mamás que entrenan fútbol, t-ball, flag football y básquetbol a niños de 3 a 5 años — aunque nunca hayas jugado el deporte.**
 
 Disponible en inglés, 中文 (chino simplificado) y español.
 
@@ -26,8 +26,8 @@ Todo está construido alrededor de una sola restricción: **la atención de un n
 | | |
 |---|---|
 | **Básicos del deporte** | ¿Nunca jugaste? Cada deporte tiene una explicación en lenguaje sencillo con diagramas — el campo, cómo funciona un partido, cómo se anota, las reglas que importan y ocho palabras que vas a oír. Más una descripción honesta de cómo se ve el juego de verdad a los 4 años. |
-| **Temporadas de 12 semanas** | Dos sesiones de 25 minutos por semana, en cuatro fases, desde el primer toque hasta un partido reducido real. Cada semana tiene un enfoque y una meta concreta que observar. |
-| **43 ejercicios** | Cada uno trae montaje, cómo se juega, la frase exacta que decir y cómo hacerlo más fácil o más difícil sobre la marcha. |
+| **Temporadas de 12 semanas** | Cuatro deportes. Dos sesiones de 25 minutos por semana, en cuatro fases, desde el primer toque hasta un partido reducido real. Cada semana tiene un enfoque y una meta concreta que observar. |
+| **56 ejercicios** | Cada uno trae montaje, cómo se juega, la frase exacta que decir y cómo hacerlo más fácil o más difícil sobre la marcha. |
 | **Cronómetro de práctica** | Modo de pantalla completa con un reloj legible a un brazo de distancia bajo el sol. |
 | **Listas de equipo** | Tres niveles de prioridad, ilustraciones dibujadas, total del presupuesto en vivo y una lista de lo que *no* comprar. |
 | **Kit de movimiento** | Juegos opcionales de escalera, vallas y conos que se intercambian en el calentamiento de cualquier semana. |
@@ -59,7 +59,7 @@ Es un solo archivo HTML sin proceso de compilación. Abre `index.html` en cualqu
 
 1. Pon `index.html` en la raíz de un repositorio público
 2. **Settings → Pages →** Source: *Deploy from a branch*, rama `main`, carpeta `/ (root)`
-3. Espera uno o dos minutos — tu sitio aparece en `https://<usuario>.github.io/<repo>/`
+3. Espera uno o dos minutos — tu sitio aparece en `https://kidsbackyardcoach-cyber.github.io/`
 
 ### En el celular
 
@@ -85,7 +85,7 @@ T                textos de interfaz, 3 idiomas
 FIG              6 diagramas de campo y jugadas (generadores SVG)
 BASICS           básicos de cada deporte, 3 idiomas
 MOVE / D         43 ejercicios, 3 idiomas
-SEASON           12 semanas x 3 deportes, 3 idiomas
+SEASON           12 semanas x 4 deportes, 3 idiomas
 SPORTS / KIT     listas de equipo y precios
 RULES / FIXES    guía para entrenar, 3 idiomas
                  funciones de renderizado y estado
@@ -130,11 +130,19 @@ Si estás reportando un problema, ayuda mucho que incluyas tu teléfono o navega
 
 ---
 
-## Licencia
+## Derechos de autor y uso
 
-MIT — ver [`LICENSE`](LICENSE).
+© 2026 Backyard Coach. Todos los derechos reservados.
 
-Úsala, bifúrcala, tradúcela, llévala al parque de tu colonia. Si le ayuda a tu hijo o hija a pasar un buen sábado, para eso es.
+Este proyecto se publica para que los papás y mamás puedan usarlo, no como software de código abierto. El código se ve aquí porque es un solo archivo HTML servido por GitHub Pages — que sea visible no es una licencia.
+
+**Puedes:** usar la app libremente con tu familia, equipo o grupo; compartir el enlace; e imprimir sesiones para tu propio uso.
+
+**Consúltame antes de:** redistribuirla o alojar tu propia copia, publicar versiones modificadas, integrarla en otro producto, o usarla comercialmente.
+
+Las contribuciones y traducciones son bienvenidas — ver arriba. Al enviar una, aceptas que pueda incluirse en este proyecto. Si quieres construir algo sobre esto, escríbeme; la respuesta suele ser que sí.
+
+*Este es un resumen en lenguaje sencillo, no asesoría legal.*
 
 ---
 
@@ -144,7 +152,7 @@ Ideas, más o menos por orden de utilidad:
 
 - [ ] Funcionamiento sin conexión: incrustar tipografías, agregar un service worker
 - [ ] Chino tradicional (繁體中文) para Taiwán y Hong Kong
-- [ ] Temporadas de básquetbol y tenis
+- [ ] Tenis, atletismo básico y un módulo bajo techo para días de lluvia
 - [ ] Una versión para 3 años (sesiones más cortas, ejercicios más simples) y otra para 5–6
 - [ ] Vista de impresión — una hoja por sesión para pegar en el refrigerador
 - [ ] Exportar e importar el progreso, para que sobreviva a un teléfono nuevo
