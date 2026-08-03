@@ -6,7 +6,7 @@
 
 Disponible en inglés, 中文 (chino simplificado) y español.
 
-[**→ Abrir la app**](https://YOUR-USERNAME.github.io/backyard-coach/)
+[**→ Abrir la app**](https://kidsbackyardcoach-cyber.github.io/)
 
 ---
 
