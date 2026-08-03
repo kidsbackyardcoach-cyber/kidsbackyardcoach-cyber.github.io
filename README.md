@@ -2,7 +2,7 @@
 
 **English** · [中文](README.zh.md) · [Español](README.es.md)
 
-**12-week practice plans for parents coaching soccer, t-ball, and flag football to 3–5 year olds — even if you've never played the sport yourself.**
+**12-week practice plans for parents coaching soccer, t-ball, flag football, and basketball to 3–5 year olds — even if you've never played the sport yourself.**
 
 Available in English, 中文 (Simplified Chinese), and Español.
 
@@ -26,8 +26,8 @@ Everything is built around one constraint: **a four-year-old's attention span is
 | | |
 |---|---|
 | **Sport primers** | Never played? Each sport gets a plain-language explanation with diagrams — the field, how a game works, how scoring works, the rules that matter, and eight terms you'll hear. Plus an honest picture of what the game actually looks like at age 4. |
-| **12-week seasons** | Two 25-minute sessions per week, in four phases from first touch to a real small-sided game. Each week has a focus and one concrete milestone to look for. |
-| **43 drills** | Every drill has setup, how to play, the exact phrase to say, and how to make it easier or harder on the spot. |
+| **12-week seasons** | Four sports. Two 25-minute sessions per week, in four phases from first touch to a real small-sided game. Each week has a focus and one concrete milestone to look for. |
+| **56 drills** | Every drill has setup, how to play, the exact phrase to say, and how to make it easier or harder on the spot. |
 | **Practice timer** | Full-screen run mode with a clock readable at arm's length in sunlight. |
 | **Gear lists** | Three priority tiers, drawn illustrations, running budget total, and a list of what *not* to buy. |
 | **Movement kit** | Optional ladder / hurdle / cone games that swap into any week's warm-up. |
@@ -59,7 +59,7 @@ It's a single HTML file with no build step. Open `index.html` in any browser. Th
 
 1. Put `index.html` at the root of a public repo
 2. **Settings → Pages →** Source: *Deploy from a branch*, branch `main`, folder `/ (root)`
-3. Wait 1–2 minutes — your site appears at `https://<username>.github.io/<repo>/`
+3. Wait 1–2 minutes — your site appears at `https://kidsbackyardcoach-cyber.github.io/`
 
 ### On a phone
 
@@ -85,7 +85,7 @@ T                UI strings, 3 languages
 FIG              6 field/play diagrams (SVG generators)
 BASICS           sport primers, 3 languages
 MOVE / D         43 drills, 3 languages
-SEASON           12 weeks x 3 sports, 3 languages
+SEASON           12 weeks x 4 sports, 3 languages
 SPORTS / KIT     gear lists and prices
 RULES / FIXES    coaching guide, 3 languages
                  render + state functions
@@ -130,11 +130,19 @@ If you're reporting a problem, it helps to include your phone or browser, the la
 
 ---
 
-## License
+## Copyright and use
 
-MIT — see [`LICENSE`](LICENSE).
+© 2026 Backyard Coach. All rights reserved.
 
-Use it, fork it, translate it, run it at your local park. If it helps your kid have a good Saturday, that's the whole point.
+This project is published so parents can use it, not as open-source software. The source is visible here because it's a single HTML file served by GitHub Pages — visibility is not a license.
+
+**You may:** use the app freely with your own family, team, or group; link to it; and print sessions for your own use.
+
+**Please ask first before:** redistributing or hosting your own copy, publishing modified versions, bundling it into another product, or using it commercially.
+
+Contributions and translations are welcome — see above. By submitting one, you agree it can be included in this project. If you want to build something on top of this, get in touch; the answer is usually yes.
+
+*This is a plain-language summary, not legal advice.*
 
 ---
 
@@ -144,8 +152,7 @@ Ideas, in rough order of usefulness:
 
 - [ ] Offline-capable: embed fonts, add a service worker
 - [ ] Traditional Chinese (繁體中文) for Taiwan and Hong Kong
-- [ ] Basketball and tennis seasons
+- [ ] Tennis, track and field, and a rainy-day indoor module
 - [ ] A 3-year-old track (shorter sessions, simpler drills) and a 5–6 track
 - [ ] Print view — one page per session for the fridge
 - [ ] Export/import progress, so it survives a new phone
-
