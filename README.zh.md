@@ -6,7 +6,7 @@
 
 提供英文、简体中文、西班牙语三种语言。
 
-[**→ 打开应用**]((https://kidsbackyardcoach-cyber.github.io/))
+[**→ 打开应用**](https://kidsbackyardcoach-cyber.github.io/)
 
 ---
 
