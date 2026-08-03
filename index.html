@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Backyard Coach — 12-week soccer, t-ball and flag football practice plans, gear lists and drill timers for parents coaching 3–5 year olds. English, 中文, Español.">
+<meta name="theme-color" content="#EEF1EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Backyard Coach">
+<meta property="og:title" content="Backyard Coach">
+<meta property="og:description" content="12-week practice plans, gear lists and drill timers for parents coaching 3–5 year olds.">
+<meta property="og:type" content="website">
+<title>Backyard Coach · 后院教练 · Entrenador de Patio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#101E1A; --ink-2:#41544E; --ink-3:#7B8B85;
+  --paper:#EEF1EE; --card:#FFFFFF; --line:#D3DAD6;
+  --cone:#FF6A13; --accent:#1E9E52; --accent-soft:#E4F3EA;
+  --shadow:0 1px 0 rgba(16,30,26,.06), 0 6px 18px -8px rgba(16,30,26,.28);
+  --r:14px; --disp:'Barlow Condensed',Impact,sans-serif;
+}
+body[data-sport="soccer"]{--accent:#1E9E52;--accent-soft:#E4F3EA;}
+body[data-sport="baseball"]{--accent:#C0492B;--accent-soft:#F8E9E5;}
+body[data-sport="football"]{--accent:#A85C22;--accent-soft:#F6EDE3;}
+body[data-lang="zh"]{--disp:'Noto Sans SC',sans-serif;}
+body[data-lang="zh"] h1,body[data-lang="zh"] h2,body[data-lang="zh"] h3,body[data-lang="zh"] h4{letter-spacing:0}
+body[data-lang="zh"]{font-family:'Noto Sans SC','Barlow',system-ui,sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:'Barlow',system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.45;padding-bottom:calc(76px + env(safe-area-inset-bottom));overflow-x:hidden}
+h1,h2,h3{font-family:var(--disp);font-weight:800;letter-spacing:.01em;line-height:1.05}
+button{font-family:inherit;font-size:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:3px solid var(--cone);outline-offset:2px;border-radius:6px}
+.wrap{max-width:620px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+.brandrow{display:flex;align-items:center;gap:9px;padding:11px 0 9px}
+.brand{font-family:var(--disp);font-weight:800;font-size:24px;text-transform:uppercase;flex:1;min-width:0}
+body[data-lang="zh"] .brand{text-transform:none;font-size:22px}
+.brand em{font-style:normal;color:var(--accent)}
+.langsw{display:flex;border:1.5px solid var(--line);border-radius:9px;overflow:hidden;background:var(--card);flex:0 0 auto}
+.langsw button{padding:5px 9px;font-family:var(--disp);font-weight:700;font-size:13px;color:var(--ink-3);letter-spacing:.04em}
+body[data-lang="zh"] .langsw button{font-family:'Noto Sans SC',sans-serif}
+.langsw button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.sportsw{display:flex;gap:7px;padding-bottom:11px}
+.sportsw button{flex:1;border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:9px 4px 8px;
+  font-family:var(--disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--ink-2);display:flex;flex-direction:column;align-items:center;gap:3px;transition:.14s}
+body[data-lang="zh"] .sportsw button{text-transform:none;letter-spacing:0}
+.sportsw button .ico{font-size:19px;line-height:1}
+.sportsw button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 3px 0 rgba(16,30,26,.16)}
+.eyebrow{font-family:var(--disp);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--ink-3);display:flex;align-items:center;gap:9px;margin:26px 0 11px}
+body[data-lang="zh"] .eyebrow{text-transform:none;letter-spacing:.04em;font-size:14px}
+.eyebrow::after{content:"";flex:1;height:1.5px;background:var(--line)}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.muted{color:var(--ink-2);font-size:15.5px}
+.planhead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:18px}
+.planhead h2{font-size:30px;text-transform:uppercase;margin:0}
+body[data-lang="zh"] .planhead h2{text-transform:none;font-size:26px}
+.planmeta{font-family:var(--disp);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--ink-3);white-space:nowrap;padding-bottom:3px}
+body[data-lang="zh"] .planmeta{text-transform:none;letter-spacing:0}
+.startbtn{width:100%;margin-top:14px;background:var(--cone);color:#fff;border-radius:12px;padding:16px;
+  font-family:var(--disp);font-weight:800;font-size:21px;text-transform:uppercase;letter-spacing:.05em;
+  box-shadow:0 4px 0 #C24E08;transition:.1s}
+body[data-lang="zh"] .startbtn{text-transform:none;letter-spacing:.02em}
+.startbtn:active{transform:translateY(3px);box-shadow:0 1px 0 #C24E08}
+.ghostbtn{width:100%;margin-top:9px;border:1.5px solid var(--line);background:var(--card);border-radius:11px;padding:11px;
+  font-family:var(--disp);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+body[data-lang="zh"] .ghostbtn{text-transform:none;letter-spacing:0}
+.abrow{display:flex;gap:7px;margin:14px 0 10px}
+.abrow button{flex:1;border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:9px;
+  font-family:var(--disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+body[data-lang="zh"] .abrow button{text-transform:none;letter-spacing:0}
+.abrow button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.kitrow{display:flex;align-items:center;gap:11px;padding:11px 13px;margin-bottom:12px}
+.kitrow .kt{flex:1;min-width:0}
+.kitrow .kt b{font-family:var(--disp);font-weight:700;font-size:16px;display:block}
+.kitrow .kt span{font-size:13.5px;color:var(--ink-2)}
+.tog{flex:0 0 50px;height:29px;border-radius:99px;background:var(--line);position:relative;transition:.16s}
+.tog::after{content:"";position:absolute;top:3px;left:3px;width:23px;height:23px;border-radius:99px;background:#fff;transition:.16s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.kitrow[aria-pressed="true"] .tog{background:var(--accent)}
+.kitrow[aria-pressed="true"] .tog::after{transform:translateX(21px)}
+.drill{display:flex;margin-bottom:9px;overflow:hidden;width:100%;text-align:left;align-items:stretch}
+.drill .num{flex:0 0 54px;background:var(--accent-soft);border-right:1.5px solid var(--line);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px}
+.drill .num b{font-family:var(--disp);font-size:26px;font-weight:800;color:var(--accent);line-height:1}
+.drill .num span{font-family:var(--disp);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3)}
+body[data-lang="zh"] .drill .num span{letter-spacing:0;font-size:11.5px}
+.drill .body{padding:11px 13px;flex:1;min-width:0}
+.drill .body h3{font-size:19.5px;margin:0 0 2px;text-transform:uppercase}
+body[data-lang="zh"] .drill .body h3{text-transform:none;font-size:18px}
+.drill .body p{margin:0;font-size:14.5px;color:var(--ink-2);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.tag{display:inline-block;font-family:var(--disp);font-weight:700;font-size:11.5px;text-transform:uppercase;
+  letter-spacing:.09em;padding:2px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent);margin:0 3px 4px 0}
+body[data-lang="zh"] .tag{text-transform:none;letter-spacing:0;font-size:12px}
+.tag.new{background:var(--cone);color:#fff}
+.tag.kit{background:var(--ink);color:#fff}
+.phase{margin-top:22px}
+.phasehead{display:flex;align-items:baseline;gap:9px;margin-bottom:9px}
+.phasehead h3{font-size:20px;text-transform:uppercase;margin:0}
+body[data-lang="zh"] .phasehead h3{text-transform:none}
+.phasehead span{font-family:var(--disp);font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3)}
+body[data-lang="zh"] .phasehead span{text-transform:none;letter-spacing:0}
+.wk{display:flex;align-items:stretch;width:100%;text-align:left;margin-bottom:8px;overflow:hidden;transition:.14s}
+.wk .wn{flex:0 0 50px;background:var(--accent-soft);border-right:1.5px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.wk .wn b{font-family:var(--disp);font-size:22px;font-weight:800;color:var(--accent);line-height:1}
+.wk .wn span{font-family:var(--disp);font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase}
+body[data-lang="zh"] .wk .wn span{letter-spacing:0;font-size:11px}
+.wk .wb{padding:10px 12px;flex:1;min-width:0}
+.wk .wb h4{margin:0 0 2px;font-family:var(--disp);font-weight:700;font-size:18px;text-transform:uppercase}
+body[data-lang="zh"] .wk .wb h4{text-transform:none;font-size:17px}
+.wk .wb p{margin:0;font-size:14px;color:var(--ink-2)}
+.wk .wr{display:flex;align-items:center;padding-right:12px;gap:5px}
+.sdot{width:15px;height:15px;border-radius:5px;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff}
+.sdot.on{background:var(--accent);border-color:var(--accent)}
+.wk[data-cur="1"]{border-color:var(--cone);box-shadow:0 0 0 2.5px rgba(255,106,19,.22),var(--shadow)}
+.wk[data-cur="1"] .wn{background:var(--cone)}
+.wk[data-cur="1"] .wn b,.wk[data-cur="1"] .wn span{color:#fff}
+.mile{background:var(--card);border:1.5px solid var(--line);border-left:5px solid var(--cone);border-radius:0 12px 12px 0;padding:13px 15px;margin-top:12px}
+.mile h4{margin:0 0 4px;font-family:var(--disp);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.13em;color:var(--ink-3)}
+body[data-lang="zh"] .mile h4{text-transform:none;letter-spacing:.03em;font-size:14px}
+.mile p{margin:0;font-size:16px}
+.tierhead{display:flex;align-items:baseline;justify-content:space-between;margin:24px 0 8px}
+.tierhead h3{font-size:21px;text-transform:uppercase;margin:0}
+body[data-lang="zh"] .tierhead h3{text-transform:none}
+.tierhead span{font-family:var(--disp);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+body[data-lang="zh"] .tierhead span{text-transform:none;letter-spacing:0}
+.gear{display:flex;align-items:flex-start;gap:11px;padding:12px 13px;border-bottom:1.5px solid var(--line);width:100%;text-align:left}
+.gear:last-child{border-bottom:0}
+.gimg{flex:0 0 54px;height:54px;background:var(--accent-soft);border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.gimg svg{width:38px;height:38px}
+.box{flex:0 0 24px;height:24px;border:2.5px solid var(--line);border-radius:7px;margin-top:15px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;transition:.12s}
+.gear[aria-pressed="true"] .box{background:var(--accent);border-color:var(--accent)}
+.gear[aria-pressed="true"] .gname{text-decoration:line-through;color:var(--ink-3)}
+.gear[aria-pressed="true"] .gimg{opacity:.45}
+.gtxt{flex:1;min-width:0;padding-top:2px}
+.gname{font-family:var(--disp);font-weight:700;font-size:17.5px;line-height:1.2;display:block}
+.gwhy{font-size:13.5px;color:var(--ink-2);display:block;margin-top:2px}
+.gprice{font-family:var(--disp);font-weight:700;font-size:14px;color:var(--ink-3);display:block;margin-top:3px}
+.budget{display:flex;justify-content:space-between;align-items:center;padding:14px 15px;margin-top:14px;background:var(--ink);color:#fff;border-radius:12px}
+.budget b{font-family:var(--disp);font-size:25px;font-weight:800}
+.budget span{font-family:var(--disp);font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#A9BAB4}
+body[data-lang="zh"] .budget span{text-transform:none;letter-spacing:0}
+.skip{padding:13px 15px}
+.skip li{margin-bottom:6px;font-size:15px;color:var(--ink-2)}
+.skip li b{color:var(--ink)}
+.rule{display:flex;gap:12px;padding:13px 14px;border-bottom:1.5px solid var(--line)}
+.rule:last-child{border-bottom:0}
+.rule .k{flex:0 0 30px;height:30px;border-radius:8px;background:var(--ink);color:#fff;font-family:var(--disp);
+  font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center}
+.rule h4{margin:0 0 2px;font-family:var(--disp);font-weight:700;font-size:18px;text-transform:uppercase}
+body[data-lang="zh"] .rule h4{text-transform:none;font-size:17px}
+.rule p{margin:0;font-size:15px;color:var(--ink-2)}
+details.fix{border-bottom:1.5px solid var(--line)}
+details.fix:last-child{border-bottom:0}
+details.fix summary{padding:13px 14px;font-family:var(--disp);font-weight:700;font-size:18px;text-transform:uppercase;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+body[data-lang="zh"] details.fix summary{text-transform:none;font-size:17px}
+details.fix summary::-webkit-details-marker{display:none}
+details.fix summary::after{content:"+";color:var(--accent);font-size:24px}
+details.fix[open] summary::after{content:"–"}
+details.fix .ans{padding:0 14px 14px;font-size:15.5px;color:var(--ink-2)}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--card);border-top:1.5px solid var(--line);display:flex;padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;padding:11px 4px 10px;display:flex;flex-direction:column;align-items:center;gap:3px;
+  font-family:var(--disp);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3)}
+body[data-lang="zh"] nav button{text-transform:none;letter-spacing:0;font-size:13px}
+nav button .ico{font-size:20px;line-height:1}
+nav button[aria-pressed="true"]{color:var(--accent)}
+.sheet{position:fixed;inset:0;z-index:60;background:var(--paper);overflow-y:auto;padding-top:env(safe-area-inset-top);display:none}
+.sheet.on{display:block;animation:up .22s cubic-bezier(.2,.7,.3,1)}
+@keyframes up{from{transform:translateY(18px);opacity:0}to{transform:none;opacity:1}}
+.sheettop{position:sticky;top:0;background:var(--paper);border-bottom:1.5px solid var(--line);display:flex;align-items:center;gap:12px;padding:11px 16px;z-index:2}
+.sheettop .x{font-size:26px;line-height:1;color:var(--ink-2);padding:0 4px}
+.sheettop h2{font-size:21px;text-transform:uppercase;margin:0;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body[data-lang="zh"] .sheettop h2{text-transform:none}
+.dsec{margin:20px 0}
+.dsec h4{font-family:var(--disp);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.13em;color:var(--ink-3);margin:0 0 6px}
+body[data-lang="zh"] .dsec h4{text-transform:none;letter-spacing:.03em;font-size:14px}
+.dsec p{margin:0;font-size:16.5px}
+.cue{background:var(--accent-soft);border-left:5px solid var(--accent);border-radius:0 10px 10px 0;padding:13px 15px}
+.cue p{font-family:var(--disp);font-weight:700;font-size:21px;line-height:1.25;color:var(--accent)}
+.adj{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.adj div{background:var(--card);border:1.5px solid var(--line);border-radius:11px;padding:11px 12px}
+.adj h5{margin:0 0 3px;font-family:var(--disp);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+body[data-lang="zh"] .adj h5{text-transform:none;letter-spacing:0;font-size:15px}
+.adj p{font-size:14.5px;color:var(--ink-2)}
+#run{background:var(--accent);color:#fff}
+#run .runtop{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;padding-top:calc(14px + env(safe-area-inset-top))}
+#run .runtop button{color:#fff;font-family:var(--disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.07em;opacity:.85}
+body[data-lang="zh"] #run .runtop button{text-transform:none;letter-spacing:0}
+.dots{display:flex;gap:5px}
+.dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.35)}
+.dots i.on{background:#fff}
+.runbody{padding:0 22px 30px;text-align:center}
+.runtag{font-family:var(--disp);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.14em;opacity:.85}
+body[data-lang="zh"] .runtag{text-transform:none;letter-spacing:.03em}
+.runbody h2{font-size:clamp(32px,9.5vw,50px);text-transform:uppercase;margin:6px 0 4px;line-height:1}
+body[data-lang="zh"] .runbody h2{text-transform:none}
+.clock{font-family:var(--disp);font-weight:800;font-size:clamp(76px,25vw,120px);line-height:.9;letter-spacing:-.02em;margin:14px 0 4px;font-variant-numeric:tabular-nums}
+.clock.done{animation:flash 1s steps(1) infinite}
+@keyframes flash{50%{opacity:.35}}
+.runhow{background:rgba(255,255,255,.14);border-radius:14px;padding:15px 17px;text-align:left;font-size:16px;margin:16px 0}
+.runcue{font-family:var(--disp);font-weight:800;font-size:23px;text-transform:uppercase;line-height:1.2;margin:6px 0 18px}
+body[data-lang="zh"] .runcue{text-transform:none}
+.runctl{display:flex;gap:9px}
+.runctl button{flex:1;background:#fff;color:var(--accent);border-radius:12px;padding:15px;font-family:var(--disp);
+  font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:.05em}
+body[data-lang="zh"] .runctl button{text-transform:none;letter-spacing:0}
+.runctl button.ghost{background:rgba(255,255,255,.16);color:#fff}
+.finish{text-align:center;padding:50px 24px}
+.finish .big{font-size:62px}
+.finish h2{font-size:36px;text-transform:uppercase;margin:14px 0 8px}
+body[data-lang="zh"] .finish h2{text-transform:none}
+.fig{padding:14px 13px 11px;overflow:hidden}
+.fig svg{width:100%;height:auto;display:block}
+.figcap{font-size:13.5px;color:var(--ink-3);margin:9px 2px 0;line-height:1.5}
+.ruleB{display:flex;gap:11px;padding:12px 14px;border-bottom:1.5px solid var(--line)}
+.ruleB:last-child{border-bottom:0}
+.ruleB .n{flex:0 0 25px;height:25px;border-radius:7px;background:var(--accent-soft);color:var(--accent);
+  font-family:var(--disp);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.ruleB h4{margin:0 0 2px;font-family:var(--disp);font-weight:700;font-size:17.5px;text-transform:uppercase}
+body[data-lang="zh"] .ruleB h4{text-transform:none;font-size:17px}
+.ruleB p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.word{display:flex;gap:11px;padding:10px 14px;border-bottom:1.5px solid var(--line);align-items:baseline}
+.word:last-child{border-bottom:0}
+.word b{flex:0 0 34%;font-family:var(--disp);font-weight:700;font-size:16.5px;line-height:1.25}
+.word span{flex:1;font-size:14.5px;color:var(--ink-2)}
+svg .fld{fill:var(--accent-soft)}
+svg .ln{stroke:var(--accent);stroke-width:2;fill:none}
+svg .ln2{stroke:var(--line);stroke-width:2;fill:none}
+svg .sld{fill:var(--accent)}
+svg .dk{fill:var(--ink)}
+svg .tx{font-family:var(--disp);font-weight:700;font-size:13px;fill:var(--ink-2)}
+body[data-lang="zh"] svg .tx{font-family:'Noto Sans SC',sans-serif;font-size:12.5px}
+svg .txs{font-family:var(--disp);font-weight:700;font-size:11.5px;fill:var(--ink-3)}
+body[data-lang="zh"] svg .txs{font-family:'Noto Sans SC',sans-serif;font-size:11px}
+.note{font-size:13.5px;color:var(--ink-3);line-height:1.55;margin:16px 0 8px}
+.hide{display:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body data-sport="soccer" data-lang="en">
+
+<header>
+  <div class="wrap">
+    <div class="brandrow">
+      <div class="brand" id="brandTxt">Backyard <em>Coach</em></div>
+      <div class="langsw" id="langsw" role="group" aria-label="Language">
+        <button data-l="en" aria-pressed="true">EN</button>
+        <button data-l="zh" aria-pressed="false">中文</button>
+        <button data-l="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+    <div class="sportsw" id="sportsw" role="group">
+      <button data-s="soccer" aria-pressed="true"><span class="ico">⚽</span><span class="lbl"></span></button>
+      <button data-s="baseball" aria-pressed="false"><span class="ico">⚾</span><span class="lbl"></span></button>
+      <button data-s="football" aria-pressed="false"><span class="ico">🏈</span><span class="lbl"></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="tab-basics">
+    <div class="planhead"><h2 id="basicsH"></h2></div>
+    <p class="muted" style="margin:8px 0 0" id="basicsOne"></p>
+    <div class="eyebrow" id="fieldH"></div>
+    <div class="card fig" id="figField"></div>
+    <div class="eyebrow" id="gameH"></div>
+    <div class="card" style="padding:15px"><p style="margin:0" id="gameP"></p></div>
+    <div class="eyebrow" id="scoreH"></div>
+    <div class="card" style="padding:15px"><p style="margin:0" id="scoreP"></p></div>
+    <div class="eyebrow" id="rulesBH"></div>
+    <div class="card" id="rulesB"></div>
+    <div class="eyebrow" id="age4H"></div>
+    <div class="card fig" id="figAge4"></div>
+    <div class="card" style="padding:15px;margin-top:9px"><p style="margin:0" id="age4P"></p></div>
+    <div class="eyebrow" id="wordsH"></div>
+    <div class="card" id="wordsList"></div>
+    <p class="note" id="basicsNote"></p>
+  </section>
+
+  <section id="tab-season" class="hide">
+    <div class="planhead"><h2 id="seasonH"></h2><div class="planmeta" id="seasonMeta"></div></div>
+    <p class="muted" style="margin:8px 0 0" id="seasonBlurb"></p>
+    <div id="seasonList"></div>
+    <p class="note" id="seasonNote"></p>
+  </section>
+
+  <section id="tab-practice" class="hide">
+    <div class="planhead"><h2 id="planTitle"></h2><div class="planmeta" id="planMeta"></div></div>
+    <p class="muted" style="margin:8px 0 0" id="planFocus"></p>
+    <div class="abrow" id="abrow">
+      <button data-ab="a" aria-pressed="true"></button>
+      <button data-ab="b" aria-pressed="false"></button>
+    </div>
+    <button class="card kitrow" id="kitToggle" aria-pressed="false">
+      <span class="kt"><b id="kitT"></b><span id="kitS"></span></span><span class="tog"></span>
+    </button>
+    <div id="planList"></div>
+    <div class="mile"><h4 id="mileH"></h4><p id="planMile"></p></div>
+    <button class="startbtn" id="startBtn"></button>
+    <button class="ghostbtn" id="doneBtn"></button>
+    <p class="note" id="planNote"></p>
+  </section>
+
+  <section id="tab-gear" class="hide">
+    <div class="planhead"><h2 id="gearTitle"></h2></div>
+    <p class="muted" style="margin:8px 0 0" id="gearBlurb"></p>
+    <div id="gearList"></div>
+    <div class="budget"><span id="budgetL"></span><b id="budgetNum">$0</b></div>
+    <div class="eyebrow" id="skipH"></div>
+    <div class="card skip"><ul style="margin:0;padding-left:18px" id="skipList"></ul></div>
+    <p class="note" id="gearNote"></p>
+  </section>
+
+  <section id="tab-coach" class="hide">
+    <div class="planhead"><h2 id="coachH"></h2></div>
+    <div class="eyebrow" id="rulesH"></div>
+    <div class="card" id="rulesList"></div>
+    <div class="eyebrow" id="devH"></div>
+    <div class="card" style="padding:15px">
+      <p style="margin:0 0 10px" id="canDo"></p><p style="margin:0" id="cantDo"></p>
+    </div>
+    <div class="eyebrow" id="fixH"></div>
+    <div class="card" id="fixList"></div>
+    <p class="note" id="coachNote"></p>
+  </section>
+</main>
+
+<nav role="tablist">
+  <button data-t="basics" aria-pressed="true"><span class="ico">📖</span><span class="lbl"></span></button>
+  <button data-t="season" aria-pressed="false"><span class="ico">🗓</span><span class="lbl"></span></button>
+  <button data-t="practice" aria-pressed="false"><span class="ico">📋</span><span class="lbl"></span></button>
+  <button data-t="gear" aria-pressed="false"><span class="ico">🎒</span><span class="lbl"></span></button>
+  <button data-t="coach" aria-pressed="false"><span class="ico">🧢</span><span class="lbl"></span></button>
+</nav>
+
+<div class="sheet" id="detail" role="dialog" aria-modal="true">
+  <div class="sheettop"><button class="x" id="detailX">×</button><h2 id="dTitle"></h2></div>
+  <div class="wrap" id="dBody" style="padding-bottom:40px"></div>
+</div>
+
+<div class="sheet" id="run" role="dialog" aria-modal="true">
+  <div class="runtop"><button id="runQuit"></button><div class="dots" id="runDots"></div><button id="runSkip"></button></div>
+  <div class="wrap runbody" id="runBody"></div>
+</div>
+
+<script>
+/* ============ ICONS (drawn, no brands, no photos) ============ */
+const V=p=>`<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+const IC={
+ ball:V('<circle cx="24" cy="24" r="14"/><path d="M24 11l7.5 5.5-3 9h-9l-3-9z"/><path d="M31.5 16.5l7.5-1M16.5 16.5l-7.5-1M21 25.5l-4.5 8M27 25.5l4.5 8"/>'),
+ miniball:V('<circle cx="24" cy="24" r="9"/><path d="M24 15l4.5 3.5-2 5.5h-5l-2-5.5z"/>'),
+ cone:V('<path d="M24 9l10 24H14z"/><path d="M9 37h30"/><path d="M19.5 24h9"/>'),
+ tallcone:V('<path d="M24 6l7 28H17z"/><path d="M11 38h26"/><path d="M20 20h8M18.5 27h11"/>'),
+ ladder:V('<path d="M12 8v32M36 8v32"/><path d="M12 15h24M12 22h24M12 29h24M12 36h24"/>'),
+ hurdle:V('<path d="M11 36V20M37 36V20"/><path d="M9 20h30"/><path d="M14 27h20"/><path d="M7 36h8M33 36h8"/>'),
+ bottle:V('<rect x="17" y="15" width="14" height="24" rx="4.5"/><rect x="20.5" y="8" width="7" height="7" rx="1.5"/><path d="M17 24h14"/>'),
+ goal:V('<path d="M9 34V15h30v19"/><path d="M9 34h30"/><path d="M19 15v19M29 15v19M9 21h30M9 27.5h30"/>'),
+ shirt:V('<path d="M18 11l-7 4.5 3.5 6 3.5-2.5V38h12V19l3.5 2.5 3.5-6L30 11l-6 3.5z"/>'),
+ shin:V('<path d="M17.5 9h13v19c0 6.5-3 10.5-6.5 10.5S17.5 34.5 17.5 28z"/><path d="M24 13v22"/>'),
+ chalk:V('<rect x="13" y="20" width="7" height="19" rx="2"/><rect x="24" y="14" width="7" height="25" rx="2"/><path d="M13 26h7M24 20h7"/>'),
+ tee:V('<path d="M13 39h22"/><path d="M24 39V19"/><path d="M18 23h12"/><circle cx="24" cy="13" r="5.5"/>'),
+ foamball:V('<circle cx="24" cy="24" r="13"/><path d="M13 19c6.5 3 15.5 3 22 0M13 29c6.5-3 15.5-3 22 0"/>'),
+ bat:V('<path d="M11 37l6.5-6.5"/><path d="M17.5 30.5c3-3 5-4.5 8.5-8s5.5-7 3.5-9-6 .5-9 4-5 5.5-8 8.5z"/><path d="M11.5 33.5l3 3"/>'),
+ base:V('<path d="M24 10l13.5 13.5L24 37 10.5 23.5z"/><path d="M24 17l6.5 6.5L24 30l-6.5-6.5z"/>'),
+ bucket:V('<path d="M12 15h24l-3.5 24h-17z"/><path d="M12 15h24"/><path d="M15 23h18"/>'),
+ hoop:V('<ellipse cx="24" cy="24" rx="15" ry="9"/><ellipse cx="24" cy="24" rx="9.5" ry="5"/>'),
+ glove:V('<path d="M13 33V19.5c0-3.2 4.2-3.2 4.2 0V15c0-3.2 4.2-3.2 4.2 0v4.5c0-3.2 4.2-3.2 4.2 0v1c0-3.2 4.4-3.2 4.4 0V32c0 4.5-3.6 7-8.5 7S13 37 13 33z"/><path d="M17.2 22.5v6"/>'),
+ football:V('<ellipse cx="24" cy="24" rx="15" ry="9.5" transform="rotate(-20 24 24)"/><path d="M18.5 26.5l9-5M20 22.5l2 3.5M24 20l2 3.5M28 17.5l2 3.5"/>'),
+ flagbelt:V('<path d="M7 17h34v6H7z"/><path d="M14 23v13l3.5-3 3.5 3V23"/><path d="M27 23v13l3.5-3 3.5 3V23"/>')
+};
+
+/* ============ UI STRINGS ============ */
+const T={
+en:{nBasics:"Basics",basicsH:"Never played? Start here",fieldH:"The field",gameH:"How a game works",scoreH:"How you score",rulesBH:"Rules a parent needs",age4H:"What it looks like at age 4",wordsH:"Words you'll hear",basicsNote:"You do not need to know this sport to coach it at this age. Read this page once, then run the practices — the drills teach the game far better than any explanation will.",brand:'Backyard <em>Coach</em>',soccer:"Soccer",baseball:"T-Ball",football:"Flag",
+ nSeason:"Season",nPractice:"Practice",nGear:"Gear",nCoach:"Coach",
+ seasonH:"12-week season",sessions:"sessions",
+ seasonNote:"Two short sessions a week for twelve weeks. Tap a week to make it current — the Practice tab then builds from it. Tap the two small squares as you finish each session.",
+ sessA:"Session A",sessB:"Session B",week:"Week",station:"Station",of:"of",min:"min",stations:"stations",
+ kitT:"Movement kit",kitS:"Swap the warm-up for ladder, hurdle and cone games",
+ mileH:"Look for this by the end of the week",start:"▶ Start practice",
+ markDone:"✓ Mark this session done",undone:"✓ Session done — tap to undo",
+ planNote:"Tap any station for the full setup, the exact words to say, and how to make it easier or harder on the spot.",
+ gearH:"gear",checkedOff:"Checked off",dontBuy:"Don't buy this yet",items:"items",
+ gearNote:"Prices are rough US estimates for budgeting, not live prices — check current listings before buying. Illustrations show the shape and type of item, not a specific brand or model.",
+ coachH:"Coaching a 4-year-old",rulesH:"The eight rules",devH:"What they can and can't do yet",fixH:"When it goes sideways",
+ canDo:"<b>Can do:</b> run, stop, kick a still ball, throw underhand, catch against the body, copy what you do, follow one instruction at a time, play <em>next to</em> friends.",
+ cantDo:"<b>Not yet:</b> passing to a teammate on purpose, positions, taking turns for more than a few seconds, tracking a ball in the air, understanding “we're on the same team,” losing gracefully.",
+ coachNote:"Move on before they're bored, not after. A practice that ends while everyone still wants more is the one they'll ask to repeat tomorrow.",
+ setUp:"Set it up",howWorks:"How it works",sayThis:"Say this",tooHard:"Too hard?",tooEasy:"Too easy?",
+ newWk:"New this week",kitTag:"Movement kit",minutes:"minutes",
+ pause:"Pause",resume:"Resume",next:"Next station",finishB:"Finish",end:"✕ End",skip:"Skip ▸",
+ doneH:"Practice done",doneP:"High fives, water, snack. Tell him one specific thing he did well — “you kept the ball really close on that last one” beats “good job.”",
+ thisMile:"This week's milestone:",markB:"Mark session done",backB:"Back to plan",
+ phases:[["Weeks 1–3","Getting friendly"],["Weeks 4–6","Building control"],["Weeks 7–9","Putting it together"],["Weeks 10–12","Playing the game"]],
+ tiers:["Start here","Worth adding soon","Nice to have","Movement kit"],
+ tags:{warm:"Warm-up",control:"Control",pass:"Passing",game:"Game",shoot:"Shooting",combine:"Combine",finish:"Finish",hit:"Hitting",field:"Fielding",catch:"Catching",throw:"Throwing",run:"Running",move:"Movement"}},
+
+zh:{nBasics:"入门",basicsH:"完全没玩过？先看这里",fieldH:"场地长什么样",gameH:"一场比赛是怎么进行的",scoreH:"怎么得分",rulesBH:"家长需要知道的规则",age4H:"四岁的比赛实际是什么样",wordsH:"你会听到的词",basicsNote:"在这个年龄段，你其实不需要懂这项运动也能教。这一页看一遍就够了，然后照着训练计划做 —— 练习本身教会孩子的，比任何讲解都多得多。",brand:'后院<em>教练</em>',soccer:"足球",baseball:"棒球",football:"腰旗橄榄球",
+ nSeason:"赛季",nPractice:"训练",nGear:"装备",nCoach:"教练手册",
+ seasonH:"12周训练计划",sessions:"次训练",
+ seasonNote:"每周两次短训练，共十二周。点一下某一周把它设为当前周，训练页会自动生成那一周的内容。每完成一次训练，点右边的小方块打勾。",
+ sessA:"第一次",sessB:"第二次",week:"第",station:"第",of:"／共",min:"分钟",stations:"个环节",
+ kitT:"体能小工具",kitS:"把热身换成敏捷梯、跨栏和标志桶游戏",
+ mileH:"这一周结束时，留意他能不能做到",start:"▶ 开始训练",
+ markDone:"✓ 标记这次训练已完成",undone:"✓ 已完成 — 点一下取消",
+ planNote:"点任意环节可以看到完整摆放方式、该说的原话，以及现场怎么调难或调易。",
+ gearH:"装备",checkedOff:"已勾选合计",dontBuy:"现在还不用买",items:"件",
+ gearNote:"价格是美国市场的大致区间，仅供估算预算，不是实时价格，购买前请自行查看。插图只表示物品的形状和类型，不代表任何品牌或型号。",
+ coachH:"怎么教四岁孩子",rulesH:"八条原则",devH:"这个年纪能做什么、还做不到什么",fixH:"场面失控时怎么办",
+ canDo:"<b>能做到：</b>跑、急停、踢静止的球、下手抛球、用身体接球、模仿你的动作、一次听懂一条指令、和小伙伴<em>并排</em>玩。",
+ cantDo:"<b>还做不到：</b>有意识地传球给队友、理解位置、持续几秒以上地轮流等待、追踪空中飞行的球、理解“我们是一队的”、输了不难过。",
+ coachNote:"要在他觉得腻之前收，而不是之后。一次在大家还意犹未尽时结束的训练，明天他才会主动要求再来一次。",
+ setUp:"怎么摆",howWorks:"怎么玩",sayThis:"就这样说",tooHard:"太难了？",tooEasy:"太简单了？",
+ newWk:"本周新增",kitTag:"体能工具",minutes:"分钟",
+ pause:"暂停",resume:"继续",next:"下一环节",finishB:"结束",end:"✕ 结束",skip:"跳过 ▸",
+ doneH:"训练完成",doneP:"击掌、喝水、来点小零食。告诉他一件具体做得好的事 —— “你最后那次把球控得特别近”比“你真棒”有用得多。",
+ thisMile:"本周目标：",markB:"标记已完成",backB:"回到计划",
+ phases:[["第1–3周","先熟悉起来"],["第4–6周","建立控制"],["第7–9周","串联动作"],["第10–12周","真正打比赛"]],
+ tiers:["先买这些","很快会用上","有更好","体能小工具"],
+ tags:{warm:"热身",control:"控球",pass:"传球",game:"游戏",shoot:"射门",combine:"组合",finish:"收尾",hit:"击球",field:"接地滚球",catch:"接球",throw:"传球",run:"跑动",move:"体能"}},
+
+es:{nBasics:"Básicos",basicsH:"¿Nunca has jugado? Empieza aquí",fieldH:"El campo",gameH:"Cómo funciona un partido",scoreH:"Cómo se anota",rulesBH:"Reglas que un papá necesita",age4H:"Cómo se ve a los 4 años",wordsH:"Palabras que vas a oír",basicsNote:"No necesitas saber de este deporte para entrenarlo a esta edad. Lee esta página una vez y luego corre las prácticas — los ejercicios enseñan el juego mucho mejor que cualquier explicación.",brand:'Entrenador de <em>Patio</em>',soccer:"Fútbol",baseball:"T-Ball",football:"Flag",
+ nSeason:"Temporada",nPractice:"Práctica",nGear:"Equipo",nCoach:"Entrenar",
+ seasonH:"Temporada de 12 semanas",sessions:"sesiones",
+ seasonNote:"Dos sesiones cortas por semana durante doce semanas. Toca una semana para hacerla la actual — la pestaña Práctica se arma con ella. Marca los dos cuadritos al terminar cada sesión.",
+ sessA:"Sesión A",sessB:"Sesión B",week:"Semana",station:"Estación",of:"de",min:"min",stations:"estaciones",
+ kitT:"Kit de movimiento",kitS:"Cambia el calentamiento por juegos de escalera, vallas y conos",
+ mileH:"Busca esto al final de la semana",start:"▶ Empezar práctica",
+ markDone:"✓ Marcar sesión como hecha",undone:"✓ Sesión hecha — toca para deshacer",
+ planNote:"Toca cualquier estación para ver el montaje completo, las palabras exactas que decir y cómo hacerlo más fácil o más difícil sobre la marcha.",
+ gearH:"equipo",checkedOff:"Marcado",dontBuy:"No compres esto todavía",items:"artículos",
+ gearNote:"Los precios son estimados aproximados de EE. UU. para presupuestar, no precios en vivo — revisa antes de comprar. Las ilustraciones muestran la forma y el tipo de artículo, no una marca ni un modelo.",
+ coachH:"Entrenar a un niño de 4 años",rulesH:"Las ocho reglas",devH:"Lo que puede y lo que aún no puede",fixH:"Cuando se descontrola",
+ canDo:"<b>Puede:</b> correr, frenar, patear un balón quieto, lanzar por debajo, atrapar contra el cuerpo, copiar lo que haces, seguir una instrucción a la vez, jugar <em>al lado</em> de sus amigos.",
+ cantDo:"<b>Todavía no:</b> pasar al compañero a propósito, entender posiciones, esperar turnos más de unos segundos, seguir un balón por el aire, entender “somos del mismo equipo”, perder sin enojarse.",
+ coachNote:"Cambia antes de que se aburran, no después. La práctica que termina cuando todos quieren más es la que pedirán repetir mañana.",
+ setUp:"Cómo montarlo",howWorks:"Cómo se juega",sayThis:"Di esto",tooHard:"¿Muy difícil?",tooEasy:"¿Muy fácil?",
+ newWk:"Nuevo esta semana",kitTag:"Kit de movimiento",minutes:"minutos",
+ pause:"Pausa",resume:"Seguir",next:"Siguiente",finishB:"Terminar",end:"✕ Salir",skip:"Saltar ▸",
+ doneH:"Práctica terminada",doneP:"Choca los cinco, agua y una merienda. Dile una cosa concreta que hizo bien — “mantuviste el balón muy cerca en esa última” vale más que “buen trabajo”.",
+ thisMile:"Meta de esta semana:",markB:"Marcar como hecha",backB:"Volver al plan",
+ phases:[["Semanas 1–3","Tomar confianza"],["Semanas 4–6","Ganar control"],["Semanas 7–9","Unir las piezas"],["Semanas 10–12","Jugar de verdad"]],
+ tiers:["Empieza aquí","Vale la pena pronto","Bueno tenerlo","Kit de movimiento"],
+ tags:{warm:"Calentamiento",control:"Control",pass:"Pase",game:"Juego",shoot:"Tiro",combine:"Combinar",finish:"Cierre",hit:"Bateo",field:"Fildeo",catch:"Atrapar",throw:"Lanzar",run:"Correr",move:"Movimiento"}}
+};
+
+/* ============ MOVEMENT KIT DRILLS (shared across all sports) ============ */
+const MOVE={
+m1:{tag:"move",min:3,kit:1,
+ en:{n:"Ladder hop",setup:"Agility ladder flat on the grass. Everyone lines up at one end — but keep the line to two or three kids so nobody waits.",how:"Two feet in every square, walking at first. Then one foot per square. Then side-steps facing sideways. Then bunny hops with both feet together. Change the pattern every 30 seconds and let a child invent one.",cue:"Two feet in every box!",e:"Walk it slowly holding your hand. Stepping on the rungs is completely fine at this age.",h:"Hop on one foot, or go backwards."},
+ zh:{n:"敏捷梯跳格",setup:"敏捷梯平铺在草地上。大家在一端排队 —— 但每队只留两三个孩子，别让人干等。",how:"先走：每一格踩两只脚。然后每格一只脚。然后侧着身子横向移动。然后双脚并拢像小兔子一样跳。每30秒换一种玩法，也让孩子自己发明一种。",cue:"每一格都要踩两只脚！",e:"牵着手慢慢走。这个年纪踩到横杆上完全没关系。",h:"改成单脚跳，或者倒着走。"},
+ es:{n:"Saltos en la escalera",setup:"Escalera de agilidad plana sobre el césped. Todos en fila en un extremo — máximo dos o tres niños por fila para que nadie espere.",how:"Los dos pies en cada cuadro, caminando al principio. Luego un pie por cuadro. Luego pasos laterales de costado. Luego saltos de conejo con los pies juntos. Cambia el patrón cada 30 segundos y deja que un niño invente uno.",cue:"¡Los dos pies en cada cuadro!",e:"Camínala despacio de tu mano. Pisar los travesaños está perfectamente bien a esta edad.",h:"Salta en un pie, o hazla hacia atrás."}},
+m2:{tag:"move",min:3,kit:1,
+ en:{n:"Jungle jumps",setup:"Six mini hurdles in a line, about two steps apart. Set them at the lowest height.",how:"Jump over each hurdle with two feet together, landing softly with bent knees. Give each hurdle an animal name — the crocodile, the snake — and let them shout it as they jump. Go through three or four times.",cue:"Two feet — land soft like a bunny!",e:"Step over instead of jumping, or lay the hurdles flat as lines to step over.",h:"Jump sideways over them, or add a fourth and fifth hurdle."},
+ zh:{n:"跳过小丛林",setup:"六个迷你跨栏排成一列，间隔约两步。调到最低高度。",how:"双脚并拢跳过每个栏，落地时屈膝、轻轻落。给每个栏起个动物名字 —— 鳄鱼、蛇 —— 跳过去的时候让他们喊出来。来回三到四趟。",cue:"双脚一起 —— 像小兔子一样轻轻落地！",e:"改成跨过去而不是跳过去，或者把栏放平当成线来跨。",h:"改成侧向跳，或者再加两个栏。"},
+ es:{n:"Saltos de la selva",setup:"Seis mini vallas en fila, a unos dos pasos de distancia. Ponlas en la altura más baja.",how:"Salta cada valla con los dos pies juntos, cayendo suave con las rodillas flexionadas. Ponle un nombre de animal a cada valla — el cocodrilo, la serpiente — y que lo griten al saltar. Tres o cuatro pasadas.",cue:"¡Los dos pies — cae suave como un conejo!",e:"Que pasen por encima caminando, o acuesta las vallas como líneas para cruzar.",h:"Que salten de lado, o agrega una cuarta y quinta valla."}},
+m3:{tag:"move",min:3,kit:1,
+ en:{n:"Zoo walk",setup:"Agility ladder on the grass, or two chalk lines if you don't have one.",how:"Travel down the ladder as an animal you call out: bear (hands and feet), crab (belly up), bunny (two-foot hops), flamingo (one foot per square). Kids pick the next animal. This builds more real coordination than any drill with a ball in it.",cue:"Now you're a bear — hands and feet!",e:"Stay with bear and bunny only; skip crab, which is genuinely hard at four.",h:"Go backwards, or do two animals in one trip."},
+ zh:{n:"动物园走路",setup:"敏捷梯放在草地上；没有的话用粉笔画两条线也行。",how:"按你喊的动物方式沿着梯子走：狗熊（手脚着地）、螃蟹（肚子朝上）、兔子（双脚跳）、火烈鸟（每格一只脚）。让孩子选下一个动物。这个比任何带球的练习都更能练协调性。",cue:"现在你是一只熊 —— 手脚一起走！",e:"只玩狗熊和兔子；螃蟹对四岁孩子来说确实很难，可以跳过。",h:"倒着走，或者一趟里换两种动物。"},
+ es:{n:"Caminata del zoológico",setup:"Escalera de agilidad en el césped, o dos líneas de gis si no tienes una.",how:"Recorre la escalera como el animal que grites: oso (manos y pies), cangrejo (panza arriba), conejo (saltos con dos pies), flamenco (un pie por cuadro). Los niños eligen el siguiente animal. Esto desarrolla más coordinación real que cualquier ejercicio con balón.",cue:"¡Ahora eres un oso — manos y pies!",e:"Quédate solo con oso y conejo; el cangrejo es genuinamente difícil a los cuatro.",h:"Hazlo hacia atrás, o dos animales en un mismo recorrido."}},
+m4:{tag:"move",min:3,kit:1,
+ en:{n:"Weave the towers",setup:"Six tall cones in a line, three steps apart.",how:"Run a zigzag through the towers, then walk back. Once they've got it, add the ball — dribble through in soccer, carry the ball in football, or run it while holding a glove in t-ball. Tall cones matter here: a four-year-old can see them from the side, and flat discs disappear.",cue:"Zigzag — don't knock the tower over!",e:"Space the cones further apart and walk it.",h:"Move the cones closer, or add the ball."},
+ zh:{n:"绕桶穿行",setup:"六个高标志桶排成一列，间隔三步。",how:"以之字形跑着穿过标志桶，然后走回来。熟练之后加上球 —— 足球就带球绕，橄榄球就抱着球跑，棒球就戴着手套跑。这里一定要用高桶：四岁孩子从侧面能看见高桶，扁平的标志盘他们看不到。",cue:"之字形 —— 别把桶碰倒了！",e:"把桶的间距拉大，改成走。",h:"把桶靠近一些，或者加上球。"},
+ es:{n:"Zigzag entre torres",setup:"Seis conos altos en fila, a tres pasos de distancia.",how:"Corre en zigzag entre los conos y regresa caminando. Cuando lo dominen, agrega el balón — driblando en fútbol, cargando el balón en flag, o corriendo con el guante puesto en t-ball. Los conos altos importan: un niño de cuatro los ve de lado, y los discos planos desaparecen.",cue:"¡Zigzag — no tumbes la torre!",e:"Separa más los conos y háganlo caminando.",h:"Acerca los conos, o agrega el balón."}},
+m5:{tag:"move",min:5,kit:1,
+ en:{n:"Obstacle course",setup:"Ladder, then three hurdles, then four tall cones to weave, then a finish line. Build it together with the kids — the building is half the fun.",how:"One at a time through the whole course, everyone else cheering. Then go again and try to beat the last run. Nobody is timed against anyone else. Let them redesign it halfway through; it will get better and sillier.",cue:"Ladder, jump, zigzag, GO!",e:"Cut it to two obstacles. Run it beside them the first time.",h:"Add the ball through the whole course, or run it backwards."},
+ zh:{n:"障碍闯关",setup:"先敏捷梯，再三个跨栏，再四个高标志桶绕行，最后一条终点线。和孩子一起摆 —— 摆场地本身就是一半的乐趣。",how:"一次一个人跑完全程，其他人在旁边加油。然后再来一次，看能不能比上一次更好。不和别人比时间。中途让他们自己改路线，只会越改越有意思。",cue:"爬梯、跳栏、绕桶，冲！",e:"减到两个障碍。第一次陪着他一起跑。",h:"全程带球，或者倒着跑一遍。"},
+ es:{n:"Circuito de obstáculos",setup:"Escalera, luego tres vallas, luego cuatro conos altos en zigzag, y una línea de meta. Ármalo junto con los niños — armarlo es la mitad de la diversión.",how:"Uno a la vez por todo el circuito, los demás echando porras. Después otra vuelta para mejorar la anterior. Nadie compite contra nadie. Déjalos rediseñarlo a media práctica; quedará mejor y más divertido.",cue:"¡Escalera, salto, zigzag, YA!",e:"Redúcelo a dos obstáculos. Corre a su lado la primera vez.",h:"Agrega el balón en todo el circuito, o córrelo al revés."}}
+};
+
+/* ============ SPORT DRILLS ============ */
+const D={
+/* ---- SOCCER ---- */
+s1:{tag:"warm",min:3,
+ en:{n:"Wake-up toes",setup:"Everyone stands on their own ball in a loose circle around you.",how:"Tap the top of the ball with the bottom of one foot, then the other. Then roll it side to side. Then jump over it and back. Change every 20 seconds so nobody stalls.",cue:"Light taps — like popcorn!",e:"Just tap one foot, or touch the ball with hands first.",h:"Speed rounds: 'ten fast taps, go!'"},
+ zh:{n:"叫醒小脚",setup:"每人一个球，踩在自己球上，围成一个松散的圈站在你周围。",how:"用一只脚的脚底轻点球顶，再换另一只脚。然后把球左右来回拨。然后跳过球再跳回来。每20秒换一个动作，别让人愣着。",cue:"轻轻点 —— 像爆米花一样！",e:"只用一只脚点，或者先允许用手摸球。",h:"来个速度赛：“快点十下，开始！”"},
+ es:{n:"Despertar los pies",setup:"Cada uno de pie sobre su propio balón, en un círculo suelto alrededor de ti.",how:"Toca la parte de arriba del balón con la planta de un pie, luego con el otro. Después rueda el balón de lado a lado. Después salta por encima y regresa. Cambia cada 20 segundos para que nadie se estanque.",cue:"¡Toques suaves — como palomitas!",e:"Solo con un pie, o deja que toquen el balón con las manos primero.",h:"Ronda de velocidad: '¡diez toques rápidos, ya!'"}},
+s10:{tag:"warm",min:3,
+ en:{n:"Follow the leader",setup:"Everyone with a ball, you at the front.",how:"You dribble slowly around the yard and everyone follows in a wobbly line, copying what you do — big steps, tiny steps, stop, turn, wiggle. Then let a child lead.",cue:"Do what I do — stay close!",e:"Walk instead of jog.",h:"Add sudden stops and turns."},
+ zh:{n:"跟着领队走",setup:"每人一个球，你在最前面。",how:"你慢慢带球在院子里绕，大家排成歪歪扭扭的一队跟在后面模仿你 —— 大步、小碎步、急停、转身、扭一扭。然后换一个孩子当领队。",cue:"我怎么做你就怎么做 —— 跟紧点！",e:"改成走，不要小跑。",h:"加入突然的急停和转身。"},
+ es:{n:"Sigue al líder",setup:"Cada uno con su balón, tú al frente.",how:"Driblas despacio por el patio y todos te siguen en una fila chueca, copiando lo que haces — pasos grandes, pasitos, alto, giro, meneo. Después deja que un niño sea el líder.",cue:"¡Haz lo que yo hago — no te quedes atrás!",e:"Caminen en vez de trotar.",h:"Agrega frenadas y giros repentinos."}},
+s2:{tag:"control",min:4,
+ en:{n:"Red light, green light",setup:"Everyone with a ball on one line, you about 15 steps away.",how:"Green light means dribble toward you. Red light means stop the ball with the bottom of your foot and freeze. Nobody goes back for moving — just call it out and giggle. High five at the end, then run back and go again.",cue:"Foot on top — freeze like a statue!",e:"Call 'red light' loudly and count to three before checking.",h:"Add yellow light for slow motion."},
+ zh:{n:"红灯绿灯",setup:"每人一个球站在一条线上，你站在约15步开外。",how:"绿灯就带球朝你走，红灯就用脚底把球停住、原地不动。动了也不用退回去 —— 指出来一起笑一笑就行。到了终点击掌，然后跑回去再来一轮。",cue:"脚踩住球 —— 像雕像一样别动！",e:"“红灯”喊得响一点，数到三再检查。",h:"加一个黄灯，表示慢动作。"},
+ es:{n:"Luz roja, luz verde",setup:"Todos con balón en una línea, tú a unos 15 pasos.",how:"Luz verde: driblan hacia ti. Luz roja: paran el balón con la planta y se congelan. Nadie regresa por moverse — solo señálalo y ríanse. Choca los cinco al final, corran de regreso y otra vez.",cue:"¡Pie encima — congélate como estatua!",e:"Grita 'luz roja' fuerte y cuenta hasta tres antes de revisar.",h:"Agrega luz amarilla para cámara lenta."}},
+s3:{tag:"control",min:3,
+ en:{n:"Body part freeze",setup:"Open area, everyone dribbling their own ball.",how:"Kids dribble anywhere. You shout a body part — knee, elbow, belly, nose — and they stop the ball and touch it with that part. Then go again. Fast and silly.",cue:"Dribble, dribble… ELBOW!",e:"Use only foot and hand.",h:"Call two parts at once."},
+ zh:{n:"身体部位定格",setup:"一片开阔地，每人带着自己的球。",how:"孩子随便带球跑。你喊一个身体部位 —— 膝盖、胳膊肘、肚子、鼻子 —— 他们就停球并用那个部位碰一下球，然后继续跑。要快，要好笑。",cue:"带球、带球…… 胳膊肘！",e:"只喊脚和手。",h:"一次喊两个部位。"},
+ es:{n:"Congelado por partes",setup:"Área abierta, cada uno driblando su balón.",how:"Los niños driblan por donde sea. Gritas una parte del cuerpo — rodilla, codo, panza, nariz — y paran el balón y lo tocan con esa parte. Luego siguen. Rápido y chistoso.",cue:"Dribla, dribla… ¡CODO!",e:"Usa solo pie y mano.",h:"Grita dos partes a la vez."}},
+s9:{tag:"control",min:4,
+ en:{n:"Cone gates",setup:"Scatter eight pairs of cones as little gates, two steps wide, all over the yard.",how:"Dribble through as many gates as you can before you say stop. Count them out loud together. Reset and beat the score. Gates teach steering without a single instruction.",cue:"Find another gate — go!",e:"Wider gates, fewer of them.",h:"Narrow the gates, or say each gate counts only once."},
+ zh:{n:"穿过小门",setup:"用标志桶两两一组摆成八个“小门”，每个门宽两步，散布在整个院子里。",how:"在你喊停之前，尽量多地带球穿过小门。一起大声数数。然后重来一轮，看能不能超过上次。小门能让孩子自然学会控制方向，一句指令都不用讲。",cue:"再找一个门 —— 冲！",e:"门开宽一点，数量少一点。",h:"门收窄，或者规定每个门只能算一次。"},
+ es:{n:"Puertas de conos",setup:"Reparte ocho pares de conos como puertitas de dos pasos de ancho por todo el patio.",how:"Driblen por tantas puertas como puedan antes de que digas alto. Cuéntenlas en voz alta juntos. Reinicien e intenten superar el número. Las puertas enseñan a dirigir el balón sin una sola instrucción.",cue:"¡Busca otra puerta — corre!",e:"Puertas más anchas y menos cantidad.",h:"Puertas más angostas, o cada puerta cuenta solo una vez."}},
+s11:{tag:"control",min:3,
+ en:{n:"Turn and go",setup:"One cone per child, spread out.",how:"Dribble to your cone, stop the ball with your foot, turn around, dribble back. Make it a story — the cone is a monster, don't let it get your ball.",cue:"Stop it, turn, go!",e:"Let them pick the ball up to turn.",h:"Two cones — turn at each one."},
+ zh:{n:"转身回来",setup:"每个孩子一个标志桶，分散摆开。",how:"带球到自己的桶前，用脚把球停住，转身，再带回来。编个故事 —— 桶是个小怪兽，别让它抢走你的球。",cue:"停住、转身、走！",e:"允许他们用手把球抱起来转身。",h:"摆两个桶，每个桶都要转一次。"},
+ es:{n:"Frena y regresa",setup:"Un cono por niño, bien separados.",how:"Dribla hasta tu cono, para el balón con el pie, date la vuelta y regresa driblando. Cuéntalo como historia — el cono es un monstruo, no dejes que te quite el balón.",cue:"¡Párala, gira, vamos!",e:"Déjalos levantar el balón con las manos para girar.",h:"Dos conos — giro en cada uno."}},
+s12:{tag:"pass",min:3,
+ en:{n:"Roll it to me",setup:"Face your child, four steps apart. One ball.",how:"Push the ball to each other with the inside of the foot — not a kick, a push. Count passes out loud. The first idea of passing is simply that the ball goes to a person on purpose.",cue:"Side of the foot — push it to me!",e:"Roll it with hands first, then feet.",h:"Step back one pace. Add a second ball going the other way."},
+ zh:{n:"推给我",setup:"和孩子面对面站，相距四步。一个球。",how:"用脚内侧把球推给对方 —— 是推，不是踢。大声数传了多少次。传球最初的概念，只是“球是有意送到某个人那里的”。",cue:"用脚内侧 —— 推给我！",e:"先用手滚，再改用脚。",h:"往后退一步。再加一个球从反方向传。"},
+ es:{n:"Ruédamela",setup:"Frente a tu hijo, a cuatro pasos. Un balón.",how:"Empújense el balón con el interior del pie — no es un patadón, es un empujón. Cuenten los pases en voz alta. La primera idea del pase es simplemente que el balón va hacia una persona a propósito.",cue:"¡Con el lado del pie — empújala hacia mí!",e:"Ruédenla con las manos primero, luego con los pies.",h:"Retrocede un paso. Agrega un segundo balón en sentido contrario."}},
+s4:{tag:"game",min:4,
+ en:{n:"Sharks and minnows",setup:"Two lines about 15 steps apart. Kids on one line with a ball each. You in the middle.",how:"Kids dribble across while you try to kick their ball out. Nobody is ever out — if your ball goes out, chase it, bring it back, jump in again. Be a comically slow shark.",cue:"Keep it close! Little touches!",e:"Wider area, move slower.",h:"Narrow the area, or add a second shark."},
+ zh:{n:"鲨鱼抓小鱼",setup:"两条线相距约15步。孩子站在一条线上，每人一个球。你站中间。",how:"孩子带球穿过去，你想办法把他们的球踢出场。永远没有人“出局” —— 球被踢出去了就去追回来，回到起点再来一次。你要当一条慢得很搞笑的鲨鱼。",cue:"把球带近点！小步碰球！",e:"场地拉宽，你动作慢一点。",h:"场地收窄，或者再加一条鲨鱼。"},
+ es:{n:"Tiburones y sardinas",setup:"Dos líneas a unos 15 pasos. Los niños en una línea, cada uno con balón. Tú en medio.",how:"Los niños cruzan driblando mientras intentas sacarles el balón. Nadie queda eliminado nunca — si te sacan el balón, ve por él, regresa y vuelve a entrar. Sé un tiburón cómicamente lento.",cue:"¡Cerquita! ¡Toques pequeños!",e:"Área más ancha, muévete más lento.",h:"Área más angosta, o agrega un segundo tiburón."}},
+s5:{tag:"shoot",min:4,
+ en:{n:"Knock down the towers",setup:"Stack cones into six little towers about six steps from a shooting line.",how:"Everyone shoots at the towers, chases their own ball, comes back, shoots again. Reset constantly. No turns, no lines — endless shooting.",cue:"Laces down, kick the middle!",e:"Move the line closer, use bigger targets.",h:"Move back, or roll the ball so they strike it moving."},
+ zh:{n:"打倒小塔",setup:"把标志桶叠成六座小塔，摆在离射门线约六步的地方。",how:"所有人一起射门打塔，自己去追球，跑回来再射。不停地把塔扶起来。不排队、不轮流 —— 一直射。",cue:"脚背压下去，踢中间！",e:"射门线往前挪，用更大的目标。",h:"往后退几步，或者你把球滚过去让他踢动着的球。"},
+ es:{n:"Derriba las torres",setup:"Apila conos en seis torrecitas a unos seis pasos de una línea de tiro.",how:"Todos disparan a las torres, van por su propio balón, regresan y disparan otra vez. Reacomoda las torres constantemente. Sin turnos, sin filas — disparos sin parar.",cue:"¡Empeine abajo, pégale al centro!",e:"Acerca la línea, usa blancos más grandes.",h:"Aléjate, o ruédale el balón para que le pegue en movimiento."}},
+s13:{tag:"combine",min:4,
+ en:{n:"Dribble then shoot",setup:"Two cone gates leading to a goal, about eight steps of runway.",how:"Dribble through the gates, then shoot at the goal. Two things in a row is genuinely hard at four — expect a lot of forgetting the second part, and cheer anyway.",cue:"Through the gates… now SHOOT!",e:"Drop the gates, just dribble and shoot.",h:"Add a third gate or a defender who walks."},
+ zh:{n:"带球再射门",setup:"两个标志桶小门通向球门，助跑距离约八步。",how:"先带球穿过小门，然后射门。四岁孩子要连着做两件事是真的很难 —— 他们经常会忘掉第二步，忘了也照样鼓掌。",cue:"穿过小门…… 射门！",e:"把小门去掉，只做带球加射门。",h:"再加第三个小门，或者加一个走着防守的人。"},
+ es:{n:"Dribla y dispara",setup:"Dos puertas de conos que llevan a una portería, unos ocho pasos de recorrido.",how:"Dribla por las puertas y luego dispara a la portería. Dos cosas seguidas es genuinamente difícil a los cuatro — espera que olviden la segunda parte muchas veces, y aplaude igual.",cue:"Por las puertas… ¡ahora DISPARA!",e:"Quita las puertas, solo driblar y disparar.",h:"Agrega una tercera puerta o un defensor que camine."}},
+s7:{tag:"game",min:4,
+ en:{n:"Clean your room",setup:"Split the yard in half with cones. Every ball you own on the ground, half each side.",how:"Two teams. On 'go', kick balls out of your half into the other. Nobody wins. Play 90 seconds, rest, repeat. More kicks per minute than any drill.",cue:"Clean your room! Kick them out!",e:"Fewer balls, smaller area.",h:"They must dribble it over the line, not kick it."},
+ zh:{n:"打扫房间",setup:"用标志桶把院子分成两半。把家里所有的球都放地上，两边各一半。",how:"分成两队。喊“开始”后，把自己这半边的球全都踢到对面去。没有输赢。踢90秒，休息，再来一轮。这个游戏每分钟的触球次数比任何练习都多。",cue:"快打扫房间！把球都踢出去！",e:"球少一点，场地小一点。",h:"规定必须带球过线，不能直接踢。"},
+ es:{n:"Limpia tu cuarto",setup:"Divide el patio a la mitad con conos. Todos los balones en el suelo, la mitad de cada lado.",how:"Dos equipos. Al 'ya', patean los balones de su mitad hacia la otra. Nadie gana. Juegan 90 segundos, descansan y repiten. Más patadas por minuto que cualquier ejercicio.",cue:"¡Limpia tu cuarto! ¡Sácalos de aquí!",e:"Menos balones, área más chica.",h:"Tienen que driblarlo por encima de la línea, no patearlo."}},
+s6:{tag:"finish",min:5,
+ en:{n:"Score on the goalkeeper",setup:"One goal or two cones six feet apart. You are the goalkeeper.",how:"Kids shoot at you. Dive dramatically the wrong way. Let almost everything in. Celebrate every goal like a final. This is the part they'll remember.",cue:"Oh no — I can't stop you!",e:"Stand still and let them walk it in.",h:"Actually try, once, so a save means something."},
+ zh:{n:"射爸爸的门",setup:"一个球门，或者两个标志桶间隔约两米。你当守门员。",how:"孩子对着你射门。你要夸张地扑向完全错误的方向，几乎每个球都放进去。每进一个球都像决赛那样庆祝。这是他们最会记住的一段。",cue:"哎呀 —— 我根本挡不住你！",e:"站着不动，让他们直接带球进门。",h:"认真扑救一次，让“扑到”这件事有点分量。"},
+ es:{n:"Anótale al portero",setup:"Una portería o dos conos separados dos metros. Tú eres el portero.",how:"Los niños te disparan. Lánzate dramáticamente hacia el lado equivocado. Deja pasar casi todo. Celebra cada gol como si fuera una final. Esta es la parte que van a recordar.",cue:"¡Ay no — no puedo detenerte!",e:"Quédate quieto y déjalos meterla caminando.",h:"Inténtalo de verdad, una vez, para que atajar signifique algo."}},
+s14:{tag:"finish",min:5,
+ en:{n:"Two against two",setup:"Tiny field, two small goals, no keepers, no positions.",how:"Just play. Don't coach. Let the ball be a swarm. Stop while it's still fun.",cue:"Go get it!",e:"You join in as a slow, friendly player.",h:"Three against three."},
+ zh:{n:"二对二",setup:"很小的场地，两个小球门，没有守门员，没有位置。",how:"就是玩。别指导。让所有人围着球挤成一团也没关系。在还好玩的时候就收。",cue:"快去抢球！",e:"你加进去当一个慢吞吞的友好球员。",h:"改成三对三。"},
+ es:{n:"Dos contra dos",setup:"Cancha chiquita, dos porterías pequeñas, sin portero, sin posiciones.",how:"Solo jueguen. No corrijas. Deja que todos persigan el balón en bola. Para mientras todavía es divertido.",cue:"¡Ve por ella!",e:"Métete tú como jugador lento y amigable.",h:"Tres contra tres."}},
+s8:{tag:"finish",min:5,
+ en:{n:"Three against three",setup:"Small field, two goals, no keepers, no positions.",how:"Full swarm soccer. Every child chases the ball and that is completely correct at this age. Say almost nothing. Cheer everything.",cue:"Go go go!",e:"Two against two, or everyone versus you.",h:"Everyone touches it before scoring — only if they're ready."},
+ zh:{n:"三对三",setup:"小场地，两个球门，没有守门员，没有位置。",how:"完全是一窝蜂足球。每个孩子都追着球跑，这个年纪本来就该这样。你几乎什么都别说，什么都鼓掌。",cue:"上上上！",e:"改成二对二，或者所有人一起对你一个。",h:"规定进球前每个人都要碰一次球 —— 只有在他们准备好的时候再加。"},
+ es:{n:"Tres contra tres",setup:"Cancha chica, dos porterías, sin portero, sin posiciones.",how:"Fútbol en enjambre total. Todos persiguen el balón y a esta edad eso es completamente correcto. No digas casi nada. Aplaude todo.",cue:"¡Vamos, vamos!",e:"Dos contra dos, o todos contra ti.",h:"Que todos la toquen antes de anotar — solo si ya están listos."}},
+
+/* ---- BASEBALL / T-BALL ---- */
+b1:{tag:"warm",min:3,
+ en:{n:"Around the bases",setup:"Bases in a small diamond, about ten steps apart.",how:"Everybody jogs the bases in order while you call them: 'FIRST! SECOND! THIRD! HOME!' Three times, faster each round. Base order early saves enormous confusion later.",cue:"First, second, third, HOME!",e:"Walk it once holding hands, touching each base.",h:"Race — you run the wrong way and get lost."},
+ zh:{n:"绕垒跑",setup:"四个垒摆成一个小菱形，相邻约十步。",how:"大家按顺序绕垒慢跑，你在旁边喊：“一垒！二垒！三垒！本垒！”跑三轮，一轮比一轮快。早点搞清楚垒的顺序，以后能省下大量混乱。",cue:"一垒、二垒、三垒、本垒！",e:"先牵着手走一圈，每个垒都踩一下。",h:"比赛跑 —— 你故意跑错方向然后迷路。"},
+ es:{n:"Vuelta a las bases",setup:"Bases en un diamante chico, a unos diez pasos entre sí.",how:"Todos trotan las bases en orden mientras las cantas: '¡PRIMERA! ¡SEGUNDA! ¡TERCERA! ¡HOME!' Tres vueltas, cada una más rápida. Aprender el orden temprano ahorra muchísima confusión después.",cue:"¡Primera, segunda, tercera, HOME!",e:"Caminen una vuelta de la mano tocando cada base.",h:"Carrera — tú corres al revés y te pierdes."}},
+b8:{tag:"warm",min:3,
+ en:{n:"Ready position freeze",setup:"Everyone spread out facing you.",how:"Show the ready position: feet apart, knees bent, hands out front. Then play freeze — they jog around, you shout 'READY!', everyone freezes in position. Silly and repeatable.",cue:"Knees bent, hands out, READY!",e:"Just do it standing still together.",h:"Add 'go left' and 'go right' shuffles before the freeze."},
+ zh:{n:"预备姿势定格",setup:"大家散开面对你站着。",how:"先示范预备姿势：两脚分开、屈膝、双手放在身前。然后玩定格 —— 他们随意小跑，你喊“预备！”，所有人立刻定住摆好姿势。又傻又能反复玩。",cue:"屈膝、手伸出来、预备！",e:"就一起站着原地做，不跑。",h:"定格之前加上“向左”“向右”的横向滑步。"},
+ es:{n:"Congelado en posición",setup:"Todos separados mirándote.",how:"Muestra la posición lista: pies separados, rodillas flexionadas, manos al frente. Luego juega a congelarse — trotan por ahí, gritas '¡LISTOS!' y todos se congelan en posición. Chistoso y repetible.",cue:"¡Rodillas dobladas, manos afuera, LISTOS!",e:"Háganlo parados en el mismo lugar.",h:"Agrega desplazamientos 'a la izquierda' y 'a la derecha' antes de congelarse."}},
+b2:{tag:"hit",min:5,
+ en:{n:"Tee swings",setup:"Tee at belly-button height. Everyone else has a job.",how:"Ball on tee, three swings each, rotate. The waiting kids are not waiting — second tee, or fielding the hits, or doing ten air swings with you.",cue:"Squish the bug with your back foot!",e:"Lower the tee. Swing with no ball first.",h:"Move the tee inside or outside."},
+ zh:{n:"打击架挥棒",setup:"打击架调到肚脐高度。其他孩子都要有事做。",how:"球放架上，每人挥三棒，然后轮换。等着的孩子不能真的干等 —— 要么第二个打击架，要么去接打出来的球，要么和你一起做十次空挥棒。",cue:"后脚碾一碾，像踩虫子一样！",e:"把架子调低。先不放球空挥几次。",h:"把架子往内侧或外侧挪一点。"},
+ es:{n:"Swings del tee",setup:"Tee a la altura del ombligo. Todos los demás tienen una tarea.",how:"Pelota en el tee, tres swings cada uno, rotan. Los que esperan no están esperando — segundo tee, o fildeando los batazos, o haciendo diez swings al aire contigo.",cue:"¡Aplasta el bicho con el pie de atrás!",e:"Baja el tee. Primero swings sin pelota.",h:"Mueve el tee hacia adentro o hacia afuera."}},
+b3:{tag:"field",min:4,
+ en:{n:"Alligator chomp",setup:"Kids in a loose line facing you, five steps away. Soft balls.",how:"Roll a slow grounder to each child. They get low and trap it with two hands coming together like an alligator's mouth. Roll, chomp, throw back, next.",cue:"Chomp it with two hands!",e:"Slower, straight at them.",h:"Roll slightly left or right so they move."},
+ zh:{n:"鳄鱼咬球",setup:"孩子松散地排一排面对你，距离五步。用软球。",how:"给每个孩子滚一个慢速地滚球。他们要蹲低，两只手像鳄鱼嘴一样合起来把球夹住。滚球、咬住、扔回来、下一个。",cue:"两只手一起咬住！",e:"滚得更慢，正对着他们滚。",h:"稍微往左或往右滚，让他们要移动一下。"},
+ es:{n:"Mordida de cocodrilo",setup:"Niños en fila suelta frente a ti, a cinco pasos. Pelotas blandas.",how:"Ruédale un roletazo lento a cada uno. Se agachan y atrapan con las dos manos juntándose como la boca de un cocodrilo. Rueda, muerde, devuelve, siguiente.",cue:"¡Muérdela con las dos manos!",e:"Más lento y directo hacia ellos.",h:"Ruédala un poco a la izquierda o derecha para que se muevan."}},
+b4:{tag:"catch",min:3,
+ en:{n:"Popcorn catch",setup:"One child, one soft ball, you three steps away.",how:"Toss gently so it drops into their hands or bucket. Start with a bucket — it builds tracking without fear of hitting fingers. Move to hands when confident.",cue:"Watch it all the way in!",e:"Use a bucket or their shirt held out.",h:"Toss slightly to one side."},
+ zh:{n:"爆米花接球",setup:"一个孩子，一个软球，你站在三步远。",how:"轻轻往上抛，让球落进他手里或桶里。先用桶 —— 可以练习盯球，又不怕砸到手指。等他有信心了再改用手接。",cue:"眼睛一直盯着球！",e:"用桶接，或者让他把衣服下摆撑开当兜。",h:"稍微抛偏一点，让他要移动一下。"},
+ es:{n:"Atrapada de palomitas",setup:"Un niño, una pelota blanda, tú a tres pasos.",how:"Lánzala suave para que caiga en sus manos o en una cubeta. Empieza con cubeta — desarrolla el seguimiento visual sin miedo a los dedos. Pasa a las manos cuando tenga confianza.",cue:"¡Míratela hasta el final!",e:"Usa una cubeta o que estiren la camiseta como canasta.",h:"Lánzala un poco hacia un lado."}},
+b11:{tag:"catch",min:3,
+ en:{n:"Catch ladder",setup:"Chalk or cones marking three lines: three, five and seven steps out.",how:"Catch three in a row at the first line and move back a line. Miss two and move forward. Everyone finds their own level, and nobody is compared to anyone else.",cue:"Three in a row and you move back!",e:"Start closer than feels necessary.",h:"Add a fourth line."},
+ zh:{n:"接球升级线",setup:"用粉笔或标志桶画三条线：三步、五步、七步。",how:"在第一条线连接三个就往后退一条线；连丢两个就往前进一条线。每个人都会停在适合自己的位置，也不用和别人比。",cue:"连接三个就往后退！",e:"起始线定得比你觉得需要的还近一点。",h:"再加一条更远的线。"},
+ es:{n:"Escalera de atrapadas",setup:"Gis o conos marcando tres líneas: a tres, cinco y siete pasos.",how:"Atrapa tres seguidas en la primera línea y retrocedes una línea. Falla dos y avanzas una. Cada quien encuentra su nivel y nadie se compara con nadie.",cue:"¡Tres seguidas y te vas para atrás!",e:"Empieza más cerca de lo que parece necesario.",h:"Agrega una cuarta línea."}},
+b5:{tag:"throw",min:4,
+ en:{n:"Hit the target",setup:"Hula hoop on the ground, or a bucket, six steps away.",how:"Everyone throws at the big target. Big target, short distance, lots of reps. Accuracy comes from confidence, confidence comes from hitting things.",cue:"Point your glove hand at the target, then throw!",e:"Move closer. Any contact counts.",h:"Step back. Bonus point for hitting the bucket on the fly."},
+ zh:{n:"扔中目标",setup:"地上放一个呼啦圈，或者一个桶，距离六步。",how:"所有人朝这个大目标扔球。目标大、距离近、次数多。准头来自信心，信心来自“我扔中了”。",cue:"手套那只手指着目标，再扔！",e:"站近一点。碰到就算。",h:"往后退。直接扔进桶里加分。"},
+ es:{n:"Pégale al blanco",setup:"Un aro en el suelo, o una cubeta, a seis pasos.",how:"Todos lanzan al blanco grande. Blanco grande, distancia corta, muchas repeticiones. La puntería viene de la confianza, y la confianza viene de atinarle a cosas.",cue:"¡Apunta con la mano del guante y lanza!",e:"Acércate. Cualquier contacto cuenta.",h:"Retrocede. Punto extra si cae dentro de la cubeta."}},
+b9:{tag:"combine",min:4,
+ en:{n:"Field it and fire",setup:"You roll from home, a bucket sits where first base would be.",how:"Roll a grounder, they chomp it, then throw at the bucket. Two actions in sequence — expect them to forget the throw and just hold the ball, which is normal and fine.",cue:"Chomp it… now throw!",e:"Let them run the ball to the bucket instead of throwing.",h:"Roll it harder or wider."},
+ zh:{n:"接住再传",setup:"你从本垒位置滚球，一垒的位置放一个桶。",how:"你滚地滚球，他们“咬”住，然后朝桶扔过去。这是两个连续动作 —— 他们经常会忘了扔、就抱着球站着，很正常，没关系。",cue:"咬住…… 现在扔！",e:"允许他们抱着球跑到桶那儿放进去，不用扔。",h:"滚得快一点，或者滚偏一点。"},
+ es:{n:"Fildea y dispara",setup:"Tú ruedas desde home, una cubeta donde estaría primera base.",how:"Ruedas un roletazo, lo muerden y lanzan a la cubeta. Dos acciones seguidas — espera que olviden lanzar y se queden con la pelota, lo cual es normal y está bien.",cue:"Muérdela… ¡ahora lanza!",e:"Déjalos correr con la pelota a la cubeta en vez de lanzar.",h:"Ruédala más fuerte o más abierta."}},
+b6:{tag:"game",min:4,
+ en:{n:"Beat the ball",setup:"Tee at home, bases out, you in the field.",how:"Child hits and runs to first. You field it and jog — slowly, theatrically — toward first. They always beat you by a hair. Every time.",cue:"Run run run — drop the bat!",e:"Walk to the ball. Take a wrong turn.",h:"Have them run to second."},
+ zh:{n:"跑赢球",setup:"本垒放打击架，垒都摆好，你在外场。",how:"孩子击球后跑向一垒。你去捡球，然后夸张地、慢慢地朝一垒小跑。他们每次都以毫厘之差赢你。每一次都是。",cue:"快跑快跑 —— 把棒子放下！",e:"改成走过去捡球，还可以走错方向。",h:"让他们一路跑到二垒。"},
+ es:{n:"Gánale a la pelota",setup:"Tee en home, bases puestas, tú en el campo.",how:"El niño batea y corre a primera. Tú fildeas y trotas — lento y teatral — hacia primera. Siempre te ganan por un pelo. Siempre.",cue:"¡Corre corre — suelta el bate!",e:"Camina hacia la pelota. Da una vuelta equivocada.",h:"Que corran hasta segunda."}},
+b10:{tag:"combine",min:4,
+ en:{n:"Hit and run two",setup:"Tee, bases, you fielding.",how:"Hit off the tee and run to first, then keep going to second. Teaches that running continues past the first base. Everyone else stands at the bases cheering, not fielding.",cue:"Don't stop — keep going!",e:"First base only.",h:"All the way around."},
+ zh:{n:"击球跑两个垒",setup:"打击架、垒，你负责接球。",how:"击球后跑到一垒，然后继续跑向二垒。让他们明白到了一垒还要继续跑。其他孩子站在各个垒上加油，不用接球。",cue:"别停 —— 继续跑！",e:"只跑到一垒。",h:"一路跑完全部四个垒。"},
+ es:{n:"Batea y corre dos",setup:"Tee, bases, tú fildeando.",how:"Batea del tee y corre a primera, luego sigue a segunda. Enseña que la carrera no termina en primera. Los demás se paran en las bases echando porras, no fildeando.",cue:"¡No pares — sigue!",e:"Solo hasta primera.",h:"La vuelta completa."}},
+b12:{tag:"game",min:3,
+ en:{n:"Tag the base",setup:"Bases out, everyone at home.",how:"Call a base — 'SECOND!' — and everyone runs to touch it and comes back. Then two bases in order. A running game that quietly drills base recognition.",cue:"Touch it and come back!",e:"Call one base at a time and point.",h:"Call two bases in sequence."},
+ zh:{n:"摸到那个垒",setup:"垒都摆好，所有人站在本垒。",how:"喊一个垒 —— “二垒！” —— 所有人跑过去摸一下再跑回来。熟练之后连喊两个垒，按顺序跑。这是个跑动游戏，顺便把垒的位置记牢。",cue:"摸一下就跑回来！",e:"一次只喊一个垒，并且用手指出来。",h:"一次喊两个垒，按顺序跑。"},
+ es:{n:"Toca la base",setup:"Bases puestas, todos en home.",how:"Grita una base — '¡SEGUNDA!' — y todos corren a tocarla y regresan. Luego dos bases en orden. Un juego de correr que enseña las bases sin que se note.",cue:"¡Tócala y regresa!",e:"Una base a la vez y señálala con el dedo.",h:"Grita dos bases en secuencia."}},
+b13:{tag:"finish",min:5,
+ en:{n:"Mini game",setup:"Tee at home, bases out, everyone plays.",how:"Each child hits and runs the bases. No outs, no innings, no score. The others field wherever they like, which will be all together in one clump. That's fine.",cue:"Everybody run!",e:"One base per hit.",h:"Add one real out — but only if losing doesn't hurt yet."},
+ zh:{n:"迷你比赛",setup:"本垒放打击架，垒都摆好，所有人一起玩。",how:"每个孩子击球然后跑垒。没有出局、没有局数、不记分。其他人爱守哪儿守哪儿 —— 他们大概会全都挤在同一个地方，没关系。",cue:"大家一起跑！",e:"每次击球只跑一个垒。",h:"加入一个真正的“出局” —— 但只有在输了还不难过的时候才加。"},
+ es:{n:"Mini partido",setup:"Tee en home, bases puestas, todos juegan.",how:"Cada niño batea y corre las bases. Sin outs, sin entradas, sin marcador. Los demás fildean donde quieran, que será todos amontonados en el mismo lugar. Está bien así.",cue:"¡Todos a correr!",e:"Una base por batazo.",h:"Agrega un out real — pero solo si perder todavía no duele."}},
+b7:{tag:"finish",min:4,
+ en:{n:"Home run derby",setup:"Everyone around the tee.",how:"One swing each, everyone cheers for everyone, every hit is announced as a home run wherever it goes. Run the bases with hands in the air. End here.",cue:"IT'S OUTTA HERE!",e:"Nothing to make easier. Every hit is a home run.",h:"Don't."},
+ zh:{n:"全垒打大赛",setup:"所有人围在打击架旁边。",how:"每人挥一棒，所有人给所有人鼓掌，不管球打到哪儿都宣布是全垒打。举着双手绕垒跑一圈。每次训练都以这个收尾。",cue:"飞出去啦！",e:"不用再简化了。每一次击球都是全垒打。",h:"别加难度。"},
+ es:{n:"Derby de jonrones",setup:"Todos alrededor del tee.",how:"Un swing cada uno, todos aplauden a todos, y cada batazo se anuncia como jonrón vaya donde vaya. Corran las bases con las manos arriba. Termina aquí.",cue:"¡SE VA, SE VA!",e:"Nada que simplificar. Todo batazo es jonrón.",h:"No lo hagas."}},
+
+/* ---- FLAG FOOTBALL ---- */
+f1:{tag:"warm",min:4,
+ en:{n:"Tail tag",setup:"Everyone in flag belts. Small area marked with cones.",how:"Everyone tries to pull everyone's flags. Yours pulled? Put it back on and keep playing — nobody is out. 60-second bursts. Teaches flag-pulling and running before anyone notices they're learning.",cue:"Grab and pull — put it back on and go!",e:"Bigger area.",h:"Smaller area, or count how many in a minute."},
+ zh:{n:"抢尾巴",setup:"每人系一条腰旗带。用标志桶围出一小块场地。",how:"所有人互相抢对方的旗子。自己的被抢走了？装回去继续玩 —— 没有人出局。每轮60秒。孩子还没意识到在学东西，就已经学会了抢旗和跑动。",cue:"抓住，拉！—— 装回去接着跑！",e:"场地划大一点。",h:"场地缩小，或者数一分钟能抢几条。"},
+ es:{n:"Atrapa la cola",setup:"Todos con cinturones de flags. Área chica marcada con conos.",how:"Todos intentan quitarle los flags a todos. ¿Te quitaron el tuyo? Póntelo otra vez y sigue — nadie sale. Rondas de 60 segundos. Enseña a quitar flags y a correr antes de que nadie note que está aprendiendo.",cue:"¡Agarra y jala — póntelo y corre!",e:"Área más grande.",h:"Área más chica, o cuenten cuántos en un minuto."}},
+f7:{tag:"warm",min:3,
+ en:{n:"Flag pull circle",setup:"Kids in belts standing in a circle around you.",how:"You walk around the inside of the circle. When you pass a child they try to pull your flag. Slow, dramatic, everybody wins constantly. Then reverse — you pull theirs as they run past.",cue:"Quick hands — got it!",e:"Move very slowly and telegraph everything.",h:"Jog, and dodge."},
+ zh:{n:"围圈抢旗",setup:"孩子们系着腰旗带围成一圈，你站中间。",how:"你沿着圈内侧走。走到谁面前，谁就来抢你的旗子。慢一点、夸张一点，让大家不停地成功。然后反过来 —— 他们跑过去，你去抢他们的。",cue:"手要快 —— 抢到啦！",e:"走得非常慢，动作提前做得很明显。",h:"改成小跑，并且做闪避动作。"},
+ es:{n:"Círculo de flags",setup:"Niños con cinturón formando un círculo alrededor de ti.",how:"Caminas por dentro del círculo. Cuando pasas junto a un niño, intenta quitarte el flag. Lento, dramático, todos ganan constantemente. Después al revés — tú les quitas el suyo cuando pasan corriendo.",cue:"¡Manos rápidas — lo tengo!",e:"Muévete muy lento y telegrafía todo.",h:"Trota y esquiva."}},
+f2:{tag:"catch",min:4,
+ en:{n:"Make a nest",setup:"One child three steps in front of you.",how:"Hands out in front, thumbs together, making a nest. Toss softly right into it. Three steps — much closer than feels right. Back up only when they're catching consistently.",cue:"Make a nest — hands, not tummy!",e:"Hand it to them, or toss from one step.",h:"Back up a step. Toss slightly off-centre."},
+ zh:{n:"做一个小窝",setup:"一个孩子站在你前面三步远。",how:"双手伸到身前，两个拇指并拢，像做一个小窝。你轻轻把球抛进那个窝里。就三步 —— 比你觉得应该的距离近得多。等他能稳定接住了再往后退。",cue:"做个小窝 —— 用手接，不是用肚子！",e:"直接递到他手里，或者从一步远抛。",h:"往后退一步。抛得稍微偏一点。"},
+ es:{n:"Haz un nido",setup:"Un niño a tres pasos frente a ti.",how:"Manos al frente, pulgares juntos, formando un nido. Lanza suave justo ahí. Tres pasos — mucho más cerca de lo que parece correcto. Aléjate solo cuando atrapen consistentemente.",cue:"¡Haz un nido — con las manos, no con la panza!",e:"Dásela en la mano, o lánzala desde un paso.",h:"Retrocede un paso. Lánzala un poco descentrada."}},
+f9:{tag:"catch",min:4,
+ en:{n:"Catch on the move",setup:"A cone five steps to your right, child starting beside you.",how:"They run to the cone, turn around, and you toss it into their nest. Catching while moving is a real jump in difficulty — expect a low success rate and celebrate the attempts.",cue:"Run, turn, hands ready!",e:"They stop at the cone and get set before you throw.",h:"Toss while they're still running."},
+ zh:{n:"跑动中接球",setup:"在你右边五步放一个标志桶，孩子站在你旁边起跑。",how:"他跑到桶那儿，转身，你把球抛进他的“小窝”。移动中接球难度是一个大跳跃 —— 成功率会很低，为每一次尝试鼓掌就好。",cue:"跑、转身、手准备好！",e:"让他跑到桶那儿站稳、摆好姿势，你再抛。",h:"在他还没停下来的时候就抛。"},
+ es:{n:"Atrapar en movimiento",setup:"Un cono a cinco pasos a tu derecha, el niño empieza a tu lado.",how:"Corre al cono, se da la vuelta y tú lanzas al nido. Atrapar en movimiento es un salto real de dificultad — espera pocos aciertos y celebra los intentos.",cue:"¡Corre, gira, manos listas!",e:"Que se detengan en el cono y se acomoden antes de lanzar.",h:"Lanza mientras siguen corriendo."}},
+f3:{tag:"run",min:4,
+ en:{n:"Handoff highway",setup:"Two cones as a gate, an end zone ten steps beyond.",how:"Child runs past you, you hand off into their belly, they run through the gate into the end zone and celebrate. Straight back to the line. No standing.",cue:"Hug the ball — two hands!",e:"Hand it over standing still.",h:"Add a defender — you — reaching for their flag."},
+ zh:{n:"交接球通道",setup:"两个标志桶当成一道门，门后十步是达阵区。",how:"孩子从你身边跑过，你把球塞进他怀里，他穿过门冲进达阵区然后庆祝。马上跑回队伍。不许站着。",cue:"把球抱紧 —— 两只手！",e:"站着不动把球递给他。",h:"加一个防守的人 —— 也就是你 —— 伸手去抢旗。"},
+ es:{n:"Autopista de entregas",setup:"Dos conos como puerta, una zona de anotación diez pasos más allá.",how:"El niño pasa corriendo junto a ti, le entregas el balón en la panza, cruza la puerta hacia la zona de anotación y celebra. De regreso a la fila enseguida. Nadie parado.",cue:"¡Abraza el balón — dos manos!",e:"Entrégaselo estando parados.",h:"Agrega un defensor — tú — estirándote por su flag."}},
+f4:{tag:"run",min:3,
+ en:{n:"Weave and score",setup:"Five cones in a line three steps apart, end zone at the end.",how:"Carry the ball, weave through, cross the line, celebrate. Time them if they like numbers. Emphasise hugging the ball the whole way.",cue:"Zigzag — don't drop it!",e:"Fewer cones, wider spacing.",h:"Add a cone they must spin around."},
+ zh:{n:"绕桩达阵",setup:"五个标志桶排成一列，间隔三步，尽头是达阵区。",how:"抱着球绕桩跑，冲过线，庆祝。如果孩子喜欢数字可以给他计时。全程强调把球抱紧。",cue:"之字形 —— 别把球掉了！",e:"桶少一点，间距大一点。",h:"加一个必须绕着转一圈的桶。"},
+ es:{n:"Zigzag y anota",setup:"Cinco conos en fila a tres pasos, zona de anotación al final.",how:"Carga el balón, zigzaguea, cruza la línea, celebra. Tómales el tiempo si les gustan los números. Insiste en abrazar el balón todo el camino.",cue:"¡Zigzag — no lo sueltes!",e:"Menos conos, más separados.",h:"Agrega un cono alrededor del cual deban girar."}},
+f10:{tag:"run",min:3,
+ en:{n:"The gauntlet",setup:"Two lines of cones forming a corridor about four steps wide.",how:"Child carries the ball down the corridor while you stand halfway, reaching slowly for the flag. They learn to protect the ball and change speed. Let them through most of the time.",cue:"Two hands on the ball — go past me!",e:"Wider corridor, you reach very slowly.",h:"Narrower, or add a second reacher."},
+ zh:{n:"闯关走廊",setup:"用两排标志桶围成一条约四步宽的走廊。",how:"孩子抱着球从走廊冲过去，你站在中间，慢慢伸手去抢他的旗。他会学着护球和变速。大部分时候要让他过去。",cue:"两只手抱住球 —— 从我旁边冲过去！",e:"走廊拉宽，你伸手伸得非常慢。",h:"走廊收窄，或者再加一个人伸手。"},
+ es:{n:"El pasillo",setup:"Dos hileras de conos formando un pasillo de unos cuatro pasos de ancho.",how:"El niño corre con el balón por el pasillo mientras tú estás a la mitad estirándote lento por el flag. Aprende a proteger el balón y a cambiar de velocidad. Déjalo pasar casi siempre.",cue:"¡Dos manos en el balón — pásame!",e:"Pasillo más ancho, estírate muy lento.",h:"Más angosto, o agrega un segundo defensor."}},
+f8:{tag:"combine",min:4,
+ en:{n:"Run to the cone",setup:"A cone eight steps downfield.",how:"The first idea of a route: run to the cone and turn around. You throw as they turn. Same play every time until it's automatic — repetition is the point, not variety.",cue:"Run to the cone, turn, catch!",e:"Walk it through once with no ball.",h:"Two cones — they pick which one and you have to guess."},
+ zh:{n:"跑到那个桶",setup:"在前方八步放一个标志桶。",how:"这是“跑动路线”最初的概念：跑到桶那儿，转身。他转身的瞬间你把球抛过去。每次都跑同一条路线，一直跑到变成本能 —— 重点是重复，不是花样。",cue:"跑到桶那儿，转身，接球！",e:"先不带球，一起走一遍。",h:"摆两个桶 —— 他自己选跑哪个，你来猜。"},
+ es:{n:"Corre al cono",setup:"Un cono a ocho pasos hacia adelante.",how:"La primera idea de una ruta: corre al cono y date la vuelta. Lanzas justo cuando gira. La misma jugada siempre hasta que salga sola — el punto es la repetición, no la variedad.",cue:"¡Corre al cono, gira, atrapa!",e:"Camínenlo una vez sin balón.",h:"Dos conos — él elige cuál y tú tienes que adivinar."}},
+f5:{tag:"game",min:4,
+ en:{n:"Sharks and minnows, flags",setup:"Two lines fifteen steps apart, everyone in belts.",how:"Kids run across while you pull flags. Nobody is out — flag pulled, put it back on, run again from the start. Slow and dramatic.",cue:"Run past me — I'm too slow!",e:"Wider field, move slowly.",h:"Add a second flag-puller."},
+ zh:{n:"鲨鱼抓小鱼（腰旗版）",setup:"两条线相距十五步，每人系腰旗带。",how:"孩子从一边跑到另一边，你去抢他们的旗。没有人出局 —— 旗被抢了就装回去，回到起点再跑一次。你要慢，要夸张。",cue:"从我旁边跑过去 —— 我太慢啦！",e:"场地拉宽，你动作放慢。",h:"再加一个抢旗的人。"},
+ es:{n:"Tiburones y sardinas con flags",setup:"Dos líneas a quince pasos, todos con cinturón.",how:"Los niños cruzan corriendo mientras tú quitas flags. Nadie sale — te quitan el flag, te lo pones y corres otra vez desde el inicio. Lento y dramático.",cue:"¡Pásame corriendo — soy muy lento!",e:"Campo más ancho, muévete lento.",h:"Agrega un segundo cazador de flags."}},
+f11:{tag:"finish",min:5,
+ en:{n:"Three against three",setup:"Small field, end zone at each end, everyone in belts.",how:"Every possession ends in a touchdown one way or another. Everyone carries. Invent a celebration dance together and use it every single time.",cue:"TOUCHDOWN! Do the dance!",e:"Two against two, or everyone against you.",h:"One short forward pass per possession."},
+ zh:{n:"三对三",setup:"小场地，两端各一个达阵区，每人系腰旗带。",how:"每一次进攻最后都要以达阵收尾，怎么都行。每个孩子都要有持球的机会。和他们一起编一个庆祝舞，每次达阵都跳。",cue:"达阵！跳舞！",e:"改成二对二，或者所有人一起对你一个。",h:"每次进攻允许一次短传。"},
+ es:{n:"Tres contra tres",setup:"Campo chico, zona de anotación en cada extremo, todos con cinturón.",how:"Cada posesión termina en touchdown de una forma u otra. Todos cargan el balón. Inventen juntos un baile de celebración y úsenlo siempre.",cue:"¡TOUCHDOWN! ¡A bailar!",e:"Dos contra dos, o todos contra ti.",h:"Un pase corto hacia adelante por posesión."}},
+f6:{tag:"finish",min:5,
+ en:{n:"Everybody scores",setup:"Small field, one end zone.",how:"Each child gets the ball, runs, and scores while you chase theatrically behind. Full celebration required. End here every time.",cue:"Go go go — TOUCHDOWN!",e:"Shorter run.",h:"Actually try to pull the flag — sometimes."},
+ zh:{n:"人人都达阵",setup:"小场地，一个达阵区。",how:"每个孩子都拿球跑一次并达阵，你在后面夸张地追。必须庆祝。每次训练都用这个收尾。",cue:"跑跑跑 —— 达阵！",e:"距离缩短。",h:"偶尔真的去抢一次旗。"},
+ es:{n:"Todos anotan",setup:"Campo chico, una zona de anotación.",how:"Cada niño toma el balón, corre y anota mientras tú persigues teatralmente por detrás. Celebración obligatoria. Termina siempre con esto.",cue:"¡Corre corre — TOUCHDOWN!",e:"Distancia más corta.",h:"Intenta quitarle el flag de verdad — a veces."}}
+};
+Object.assign(D,MOVE);
+
+/* ============ SEASONS ============ */
+const W=(ph,en,zh,es,a,b,nw)=>({ph,en,zh,es,a,b,nw});
+const SEASON={
+soccer:[
+ W(0,{t:"Meet the ball",f:"Just getting comfortable with a ball at his feet. No skills yet — only fun and lots of touches.",m:"He can tap the ball with both feet and stop it when you say red light."},
+    {t:"认识这个球",f:"这一周只是让他习惯脚下有个球。先不谈技术，只要好玩、多碰球。",m:"他能用两只脚交替点球，听到“红灯”能把球停住。"},
+    {t:"Conocer el balón",f:"Solo tomar confianza con el balón en los pies. Todavía no hay técnica — solo diversión y muchos toques.",m:"Puede tocar el balón con los dos pies y pararlo cuando dices luz roja."},
+    ["s1","s2","s5","s6"],["s10","s2","s5","s6"],["s1","s2","s5","s6"]),
+ W(0,{t:"Stopping the ball",f:"Adding control. Being able to stop a ball is more useful right now than being able to kick it far.",m:"He can stop the ball with the sole of his foot without looking down the whole time."},
+    {t:"把球停住",f:"开始练控制。现在“能把球停住”比“能踢得远”有用得多。",m:"他能用脚底把球停住，而且不用全程低头盯着球。"},
+    {t:"Parar el balón",f:"Agregamos control. Poder parar el balón sirve más ahora que poder patearlo lejos.",m:"Puede parar el balón con la planta sin mirar hacia abajo todo el tiempo."},
+    ["s1","s2","s3","s5","s6"],["s10","s3","s2","s5","s6"],["s3"]),
+ W(0,{t:"Moving with the ball",f:"Dribbling with little touches instead of one big kick and a long chase.",m:"He takes two or three touches in a row before the ball gets away from him."},
+    {t:"带着球走",f:"用小步触球带球，而不是一脚大脚开出去然后追半天。",m:"他能连续碰球两三次，球才跑掉。"},
+    {t:"Moverse con el balón",f:"Driblar con toques pequeños en vez de un patadón y una persecución larga.",m:"Da dos o tres toques seguidos antes de que se le escape el balón."},
+    ["s1","s3","s9","s5","s6"],["s10","s9","s3","s7","s6"],["s9"]),
+ W(1,{t:"Keep it close",f:"The single most useful soccer habit at this age: the ball stays near your feet.",m:"He can dribble through three gates in a row without losing the ball."},
+    {t:"把球带近",f:"这个年纪最有用的一个足球习惯：球要始终在脚边。",m:"他能连续穿过三个小门而不丢球。"},
+    {t:"Cerca de los pies",f:"El hábito más útil del fútbol a esta edad: el balón se queda cerca de los pies.",m:"Puede driblar por tres puertas seguidas sin perder el balón."},
+    ["s1","s9","s4","s5","s6"],["s10","s4","s9","s7","s6"],["s4"]),
+ W(1,{t:"Turning around",f:"Changing direction with the ball. Expect this to be genuinely hard and take a few weeks.",m:"He can stop at a cone, turn, and dribble back without picking the ball up."},
+    {t:"学会转身",f:"带球变向。这件事是真的难，需要好几周，别着急。",m:"他能在桶前停住、转身、再带球回来，中途不用手抱球。"},
+    {t:"Dar la vuelta",f:"Cambiar de dirección con el balón. Espera que sea genuinamente difícil y tome varias semanas.",m:"Puede parar en el cono, girar y regresar driblando sin levantar el balón."},
+    ["s1","s11","s9","s5","s6"],["s10","s11","s4","s5","s14"],["s11"]),
+ W(1,{t:"Kicking with purpose",f:"Aiming, rather than just booting it. Big targets, short distances, many repetitions.",m:"He can knock down a cone tower from six steps more often than not."},
+    {t:"有目标地踢",f:"是瞄准，不是乱踢。目标要大、距离要近、次数要多。",m:"从六步外踢倒标志桶小塔的成功率超过一半。"},
+    {t:"Patear con intención",f:"Apuntar, no solo darle un patadón. Blancos grandes, distancias cortas, muchas repeticiones.",m:"Derriba una torre de conos desde seis pasos más veces de las que falla."},
+    ["s1","s11","s5","s13","s6"],["s10","s9","s5","s4","s14"],["s13"]),
+ W(2,{t:"Two things in a row",f:"Putting a dribble and a shot together. Sequencing two actions is a real developmental step.",m:"He can dribble through a gate and then shoot without stopping to think in between."},
+    {t:"连着做两件事",f:"把带球和射门连起来。能把两个动作串起来，是发育上一个真正的台阶。",m:"他能穿过小门后直接射门，中间不需要停下来想。"},
+    {t:"Dos cosas seguidas",f:"Unir el dribbling con el tiro. Encadenar dos acciones es un paso real de desarrollo.",m:"Puede driblar por una puerta y disparar sin detenerse a pensar en medio."},
+    ["s1","s9","s13","s5","s6"],["s10","s13","s4","s7","s14"],[]),
+ W(2,{t:"Sharing the ball",f:"The very first idea of a pass: the ball goes to a person on purpose.",m:"He can push the ball to you with the inside of his foot from four steps."},
+    {t:"把球分给别人",f:"传球最初的概念：球是有意送到某个人那里的。",m:"他能从四步外用脚内侧把球推给你。"},
+    {t:"Compartir el balón",f:"La primerísima idea del pase: el balón va hacia una persona a propósito.",m:"Puede empujarte el balón con el interior del pie desde cuatro pasos."},
+    ["s1","s12","s9","s13","s6"],["s10","s12","s4","s5","s14"],["s12"]),
+ W(2,{t:"Playing near friends",f:"Small games with other kids. Everyone chasing the ball together is correct and expected.",m:"He plays a two-minute game without wandering off or asking to stop."},
+    {t:"和小伙伴一起玩",f:"和别的孩子玩小型比赛。所有人挤在一起追球是正常的，也是应该的。",m:"他能玩满两分钟的小比赛，不走神也不要求停下来。"},
+    {t:"Jugar con amigos",f:"Partidos pequeños con otros niños. Que todos persigan el balón juntos es correcto y esperado.",m:"Juega dos minutos sin irse a otro lado ni pedir parar."},
+    ["s1","s12","s4","s13","s14"],["s10","s9","s7","s5","s8"],[]),
+ W(3,{t:"Small-sided games",f:"Mostly playing now. Skills stations get shorter, game time gets longer.",m:"He scores a goal in a real game with other children."},
+    {t:"小型比赛",f:"现在主要是打比赛了。技术环节缩短，比赛时间拉长。",m:"他在和别的孩子的真实比赛中进了一个球。"},
+    {t:"Partidos reducidos",f:"Ahora casi todo es jugar. Las estaciones técnicas se acortan y el juego se alarga.",m:"Anota un gol en un partido real con otros niños."},
+    ["s1","s13","s4","s8"],["s10","s12","s5","s8"],[]),
+ W(3,{t:"Playing longer",f:"Stretching the game a little. Still no positions, still no score.",m:"He plays two three-minute games with a rest between and still wants more."},
+    {t:"打得久一点",f:"比赛时间稍微拉长。仍然不分位置，仍然不记分。",m:"中间休息一次，能打完两场三分钟的比赛，而且还想再来。"},
+    {t:"Jugar más tiempo",f:"Alargar un poco el partido. Todavía sin posiciones y sin marcador.",m:"Juega dos partidos de tres minutos con descanso y todavía quiere más."},
+    ["s1","s9","s13","s8"],["s10","s4","s7","s8"],[]),
+ W(3,{t:"Game day",f:"A celebration, not a test. Invite the friends, play, hand out something small at the end.",m:"He asks when the next season starts."},
+    {t:"比赛日",f:"这是庆祝，不是考试。把小伙伴都叫来，打一场，最后发个小奖品。",m:"他问你下一季什么时候开始。"},
+    {t:"Día de partido",f:"Una celebración, no un examen. Invita a los amigos, jueguen y den algo pequeño al final.",m:"Pregunta cuándo empieza la siguiente temporada."},
+    ["s1","s5","s8","s6"],["s10","s13","s8","s6"],[])
+],
+baseball:[
+ W(0,{t:"Bases and swings",f:"Two things at once: where the bases are, and what a swing feels like off a tee.",m:"He can run the bases in the right order when you call them out."},
+    {t:"垒和挥棒",f:"同时做两件事：搞清楚垒在哪儿，以及从打击架上挥棒是什么感觉。",m:"你喊垒的名字时，他能按正确顺序跑垒。"},
+    {t:"Bases y swings",f:"Dos cosas a la vez: dónde están las bases y cómo se siente un swing desde el tee.",m:"Corre las bases en el orden correcto cuando se las cantas."},
+    ["b1","b2","b3","b7"],["b8","b1","b2","b5","b7"],["b1","b2"]),
+ W(0,{t:"Balls on the ground",f:"Fielding a slow roller with two hands. Ground balls before fly balls, always.",m:"He gets his hands down to a rolling ball instead of reaching with one hand."},
+    {t:"地上的球",f:"用两只手接慢速地滚球。永远先练地滚球，再练高飞球。",m:"他会把手放低去接滚过来的球，而不是单手去够。"},
+    {t:"Pelotas por el suelo",f:"Fildear un roletazo lento con las dos manos. Roletazos antes que elevados, siempre.",m:"Baja las manos hacia la pelota que rueda en vez de estirar una sola."},
+    ["b8","b1","b3","b2","b7"],["b8","b3","b2","b5","b7"],["b3"]),
+ W(0,{t:"Throwing at things",f:"Arm action, aimed at big targets close by. Distance comes much later.",m:"He hits a bucket or hoop from six steps at least half the time."},
+    {t:"朝东西扔",f:"练手臂动作，目标要大、距离要近。距离是很久以后的事。",m:"从六步外扔中桶或呼啦圈的成功率至少一半。"},
+    {t:"Lanzar a blancos",f:"El movimiento del brazo, apuntando a blancos grandes y cercanos. La distancia viene mucho después.",m:"Le atina a la cubeta o al aro desde seis pasos al menos la mitad de las veces."},
+    ["b8","b3","b5","b2","b7"],["b1","b5","b3","b2","b7"],["b5"]),
+ W(1,{t:"Catching softly",f:"Tracking a ball in the air is the hardest skill here. Start absurdly close.",m:"He catches three soft tosses in a row from three steps."},
+    {t:"轻轻接住",f:"追踪空中的球是这里最难的一项。起始距离要近到有点可笑。",m:"从三步外连续接住三个轻抛球。"},
+    {t:"Atrapar suave",f:"Seguir una pelota por el aire es lo más difícil aquí. Empieza absurdamente cerca.",m:"Atrapa tres lanzamientos suaves seguidos desde tres pasos."},
+    ["b8","b4","b3","b2","b7"],["b1","b4","b5","b2","b7"],["b4"]),
+ W(1,{t:"A better swing",f:"Level swing, eyes on the ball, back foot turning. One cue at a time, never two.",m:"He makes contact off the tee on most swings without being reminded to look at it."},
+    {t:"挥棒更像样",f:"挥棒要平、眼睛盯球、后脚转动。一次只说一个要点，绝不说两个。",m:"不用提醒他看球，大部分挥棒都能击中架上的球。"},
+    {t:"Un mejor swing",f:"Swing nivelado, ojos en la pelota, pie de atrás girando. Una indicación a la vez, nunca dos.",m:"Hace contacto en la mayoría de los swings sin que le recuerdes mirar la pelota."},
+    ["b8","b2","b4","b3","b7"],["b1","b2","b11","b5","b7"],["b11"]),
+ W(1,{t:"Running hard",f:"Sprinting to first, dropping the bat, not watching where the ball went.",m:"He drops the bat and runs without being told."},
+    {t:"用力跑",f:"击球后冲向一垒、把棒子丢掉、不要站着看球飞哪儿去了。",m:"不用别人提醒，他自己就会丢下棒子跑。"},
+    {t:"Correr fuerte",f:"Esprintar a primera, soltar el bate, no quedarse viendo a dónde fue la pelota.",m:"Suelta el bate y corre sin que se lo digan."},
+    ["b8","b2","b6","b12","b7"],["b1","b6","b4","b2","b7"],["b6","b12"]),
+ W(2,{t:"Hit and run",f:"Two actions in sequence: swing, then immediately run. Expect forgetting; expect it to be funny.",m:"He hits and runs to first without a pause in between."},
+    {t:"击球就跑",f:"两个连续动作：挥棒，然后马上跑。他会忘，而且会很好笑。",m:"击球后直接跑向一垒，中间没有停顿。"},
+    {t:"Batear y correr",f:"Dos acciones seguidas: swing y correr de inmediato. Espera olvidos; espera que sea chistoso.",m:"Batea y corre a primera sin pausa en medio."},
+    ["b8","b2","b6","b10","b7"],["b1","b10","b4","b5","b7"],["b10"]),
+ W(2,{t:"Field and throw",f:"Also two actions: stop the ball, then throw it somewhere. Big target, no pressure.",m:"He fields a roller and throws toward the bucket rather than holding the ball."},
+    {t:"接住再传出去",f:"同样是两个动作：先把球停住，再扔到某个地方。目标要大，别给压力。",m:"接到地滚球后会朝桶扔过去，而不是抱着球站着。"},
+    {t:"Fildear y lanzar",f:"También dos acciones: parar la pelota y lanzarla a algún lado. Blanco grande, sin presión.",m:"Fildea un roletazo y lanza hacia la cubeta en vez de quedarse con la pelota."},
+    ["b8","b3","b9","b2","b7"],["b1","b9","b4","b6","b7"],["b9"]),
+ W(2,{t:"Everything together",f:"Short stations, more game. He's now doing all four skills in one practice.",m:"He can name what a hit, a catch, a throw and a base are, and do each once."},
+    {t:"全都串起来",f:"技术环节缩短，比赛变多。现在一次训练里四项技能都会用到。",m:"他能说出击球、接球、传球、垒分别是什么，并且各做一次。"},
+    {t:"Todo junto",f:"Estaciones cortas, más juego. Ahora usa las cuatro habilidades en una sola práctica.",m:"Puede nombrar qué es un batazo, una atrapada, un lanzamiento y una base, y hacer cada uno una vez."},
+    ["b8","b2","b9","b6","b7"],["b1","b11","b10","b12","b7"],[]),
+ W(3,{t:"First mini game",f:"A real game shape with no outs, no innings and no score. Everyone hits, everyone runs.",m:"He plays a full round of mini game and stays engaged the whole way through."},
+    {t:"第一场迷你比赛",f:"有比赛的样子，但没有出局、没有局数、不记分。人人都击球，人人都跑垒。",m:"他能完整打完一轮迷你比赛，全程都投入。"},
+    {t:"Primer mini partido",f:"Con forma de partido real pero sin outs, sin entradas y sin marcador. Todos batean, todos corren.",m:"Juega una ronda completa del mini partido y se mantiene enganchado todo el tiempo."},
+    ["b8","b2","b13","b7"],["b1","b9","b13","b7"],["b13"]),
+ W(3,{t:"Playing longer",f:"Two rounds of the mini game with a water break between.",m:"He fields a ball in a game and does something with it."},
+    {t:"打得久一点",f:"打两轮迷你比赛，中间喝水休息一次。",m:"他在比赛中接到一个球，并且对这个球做了点什么。"},
+    {t:"Jugar más tiempo",f:"Dos rondas del mini partido con una pausa de agua en medio.",m:"Fildea una pelota en el partido y hace algo con ella."},
+    ["b8","b3","b13","b7"],["b1","b4","b13","b7"],[]),
+ W(3,{t:"Game day",f:"Invite the friends. Everybody bats, everybody scores, everybody gets announced by name.",m:"He asks to play again tomorrow."},
+    {t:"比赛日",f:"把小伙伴都叫来。人人都击球，人人都得分，每个人上场都要报名字。",m:"他问明天能不能再打一次。"},
+    {t:"Día de partido",f:"Invita a los amigos. Todos batean, todos anotan, y a todos se les anuncia por su nombre.",m:"Pide jugar otra vez mañana."},
+    ["b1","b2","b13","b7"],["b8","b13","b6","b7"],[])
+],
+football:[
+ W(0,{t:"Flags and running",f:"Before any football, just the belt game. Pulling flags is fun entirely on its own.",m:"He can pull a flag off a moving person and put his own back on unassisted."},
+    {t:"旗子和跑",f:"先别碰橄榄球，就玩腰旗。抢旗这件事本身就足够好玩了。",m:"他能从跑动的人身上抢下旗子，并且自己把旗子装回去。"},
+    {t:"Flags y correr",f:"Antes de cualquier football, solo el juego del cinturón. Quitar flags es divertido por sí solo.",m:"Puede quitarle un flag a alguien en movimiento y ponerse el suyo solo."},
+    ["f1","f7","f4","f6"],["f7","f1","f5","f6"],["f1","f7"]),
+ W(0,{t:"Carrying the ball",f:"Two hands on the ball, running to a line. The simplest complete football action there is.",m:"He runs ten steps with the ball held in two hands without dropping it."},
+    {t:"抱着球跑",f:"两只手抱球，跑向一条线。这是橄榄球里最简单的一个完整动作。",m:"他能两手抱着球跑十步而不掉球。"},
+    {t:"Cargar el balón",f:"Dos manos en el balón, correr hacia una línea. La acción completa más simple que existe.",m:"Corre diez pasos con el balón en las dos manos sin soltarlo."},
+    ["f1","f4","f3","f6"],["f7","f3","f4","f5","f6"],["f3","f4"]),
+ W(0,{t:"Catching close up",f:"Hands out, thumbs together, ball tossed from three steps. Closer than feels right.",m:"He catches three soft tosses in a row with his hands rather than his chest."},
+    {t:"近距离接球",f:"双手伸出、拇指并拢，从三步外抛球。比你觉得合适的距离还要近。",m:"他能连续用手（不是用胸口）接住三个轻抛球。"},
+    {t:"Atrapar de cerca",f:"Manos afuera, pulgares juntos, balón lanzado desde tres pasos. Más cerca de lo que parece correcto.",m:"Atrapa tres lanzamientos suaves seguidos con las manos y no con el pecho."},
+    ["f1","f2","f3","f4","f6"],["f7","f2","f5","f4","f6"],["f2"]),
+ W(1,{t:"Running with control",f:"Changing direction while carrying. Weaving, dodging, protecting the ball.",m:"He weaves through five cones without dropping the ball."},
+    {t:"跑得有控制",f:"抱着球变向。绕行、闪躲、护球。",m:"他能绕过五个标志桶而不掉球。"},
+    {t:"Correr con control",f:"Cambiar de dirección cargando el balón. Zigzaguear, esquivar, proteger.",m:"Zigzaguea entre cinco conos sin soltar el balón."},
+    ["f1","f4","f10","f2","f6"],["f7","f10","f3","f5","f6"],["f10"]),
+ W(1,{t:"Handoffs",f:"Taking the ball from someone while moving. Small thing, big feeling of playing properly.",m:"He takes a handoff at a jog and keeps running without stopping."},
+    {t:"接交接球",f:"在移动中从别人手里接过球。动作很小，但会让他觉得自己在“真的打球”。",m:"他能在小跑中接过球并继续跑，中间不停下来。"},
+    {t:"Entregas",f:"Recibir el balón de alguien en movimiento. Cosa pequeña, gran sensación de estar jugando de verdad.",m:"Recibe una entrega trotando y sigue corriendo sin detenerse."},
+    ["f1","f3","f10","f2","f6"],["f7","f3","f4","f5","f6"],[]),
+ W(1,{t:"Catching on the move",f:"Much harder than standing still. Low success rate is expected and completely fine.",m:"He catches one ball after running to a cone and turning."},
+    {t:"跑动中接球",f:"比站着接难得多。成功率低是意料之中，完全没问题。",m:"他能在跑到桶前转身后接住一个球。"},
+    {t:"Atrapar en movimiento",f:"Mucho más difícil que parado. Una tasa baja de aciertos es esperada y está perfectamente bien.",m:"Atrapa un balón después de correr a un cono y girar."},
+    ["f1","f2","f9","f4","f6"],["f7","f9","f10","f5","f6"],["f9"]),
+ W(2,{t:"The first route",f:"Run to the cone, turn, catch. The same play every time until it's automatic.",m:"He runs to the cone and turns around ready without being reminded."},
+    {t:"第一条跑动路线",f:"跑到桶那儿、转身、接球。每次都跑同一条，一直跑到变成本能。",m:"不用提醒，他就会跑到桶那儿转身做好准备。"},
+    {t:"La primera ruta",f:"Corre al cono, gira, atrapa. La misma jugada siempre hasta que salga sola.",m:"Corre al cono y se da la vuelta listo sin que se lo recuerden."},
+    ["f1","f8","f2","f3","f6"],["f7","f8","f9","f5","f6"],["f8"]),
+ W(2,{t:"Defence",f:"Pulling flags on a moving runner. Fun on its own, and the whole of defence at this age.",m:"He pulls a flag off a running child in a game."},
+    {t:"防守",f:"从跑动中的人身上抢旗。本身就很好玩，而且这个年纪的防守就只有这一件事。",m:"他在比赛中从一个跑动的孩子身上抢下了旗子。"},
+    {t:"Defensa",f:"Quitar flags a un corredor en movimiento. Divertido por sí solo, y es toda la defensa a esta edad.",m:"Le quita el flag a un niño que corre durante un partido."},
+    ["f1","f5","f10","f8","f6"],["f7","f5","f3","f9","f11"],[]),
+ W(2,{t:"Real plays",f:"Handoff or short pass, then run to the end zone. A play with two parts.",m:"He completes a handoff play from start to end zone by himself."},
+    {t:"真正的战术",f:"交接球或短传，然后跑向达阵区。一个有两个部分的战术。",m:"他能独立完成一次从接球到达阵的完整战术。"},
+    {t:"Jugadas de verdad",f:"Entrega o pase corto, luego correr a la zona de anotación. Una jugada de dos partes.",m:"Completa una jugada de entrega desde el inicio hasta la zona de anotación él solo."},
+    ["f1","f3","f8","f10","f11"],["f7","f8","f9","f5","f11"],["f11"]),
+ W(3,{t:"First real game",f:"Three against three with flags. Every possession ends in a touchdown.",m:"He scores a touchdown in a game with other children."},
+    {t:"第一场真正的比赛",f:"腰旗三对三。每一次进攻都以达阵收尾。",m:"他在和别的孩子的比赛中完成了一次达阵。"},
+    {t:"Primer partido real",f:"Tres contra tres con flags. Cada posesión termina en touchdown.",m:"Anota un touchdown en un partido con otros niños."},
+    ["f1","f8","f11","f6"],["f7","f3","f11","f6"],[]),
+ W(3,{t:"Playing longer",f:"Two short games with a break. Rotate who carries so nobody is only ever a defender.",m:"He plays two games and both carries the ball and pulls a flag."},
+    {t:"打得久一点",f:"两场短比赛，中间休息。轮流让每个人持球，别让谁一直只当防守。",m:"他打了两场，既持球跑过，也抢下过旗子。"},
+    {t:"Jugar más tiempo",f:"Dos partidos cortos con descanso. Roten quién carga el balón para que nadie sea solo defensor.",m:"Juega dos partidos y tanto carga el balón como quita un flag."},
+    ["f1","f9","f11","f6"],["f7","f10","f11","f6"],[]),
+ W(3,{t:"Game day",f:"Invite the friends. Everybody carries, everybody scores, and the dance happens every time.",m:"He does the celebration dance without being prompted."},
+    {t:"比赛日",f:"把小伙伴都叫来。人人都持球，人人都达阵，每次都要跳庆祝舞。",m:"不用提醒，他自己就跳起了庆祝舞。"},
+    {t:"Día de partido",f:"Invita a los amigos. Todos cargan, todos anotan y el baile pasa siempre.",m:"Hace el baile de celebración sin que nadie se lo pida."},
+    ["f1","f8","f11","f6"],["f7","f3","f11","f6"],[])
+]};
+
+/* ============ GEAR ============ */
+const G=(ic,p,en,zh,es)=>({ic,p,en,zh,es});
+const KIT=[
+ G("ladder","$15–25",
+  {n:"Agility ladder, flat",w:"At four this is a coordination toy, not speed training. Hopping and stepping patterns build real gross-motor control. Never time them against each other."},
+  {n:"敏捷梯（平铺式）",w:"四岁玩这个是练协调，不是练速度。跳格和踩点能实实在在地发展大肌肉控制。千万别拿它给孩子之间计时比赛。"},
+  {n:"Escalera de agilidad plana",w:"A los cuatro es un juguete de coordinación, no entrenamiento de velocidad. Los saltos y patrones de pisada desarrollan control motor real. Nunca les tomes el tiempo unos contra otros."}),
+ G("hurdle","$20–30",
+  {n:"Mini hurdles, 6 inch, set of 6",w:"Buy the shortest ones you can find — 6 inch, foam or collapsible. Two-foot jumping and soft landing is the skill. Anything taller invites tripping and fear."},
+  {n:"迷你跨栏 15厘米 六个装",w:"买能找到的最矮的 —— 15厘米左右，泡沫或可倒式的。要练的是双脚起跳和轻轻落地。再高就容易绊倒，也会让孩子害怕。"},
+  {n:"Mini vallas de 15 cm, juego de 6",w:"Compra las más bajitas que encuentres — 15 cm, de espuma o plegables. La habilidad es saltar con los dos pies y caer suave. Más altas invitan tropiezos y miedo."}),
+ G("tallcone","$12–20",
+  {n:"Tall plastic cones, 9–12 inch, set of 6–12",w:"Different from flat discs and worth owning both. A four-year-old can see a tall cone from the side; a flat disc disappears at ground level. Use tall cones for weaving and gates, discs for boundaries."},
+  {n:"高标志桶 23–30厘米 6–12个装",w:"和扁平标志盘不一样，两种都值得备。四岁孩子从侧面能看见高桶，而扁盘贴地基本看不见。绕行和小门用高桶，划边界用扁盘。"},
+  {n:"Conos altos de plástico, 23–30 cm, juego de 6–12",w:"Distintos de los discos planos y vale la pena tener ambos. Un niño de cuatro ve un cono alto de lado; un disco plano desaparece a ras de suelo. Conos altos para zigzag y puertas, discos para límites."})
+];
+const SPORTS={
+soccer:{
+ en:{name:"Soccer",seasonBlurb:"Twelve weeks from first touch to a real three-a-side game. Two 25-minute sessions a week.",gearBlurb:"One ball per child is the single most important purchase. Two kids sharing a ball means one kid standing still."},
+ zh:{name:"足球",seasonBlurb:"十二周，从第一次碰球到真正的三对三比赛。每周两次，每次25分钟。",gearBlurb:"每个孩子一个球，是最重要的一笔投入。两个孩子共用一个球，意味着有一个孩子在干站着。"},
+ es:{name:"Fútbol",seasonBlurb:"Doce semanas desde el primer toque hasta un partido real de tres contra tres. Dos sesiones de 25 minutos por semana.",gearBlurb:"Un balón por niño es la compra más importante. Dos niños compartiendo un balón significa un niño parado sin hacer nada."},
+ gear:[[
+  G("ball","$12–20 ea",{n:"Size 3 soccer ball — one per child",w:"Size 3 is the standard ball for under-6. Buy one for every kid, plus one for you."},
+   {n:"3号足球 —— 每人一个",w:"3号球是6岁以下的标准用球。每个孩子一个，再加你自己一个。"},
+   {n:"Balón de fútbol talla 3 — uno por niño",w:"La talla 3 es el balón estándar para menores de 6. Compra uno para cada niño y uno para ti."}),
+  G("cone","$10–15",{n:"Disc cones, set of 12–20",w:"Goals, gates, targets, boundaries. The most-used item you'll own."},
+   {n:"扁平标志盘 12–20个装",w:"当球门、小门、目标、边界都行。你会用得最多的一件东西。"},
+   {n:"Conos de disco, juego de 12–20",w:"Porterías, puertas, blancos, límites. Lo que más vas a usar."}),
+  G("bottle","$5–10",{n:"Water bottle per child, labeled",w:"Four-year-olds drink from whichever bottle is closest. Names in Sharpie."},
+   {n:"每人一个水壶，写上名字",w:"四岁孩子会拿离自己最近的那个瓶子喝。用记号笔写上名字。"},
+   {n:"Botella de agua por niño, con nombre",w:"Los niños de cuatro toman de la botella que esté más cerca. Nombres con marcador."})],
+ [G("goal","$25–45",{n:"Two pop-up goals, 3–4 ft",w:"A real goal to score in is worth more motivation than any drill you can design."},
+   {n:"两个便携折叠球门 约1米",w:"一个能真正射进去的球门，比你能设计的任何练习都更能激励孩子。"},
+   {n:"Dos porterías plegables de 1 m",w:"Una portería real donde anotar motiva más que cualquier ejercicio que puedas diseñar."}),
+  G("shirt","$15–25",{n:"Pinnies or two colors of t-shirts",w:"Needed once you play team games. Color beats explanation at this age."},
+   {n:"分队背心，或两种颜色的T恤",w:"开始打分队比赛后就需要。这个年纪，颜色比讲解管用得多。"},
+   {n:"Petos o playeras de dos colores",w:"Se necesitan cuando ya juegan por equipos. A esta edad el color funciona mejor que la explicación."}),
+  G("shin","$8–15 ea",{n:"Shin guards",w:"Only if kids will be near each other's feet. For solo skill work, skip them."},
+   {n:"护腿板",w:"只有当孩子们会互相靠近踢球时才需要。单独练技术就不用。"},
+   {n:"Espinilleras",w:"Solo si los niños van a estar cerca de los pies de otros. Para técnica en solitario, sáltalas."})],
+ [G("miniball","$8–12",{n:"Mini size 1 ball",w:"Great for indoor touches on rainy days and for tiny feet."},
+   {n:"1号迷你球",w:"下雨天在室内碰球很好用，也更适合小脚。"},
+   {n:"Balón mini talla 1",w:"Ideal para tocar en interiores los días de lluvia y para pies pequeños."}),
+  G("chalk","$4–8",{n:"Sidewalk chalk",w:"Draw the field, the targets, the start line. Cheapest coaching tool there is."},
+   {n:"马路粉笔",w:"画场地、画目标、画起跑线。最便宜的教学工具。"},
+   {n:"Gis para banqueta",w:"Dibuja la cancha, los blancos, la línea de salida. La herramienta de entrenamiento más barata que existe."})]],
+ skip:{en:[["Cleats","Sneakers are fine on grass at this age. Feet grow out of cleats before they're worn in."],["Rebounders and passing arcs","For kids who can already strike a ball with intent."],["Team uniforms","Save it for their first real league."]],
+  zh:[["足球鞋","这个年纪在草地上穿普通运动鞋就够了。鞋还没穿软，脚就已经长大了。"],["回弹网和传球架","那是给已经能有意识击球的孩子用的。"],["队服","留到他第一次参加真正的联赛再说。"]],
+  es:[["Tacos","Los tenis están bien en pasto a esta edad. Los pies crecen antes de que los tacos se amolden."],["Rebotadores y arcos de pase","Para niños que ya golpean el balón con intención."],["Uniformes de equipo","Guárdalo para su primera liga real."]]}},
+
+baseball:{
+ en:{name:"T-Ball",seasonBlurb:"Twelve weeks from first swing off a tee to a full mini game. Two 25-minute sessions a week.",gearBlurb:"Buy soft balls and a tee first. A glove is genuinely optional at four — hands and buckets work better while they learn to track a ball."},
+ zh:{name:"棒球",seasonBlurb:"十二周，从第一次在打击架上挥棒到完整的迷你比赛。每周两次，每次25分钟。",gearBlurb:"先买软球和打击架。四岁孩子手套真的可以先不买 —— 在学会盯球之前，用手和桶反而更好用。"},
+ es:{name:"T-Ball",seasonBlurb:"Doce semanas desde el primer swing en el tee hasta un mini partido completo. Dos sesiones de 25 minutos por semana.",gearBlurb:"Compra pelotas blandas y un tee primero. El guante es genuinamente opcional a los cuatro — las manos y una cubeta funcionan mejor mientras aprenden a seguir la pelota."},
+ gear:[[
+  G("tee","$25–45",{n:"Adjustable batting tee",w:"The whole sport at this age. Adjustable so it grows with him."},
+   {n:"可调高度打击架",w:"这个年纪整个运动就靠它。要买可调的，能跟着孩子长。"},
+   {n:"Tee de bateo ajustable",w:"Todo el deporte a esta edad. Ajustable para que crezca con él."}),
+  G("foamball","$15–30",{n:"Soft foam or reduced-impact balls, 8–12",w:"Buy more than you think. Chasing balls is the enemy of practice tempo."},
+   {n:"软泡沫球或减震球 8–12个",w:"买得比你以为需要的多。到处捡球是训练节奏最大的敌人。"},
+   {n:"Pelotas de espuma o de impacto reducido, 8–12",w:"Compra más de las que crees. Ir por las pelotas es el enemigo del ritmo de la práctica."}),
+  G("bat","$20–35",{n:"Lightweight bat, 24–26 inch",w:"Light beats long. If he can't swing it level with one hand, it's too heavy."},
+   {n:"轻量球棒 61–66厘米",w:"轻比长重要。如果他单手挥不平，就是太重了。"},
+   {n:"Bate ligero de 61–66 cm",w:"Ligero le gana a largo. Si no puede moverlo nivelado con una mano, pesa demasiado."}),
+  G("base","$12–22",{n:"Throw-down bases, set of 4",w:"Flat rubber bases. Learning base order is half of early t-ball."},
+   {n:"平铺式垒包 4个装",w:"扁平橡胶垒包。早期棒球有一半就是在学垒的顺序。"},
+   {n:"Bases de hule planas, juego de 4",w:"Bases planas de hule. Aprender el orden de las bases es la mitad del t-ball inicial."})],
+ [G("bucket","$0–10",{n:"Big bucket or laundry basket",w:"For catching practice and for holding balls. You already own one."},
+   {n:"大桶或洗衣篮",w:"练接球用，也用来装球。你家里肯定已经有了。"},
+   {n:"Cubeta grande o canasta de ropa",w:"Para practicar atrapadas y para guardar pelotas. Ya tienes una en casa."}),
+  G("hoop","$5–10",{n:"Hula hoop or large target",w:"Something big to throw at. Big targets build confident arms."},
+   {n:"呼啦圈或大目标",w:"要有个大东西给他扔。目标大，手臂才有信心。"},
+   {n:"Aro o blanco grande",w:"Algo grande a lo que lanzar. Los blancos grandes crean brazos con confianza."}),
+  G("glove","$20–35",{n:"Glove, 9–10 inch, soft",w:"Only once he catches against his chest reliably. A stiff glove makes catching harder, not easier."},
+   {n:"手套 9–10英寸 要软",w:"等他能稳定地用胸口接住球之后再买。硬手套只会让接球更难，不会更简单。"},
+   {n:"Guante de 9–10 pulgadas, suave",w:"Solo cuando ya atrape contra el pecho de forma confiable. Un guante rígido hace la atrapada más difícil, no más fácil."})],
+ [G("tee","$25–45",{n:"Second tee",w:"Doubles the swings per practice. The best upgrade once friends come over."},
+   {n:"第二个打击架",w:"每次训练的挥棒次数直接翻倍。有小伙伴来的时候，这是最值的升级。"},
+   {n:"Segundo tee",w:"Duplica los swings por práctica. La mejor mejora cuando vienen los amigos."}),
+  G("miniball","$8–15",{n:"Whiffle balls",w:"For soft toss and for indoors."},
+   {n:"洞洞球",w:"用来轻抛练习，也适合室内。"},
+   {n:"Pelotas whiffle",w:"Para lanzamientos suaves y para interiores."})]],
+ skip:{en:[["Real baseballs","Hard balls at this age create flinching that takes years to undo."],["Batting helmet","Not needed until someone is pitching. Off a tee there's nothing to duck."],["Pitching machine","Far too fast, far too soon."],["Cleats and batting gloves","Sneakers and bare hands. He'll outgrow both before they matter."]],
+  zh:[["真皮硬棒球","这个年纪碰硬球会形成躲闪反应，以后要花好几年才改得掉。"],["打击头盔","要等到有人投球才需要。从架子上打球，没有什么需要躲。"],["发球机","太快了，也太早了。"],["棒球鞋和打击手套","普通运动鞋和光手就行。还没等用上，他就长大了。"]],
+  es:[["Pelotas de béisbol reales","Las pelotas duras a esta edad generan un reflejo de encogerse que cuesta años quitar."],["Casco de bateo","No se necesita hasta que alguien lance. Desde el tee no hay nada de qué agacharse."],["Máquina de lanzar","Demasiado rápido y demasiado pronto."],["Tacos y guantillas de bateo","Tenis y manos desnudas. Los superará antes de que importen."]]}},
+
+football:{
+ en:{name:"Flag football",seasonBlurb:"Twelve weeks from pulling flags to a three-a-side flag game. Two 25-minute sessions a week.",gearBlurb:"Flag belts and a soft ball are the whole kit. There is no version of this where a four-year-old needs a helmet."},
+ zh:{name:"腰旗橄榄球",seasonBlurb:"十二周，从抢旗子到三对三腰旗比赛。每周两次，每次25分钟。",gearBlurb:"腰旗带和一个软球就是全部装备。四岁孩子在任何情况下都不需要头盔。"},
+ es:{name:"Flag football",seasonBlurb:"Doce semanas desde quitar flags hasta un partido de tres contra tres. Dos sesiones de 25 minutos por semana.",gearBlurb:"Cinturones de flags y un balón blando son todo el equipo. No existe una versión de esto donde un niño de cuatro años necesite casco."},
+ gear:[[
+  G("football","$10–20",{n:"Foam or pee-wee football",w:"Soft and small enough for small hands. A regulation ball is unusable at this age."},
+   {n:"泡沫或幼儿尺寸橄榄球",w:"够软、够小，小手能抓住。标准尺寸的球这个年纪根本用不了。"},
+   {n:"Balón de espuma o tamaño pee-wee",w:"Suave y suficientemente chico para manos pequeñas. Un balón reglamentario es inusable a esta edad."}),
+  G("flagbelt","$15–30",{n:"Flag belt set, 6–12 belts",w:"The belts are the game. Pulling flags is fun on its own, before any football happens."},
+   {n:"腰旗带 6–12条装",w:"腰旗带本身就是这个游戏。还没开始打橄榄球，光抢旗就已经很好玩了。"},
+   {n:"Juego de cinturones de flags, 6–12",w:"Los cinturones son el juego. Quitar flags es divertido por sí solo, antes de que haya football."}),
+  G("cone","$10–15",{n:"Disc cones, set of 12–20",w:"End zones, gates, weave courses, boundaries."},
+   {n:"扁平标志盘 12–20个装",w:"用来划达阵区、小门、绕桩路线和边界。"},
+   {n:"Conos de disco, juego de 12–20",w:"Zonas de anotación, puertas, circuitos de zigzag, límites."})],
+ [G("football","$10–20",{n:"Second foam football",w:"So two kids carry at once instead of one carrying and three watching."},
+   {n:"第二个泡沫橄榄球",w:"这样能同时两个孩子持球跑，而不是一个跑三个看。"},
+   {n:"Segundo balón de espuma",w:"Para que dos niños carguen a la vez en vez de uno cargando y tres mirando."}),
+  G("shirt","$15–25",{n:"Two colors of pinnies",w:"Once you play teams, color is the only way a four-year-old tracks who's who."},
+   {n:"两种颜色的分队背心",w:"开始分队之后，颜色是四岁孩子唯一能分清谁是谁的办法。"},
+   {n:"Petos de dos colores",w:"Cuando juegan por equipos, el color es la única forma en que un niño de cuatro distingue quién es quién."})],
+ [G("miniball","$6–12",{n:"Soft mini ball for indoors",w:"For catching practice on the carpet."},
+   {n:"室内软迷你球",w:"在地毯上练接球用。"},
+   {n:"Mini balón suave para interiores",w:"Para practicar atrapadas sobre la alfombra."}),
+  G("chalk","$4–8",{n:"Sidewalk chalk",w:"Draw the end zone. Kids run harder toward a line they can see."},
+   {n:"马路粉笔",w:"画出达阵区。看得见的线，孩子才会拼命往那儿跑。"},
+   {n:"Gis para banqueta",w:"Dibuja la zona de anotación. Los niños corren más fuerte hacia una línea que pueden ver."})]],
+ skip:{en:[["Helmets and shoulder pads","There is no contact at this age, so there is nothing to pad. Owning them suggests a game you shouldn't be playing yet."],["Leather or regulation-size footballs","Too big and too hard to grip or catch."],["Cleats","Sneakers on grass are fine."],["Anything with a playbook","Route trees and formations are years away."]],
+  zh:[["头盔和护肩","这个年纪没有身体对抗，没有需要保护的部位。买了反而暗示在打一种现在不该打的球。"],["真皮或标准尺寸橄榄球","太大太硬，抓不住也接不住。"],["橄榄球鞋","草地上穿普通运动鞋就行。"],["任何带战术手册的东西","路线树和阵型是好几年以后的事。"]],
+  es:[["Cascos y hombreras","No hay contacto a esta edad, así que no hay nada que proteger. Tenerlos sugiere un juego que todavía no deberían jugar."],["Balones de piel o tamaño reglamentario","Demasiado grandes y duros para agarrar o atrapar."],["Tacos","Tenis en el pasto están bien."],["Cualquier cosa con libro de jugadas","Los árboles de rutas y las formaciones están a años de distancia."]]}}};
+
+/* ============ COACH CONTENT ============ */
+const RULES={
+en:[["25","Twenty-five minutes, total","Attention at four is roughly two to five minutes per activity. A 25-minute practice that stays fun beats an hour that falls apart."],
+ ["1","One ball each","Two kids sharing a ball means one kid touching a ball. Never let a child stand and watch another child practice."],
+ ["✕","No lines, no laps, no lectures","If a child is standing in a line, the practice has stopped. If you're talking for more than fifteen seconds, so has their attention."],
+ ["▶","Games, not drills","Same skill, different wrapper. 'Dribble between cones' is a drill. 'Escape the shark' is a game. They are identical and only one of them works."],
+ ["♥","Nobody ever sits out","Elimination games at this age produce a crying child and a ruined practice. Redesign every game so getting caught means rejoining immediately."],
+ ["!","Say every child's name often","Being seen matters more than being coached. Use names constantly, especially the quiet one."],
+ ["↺","One instruction at a time","'Dribble to the cone' — not 'dribble to the cone, then turn, then pass.' Give the next instruction when the first is done."],
+ ["★","End while they still want more","Stop at the peak, not the collapse. The goal of practice one is that they ask for practice two."]],
+zh:[["25","总共二十五分钟","四岁孩子对每项活动的注意力大约是二到五分钟。一次全程好玩的25分钟训练，胜过一小时的兵荒马乱。"],
+ ["1","每人一个球","两个孩子共用一个球，等于只有一个孩子在碰球。绝不要让一个孩子站着看另一个孩子练。"],
+ ["✕","不排队、不跑圈、不训话","只要有孩子在排队，训练就已经停了。你只要讲超过十五秒，他的注意力也停了。"],
+ ["▶","要游戏，不要练习","同样的技能，换个包装。“绕桶带球”是练习，“逃离鲨鱼”是游戏。内容完全一样，但只有一个管用。"],
+ ["♥","永远不让人出局","这个年纪的淘汰制游戏，结果就是一个哭的孩子和一场毁掉的训练。把每个游戏都改成：被抓到就立刻重新加入。"],
+ ["!","经常叫每个孩子的名字","“被看见”比“被指导”重要得多。不停地叫名字，尤其是那个最安静的孩子。"],
+ ["↺","一次只给一条指令","说“带球到桶那儿” —— 而不是“带球到桶那儿，然后转身，然后传球”。第一件事做完了，再说第二件。"],
+ ["★","在他还想玩的时候收","要在最高点停，不要停在崩溃点。第一次训练的唯一目标，就是让他主动要求第二次。"]],
+es:[["25","Veinticinco minutos en total","La atención a los cuatro años es de dos a cinco minutos por actividad. Una práctica de 25 minutos que sigue divertida vale más que una hora que se desmorona."],
+ ["1","Un balón por niño","Dos niños compartiendo un balón significa un niño tocando el balón. Nunca dejes que un niño se quede parado viendo a otro practicar."],
+ ["✕","Sin filas, sin vueltas, sin sermones","Si un niño está formado en una fila, la práctica se detuvo. Si hablas más de quince segundos, su atención también."],
+ ["▶","Juegos, no ejercicios","La misma habilidad con otra envoltura. 'Dribla entre los conos' es un ejercicio. 'Escapa del tiburón' es un juego. Son idénticos y solo uno funciona."],
+ ["♥","Nadie se queda fuera","Los juegos de eliminación a esta edad producen un niño llorando y una práctica arruinada. Rediseña cada juego para que ser atrapado signifique volver a entrar de inmediato."],
+ ["!","Di el nombre de cada niño seguido","Ser visto importa más que ser corregido. Usa los nombres constantemente, sobre todo el del más callado."],
+ ["↺","Una instrucción a la vez","'Dribla hasta el cono' — no 'dribla hasta el cono, luego gira, luego pasa'. Da la siguiente instrucción cuando la primera esté hecha."],
+ ["★","Termina cuando todavía quieren más","Para en el punto alto, no en el derrumbe. La meta de la práctica uno es que pidan la práctica dos."]]};
+
+const FIXES={
+en:[["A child wanders off mid-practice","Completely normal at four and not defiance. Don't chase or negotiate. Keep the game loud and fun and they'll drift back — kids return to energy. If they don't, let them watch; watching is participating at this age. Never make it a battle you have to win."],
+ ["My son melts down when he loses","Then stop keeping score. At four, competition adds nothing and costs a lot. Make outcomes shared: 'we scored six goals as a team.' Reintroduce winning around six or seven when they can handle it."],
+ ["One kid dominates and the others fade","Give the strong one a job — 'you're my assistant coach this game' — or a handicap he'll find funny, like using only his weak foot. Never frame it as a fairness problem in front of the group."],
+ ["Nobody is listening to me","You're probably talking too long. Cut every explanation to one sentence and demonstrate instead. Get low, get their eyes, use names. If the group has genuinely gone, switch to the finishing game and end early on a good note."],
+ ["He wants to quit halfway through","Ask if he wants to do one more fun thing and then be done — offer the finishing game. Nearly always they'll do it and leave happy. Forcing a four-year-old to finish teaches them the sport is something to endure."],
+ ["We missed two weeks. Do we restart?","No. Repeat the last week you did and carry on. The season is a ladder, not a schedule — nothing breaks if a rung takes a fortnight."],
+ ["He's ahead of the plan. Skip forward?","Only if he's clearing the weekly milestone easily and asking for harder. Boredom is a real risk too. Better move is to keep the week and use the 'too easy' variation on each station."],
+ ["Is the ladder and hurdle stuff actually useful?","At four, yes — but as movement play, not athletic training. Jumping, hopping and stepping patterns build the gross-motor control every sport sits on top of. What is not useful is timing them, ranking them, or treating it as speed work."],
+ ["My child is fine but his friend is shy","Don't spotlight them. Give a parallel task beside the group rather than in front of it, and let them join when ready. Two or three sessions watching from the edge is a normal on-ramp."]],
+zh:[["有孩子练到一半跑掉了","四岁孩子这样完全正常，不是不听话。别去追，也别去讲条件。把游戏搞得又响又好玩，他自己会晃回来 —— 孩子会往有能量的地方走。如果他不回来，就让他在旁边看；这个年纪，看着也算参与。千万别把这变成一场你非赢不可的较量。"],
+ ["我儿子一输就崩溃","那就别计分。四岁玩竞争没有任何好处，代价却很大。把结果说成共同的：“我们一队一共进了六个球。”等六七岁能承受了再把输赢放回来。"],
+ ["有个孩子太强，其他人就不玩了","给那个强的孩子安排个任务 —— “这局你当我的助理教练” —— 或者给他一个他自己也觉得好笑的限制，比如只能用不顺的那只脚。千万别当着大家的面把这说成“公平问题”。"],
+ ["没人听我说话","多半是你讲太久了。把每个解释压缩成一句话，剩下的用示范。蹲下来、和他对上眼、叫名字。如果这群孩子是真的散了，就直接切到收尾游戏，提前在一个好气氛里结束。"],
+ ["他练到一半就想不练了","问他要不要再玩一个好玩的然后就结束 —— 把收尾游戏拿出来。几乎每次他都会玩，而且是高高兴兴走的。强迫四岁孩子练完，只会让他觉得这项运动是要忍耐的东西。"],
+ ["我们中间断了两周，要重头开始吗？","不用。把上次做的那一周再做一遍，然后继续往下走。这个赛季是一架梯子，不是一张时间表 —— 某一级台阶花了两周，什么都不会坏。"],
+ ["他进度超前了，可以跳过去吗？","只有当他很轻松就达到本周目标、而且主动要求更难的时候才跳。无聊也是真实的风险。更好的做法是留在这一周，但每个环节都用“太简单了”那一档的加难版本。"],
+ ["敏捷梯和跨栏这些真的有用吗？","四岁的话，有用 —— 但要当成体能游戏，不是运动训练。跳跃、单脚跳、踩点这些动作，练的是所有运动都建立在上面的大肌肉控制能力。没用的是给他们计时、排名次，或者当成速度训练来练。"],
+ ["我孩子没问题，但他的小伙伴很害羞","别把注意力聚到他身上。给他安排一个在旁边同时进行的任务，而不是在大家面前表演的任务，等他准备好了自然会加入。在边上看两三次课，是很正常的过渡。"]],
+es:[["Un niño se va a media práctica","Completamente normal a los cuatro y no es rebeldía. No lo persigas ni negocies. Mantén el juego ruidoso y divertido y regresará solo — los niños vuelven hacia donde hay energía. Si no vuelve, déjalo mirar; mirar es participar a esta edad. Nunca lo conviertas en una batalla que tengas que ganar."],
+ ["Mi hijo colapsa cuando pierde","Entonces deja de llevar marcador. A los cuatro, la competencia no aporta nada y cuesta mucho. Haz los resultados compartidos: 'anotamos seis goles como equipo'. Reintroduce el ganar alrededor de los seis o siete, cuando ya lo puedan manejar."],
+ ["Un niño domina y los demás se apagan","Dale al fuerte una tarea — 'este partido eres mi entrenador asistente' — o una desventaja que le parezca chistosa, como usar solo el pie malo. Nunca lo plantees como un problema de justicia frente al grupo."],
+ ["Nadie me hace caso","Probablemente hablas demasiado. Reduce cada explicación a una frase y demuestra en vez de explicar. Agáchate, busca sus ojos, usa los nombres. Si el grupo ya se fue de verdad, pasa al juego de cierre y termina temprano en buen momento."],
+ ["Quiere dejarlo a la mitad","Pregúntale si quiere hacer una cosa divertida más y ya — ofrécele el juego de cierre. Casi siempre lo harán y se irán contentos. Obligar a un niño de cuatro a terminar le enseña que el deporte es algo que hay que aguantar."],
+ ["Nos saltamos dos semanas. ¿Reiniciamos?","No. Repite la última semana que hicieron y sigan. La temporada es una escalera, no un calendario — no se rompe nada si un escalón toma quince días."],
+ ["Va adelantado. ¿Nos saltamos semanas?","Solo si supera la meta semanal con facilidad y pide más dificultad. El aburrimiento también es un riesgo real. Mejor quédate en la semana y usa la variante '¿Muy fácil?' de cada estación."],
+ ["¿La escalera y las vallas sirven de algo?","A los cuatro, sí — pero como juego de movimiento, no como entrenamiento atlético. Saltar y los patrones de pisada construyen el control motor grueso sobre el que se apoya todo deporte. Lo que no sirve es cronometrarlos, rankearlos o tratarlo como trabajo de velocidad."],
+ ["Mi hijo está bien pero su amigo es tímido","No lo pongas en el centro. Dale una tarea paralela junto al grupo en vez de frente al grupo, y déjalo entrar cuando esté listo. Dos o tres sesiones mirando desde la orilla es una rampa de entrada normal."]]};
+
+/* ============ STATE ============ */
+let sport="soccer", lang="en", ab="a", week=1, kit=false;
+let plan=[], idx=0, remain=0, tick=null, running=false, memOnly=false;
+const checked={}, done={}, curWeek={soccer:1,baseball:1,football:1};
+const t=()=>T[lang];
+const key=(w,s)=>sport+"|"+w+"|"+s;
+const dl=d=>d[lang]||d.en;
+
+/* Storage: uses the browser's localStorage when hosted on a normal website,
+   falls back to Claude's storage API, and finally to memory-only. */
+const STORE=(()=>{
+  try{
+    const k="__bc_test__"; localStorage.setItem(k,"1"); localStorage.removeItem(k);
+    return {get:k=>{const v=localStorage.getItem(k); return v==null?null:{value:v};},
+            set:(k,v)=>localStorage.setItem(k,v)};
+  }catch(e){}
+  if(typeof window!=="undefined" && window.storage){
+    return {get:async k=>{try{return await window.storage.get(k);}catch(e){return null;}},
+            set:async (k,v)=>{try{await window.storage.set(k,v);}catch(e){}}};
+  }
+  return {get:()=>null,set:()=>{}};
+})();
+async function loadAll(){
+  try{
+    const a=await STORE.get("bc3:checks"); if(a&&a.value) Object.assign(checked,JSON.parse(a.value));
+    const b=await STORE.get("bc3:done");   if(b&&b.value) Object.assign(done,JSON.parse(b.value));
+    const c=await STORE.get("bc3:week");   if(c&&c.value) Object.assign(curWeek,JSON.parse(c.value));
+    const d=await STORE.get("bc3:prefs");  if(d&&d.value){const o=JSON.parse(d.value); lang=o.lang||"en"; kit=!!o.kit;}
+  }catch(e){}
+}
+async function save(k,o){ try{ await STORE.set(k,JSON.stringify(o)); }catch(e){} }
+const savePrefs=()=>save("bc3:prefs",{lang,kit});
+
+/* ============ STATIC LABELS ============ */
+function paintChrome(){
+  const L=t();
+  document.body.dataset.lang=lang;
+  document.documentElement.lang = lang==="zh"?"zh-CN":lang;
+  document.getElementById("brandTxt").innerHTML=L.brand;
+  document.querySelectorAll("#langsw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===lang));
+  document.querySelectorAll("#sportsw button").forEach(b=>{
+    b.querySelector(".lbl").textContent=L[b.dataset.s];
+    b.setAttribute("aria-pressed",b.dataset.s===sport);
+  });
+  const navL={basics:L.nBasics,season:L.nSeason,practice:L.nPractice,gear:L.nGear,coach:L.nCoach};
+  document.querySelectorAll("nav button").forEach(b=>b.querySelector(".lbl").textContent=navL[b.dataset.t]);
+  document.getElementById("seasonH").textContent=L.seasonH;
+  document.getElementById("seasonNote").textContent=L.seasonNote;
+  document.querySelector('#abrow button[data-ab="a"]').textContent=L.sessA;
+  document.querySelector('#abrow button[data-ab="b"]').textContent=L.sessB;
+  document.getElementById("kitT").textContent=L.kitT;
+  document.getElementById("kitS").textContent=L.kitS;
+  document.getElementById("mileH").textContent=L.mileH;
+  document.getElementById("startBtn").textContent=L.start;
+  document.getElementById("planNote").textContent=L.planNote;
+  document.getElementById("budgetL").textContent=L.checkedOff;
+  document.getElementById("skipH").textContent=L.dontBuy;
+  document.getElementById("gearNote").textContent=L.gearNote;
+  document.getElementById("coachH").textContent=L.coachH;
+  document.getElementById("rulesH").textContent=L.rulesH;
+  document.getElementById("devH").textContent=L.devH;
+  document.getElementById("fixH").textContent=L.fixH;
+  document.getElementById("canDo").innerHTML=L.canDo;
+  document.getElementById("cantDo").innerHTML=L.cantDo;
+  document.getElementById("coachNote").textContent=L.coachNote;
+  document.getElementById("runQuit").textContent=L.end;
+  document.getElementById("runSkip").textContent=L.skip;
+  document.getElementById("kitToggle").setAttribute("aria-pressed",kit);
+  document.getElementById("rulesList").innerHTML=RULES[lang].map(([k,h,p])=>
+   `<div class="rule"><div class="k">${k}</div><div><h4>${h}</h4><p>${p}</p></div></div>`).join("");
+  document.getElementById("fixList").innerHTML=FIXES[lang].map(([q,a])=>
+   `<details class="fix"><summary>${q}</summary><div class="ans">${a}</div></details>`).join("");
+}
+
+/* ============ BASICS ============ */
+function renderBasics(){
+  const L=t(), B=BASICS[sport], X=B[lang]||B.en;
+  document.getElementById("basicsH").textContent=L.basicsH;
+  document.getElementById("basicsOne").textContent=X.one;
+  document.getElementById("fieldH").textContent=L.fieldH;
+  document.getElementById("gameH").textContent=L.gameH;
+  document.getElementById("scoreH").textContent=L.scoreH;
+  document.getElementById("rulesBH").textContent=L.rulesBH;
+  document.getElementById("age4H").textContent=L.age4H;
+  document.getElementById("wordsH").textContent=L.wordsH;
+  document.getElementById("basicsNote").textContent=L.basicsNote;
+  document.getElementById("figField").innerHTML=FIG[B.fig](X.labels)+`<p class="figcap">${X.cap}</p>`;
+  document.getElementById("figAge4").innerHTML=FIG[B.fig2](X.labels)+`<p class="figcap">${X.cap2}</p>`;
+  document.getElementById("gameP").textContent=X.game;
+  document.getElementById("scoreP").textContent=X.score;
+  document.getElementById("age4P").textContent=X.age4;
+  document.getElementById("rulesB").innerHTML=X.rules.map(([h,p],i)=>
+    `<div class="ruleB"><div class="n">${i+1}</div><div><h4>${h}</h4><p>${p}</p></div></div>`).join("");
+  document.getElementById("wordsList").innerHTML=X.words.map(([w,d])=>
+    `<div class="word"><b>${w}</b><span>${d}</span></div>`).join("");
+}
+
+/* ============ SEASON ============ */
+function renderSeason(){
+  const L=t(), S=SPORTS[sport], wks=SEASON[sport];
+  document.getElementById("seasonBlurb").textContent=dl(S).seasonBlurb;
+  const comp=wks.reduce((a,_,i)=>a+(done[key(i+1,"a")]?1:0)+(done[key(i+1,"b")]?1:0),0);
+  document.getElementById("seasonMeta").textContent=comp+" / "+(wks.length*2)+" "+L.sessions;
+  let html="";
+  L.phases.forEach((ph,pi)=>{
+    html+=`<div class="phase"><div class="phasehead"><h3>${ph[1]}</h3><span>${ph[0]}</span></div>`;
+    wks.forEach((w,i)=>{
+      if(w.ph!==pi) return;
+      const n=i+1, cur=curWeek[sport]===n, W=dl(w);
+      html+=`<button class="card wk" data-w="${n}" data-cur="${cur?1:0}">
+        <div class="wn"><b>${n}</b><span>${L.week}</span></div>
+        <div class="wb"><h4>${W.t}</h4><p>${W.f}</p></div>
+        <div class="wr"><span class="sdot ${done[key(n,"a")]?"on":""}">${done[key(n,"a")]?"✓":""}</span>
+        <span class="sdot ${done[key(n,"b")]?"on":""}">${done[key(n,"b")]?"✓":""}</span></div></button>`;
+    });
+    html+=`</div>`;
+  });
+  document.getElementById("seasonList").innerHTML=html;
+  document.querySelectorAll(".wk").forEach(b=>b.onclick=async()=>{
+    curWeek[sport]=+b.dataset.w; await save("bc3:week",curWeek);
+    renderSeason(); buildPlan(); renderPlan(); go("practice");
+  });
+}
+
+/* ============ PLAN ============ */
+function buildPlan(){
+  week=curWeek[sport];
+  const w=SEASON[sport][week-1];
+  const ids=(ab==="a"?w.a:w.b).slice();
+  plan=ids.map(id=>({...D[id],id}));
+  if(kit){
+    const mk=["m1","m2","m3","m4","m5"];
+    const pick=mk[(week-1)%mk.length];
+    if(plan.length&&plan[0].tag==="warm") plan[0]={...D[pick],id:pick};
+    else plan.unshift({...D[pick],id:pick});
+    if(week%6===0){ const o={...D.m5,id:"m5"}; if(!plan.some(x=>x.id==="m5")) plan.splice(1,0,o); }
+  }
+}
+function renderPlan(){
+  const L=t(), w=SEASON[sport][week-1], W=dl(w);
+  document.getElementById("planTitle").textContent=(lang==="zh"?`第${week}周 · ${W.t}`:`${L.week} ${week} · ${W.t}`);
+  const total=plan.reduce((a,d)=>a+d.min,0);
+  document.getElementById("planMeta").textContent=`${total} ${L.min} · ${plan.length} ${L.stations}`;
+  document.getElementById("planFocus").textContent=W.f;
+  document.getElementById("planMile").textContent=W.m;
+  document.getElementById("planList").innerHTML=plan.map((d,D2)=>{
+    const x=dl(d);
+    return `<button class="card drill" data-i="${D2}">
+      <div class="num"><b>${D2+1}</b><span>${d.min} ${L.min}</span></div>
+      <div class="body"><span class="tag">${L.tags[d.tag]}</span>${
+        d.kit?`<span class="tag kit">${L.kitTag}</span>`:""}${
+        w.nw.includes(d.id)?`<span class="tag new">${L.newWk}</span>`:""}
+        <h3>${x.n}</h3><p>${x.how}</p></div></button>`;
+  }).join("");
+  document.querySelectorAll(".drill").forEach(b=>b.onclick=()=>openDetail(+b.dataset.i));
+  const isDone=!!done[key(week,ab)], db=document.getElementById("doneBtn");
+  db.textContent=isDone?L.undone:L.markDone;
+  db.style.color=isDone?"var(--accent)":"";
+}
+function openDetail(i){
+  const L=t(), d=plan[i], x=dl(d);
+  document.getElementById("dTitle").textContent=x.n;
+  document.getElementById("dBody").innerHTML=`
+    <div class="dsec"><span class="tag">${L.tags[d.tag]}</span> <span class="tag">${d.min} ${L.minutes}</span></div>
+    <div class="dsec"><h4>${L.setUp}</h4><p>${x.setup}</p></div>
+    <div class="dsec"><h4>${L.howWorks}</h4><p>${x.how}</p></div>
+    <div class="dsec cue"><h4>${L.sayThis}</h4><p>“${x.cue}”</p></div>
+    <div class="dsec adj"><div><h5>${L.tooHard}</h5><p>${x.e}</p></div><div><h5>${L.tooEasy}</h5><p>${x.h}</p></div></div>`;
+  document.getElementById("detail").classList.add("on");
+}
+document.getElementById("detailX").onclick=()=>document.getElementById("detail").classList.remove("on");
+document.querySelectorAll("#abrow button").forEach(b=>b.onclick=()=>{
+  ab=b.dataset.ab;
+  document.querySelectorAll("#abrow button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  buildPlan(); renderPlan();
+});
+document.getElementById("kitToggle").onclick=async()=>{
+  kit=!kit; document.getElementById("kitToggle").setAttribute("aria-pressed",kit);
+  await savePrefs(); buildPlan(); renderPlan();
+};
+document.getElementById("doneBtn").onclick=async()=>{
+  const k=key(week,ab); done[k]=!done[k]; await save("bc3:done",done);
+  renderPlan(); renderSeason();
+};
+
+/* ============ GEAR ============ */
+function renderGear(){
+  const L=t(), S=SPORTS[sport];
+  document.getElementById("gearTitle").textContent=dl(S).name+" "+L.gearH;
+  document.getElementById("gearBlurb").textContent=dl(S).gearBlurb;
+  const tiers=[...S.gear,KIT];
+  let html="";
+  tiers.forEach((tier,ti)=>{
+    html+=`<div class="tierhead"><h3>${L.tiers[ti]}</h3><span>${tier.length} ${L.items}</span></div><div class="card">`;
+    tier.forEach(it=>{
+      const x=dl(it), k=sport+"|"+x.n, on=!!checked[k];
+      html+=`<button class="gear" data-k="${k}" data-p="${it.p}" aria-pressed="${on}">
+        <span class="gimg">${IC[it.ic]||IC.ball}</span>
+        <span class="gtxt"><span class="gname">${x.n}</span><span class="gwhy">${x.w}</span><span class="gprice">${it.p}</span></span>
+        <span class="box">${on?"✓":""}</span></button>`;
+    });
+    html+=`</div>`;
+  });
+  document.getElementById("gearList").innerHTML=html;
+  document.getElementById("skipList").innerHTML=S.skip[lang].map(([a,b])=>`<li><b>${a}.</b> ${b}</li>`).join("");
+  document.querySelectorAll(".gear").forEach(b=>b.onclick=async()=>{
+    const k=b.dataset.k; checked[k]=!checked[k];
+    b.setAttribute("aria-pressed",checked[k]);
+    b.querySelector(".box").textContent=checked[k]?"✓":"";
+    updateBudget(); await save("bc3:checks",checked);
+  });
+  updateBudget();
+}
+function updateBudget(){
+  let lo=0,hi=0;
+  document.querySelectorAll(".gear").forEach(b=>{
+    if(b.getAttribute("aria-pressed")!=="true") return;
+    const m=b.dataset.p.match(/\d+/g); if(!m) return;
+    lo+=+m[0]; hi+=m[1]?+m[1]:+m[0];
+  });
+  document.getElementById("budgetNum").textContent=lo===0?"$0":(lo===hi?`$${lo}`:`$${lo}–${hi}`);
+}
+
+/* ============ RUN MODE ============ */
+function startRun(){ idx=0; loadStation(); document.getElementById("run").classList.add("on"); }
+function loadStation(){
+  if(idx>=plan.length){ finishRun(); return; }
+  const L=t(), d=plan[idx], x=dl(d);
+  remain=d.min*60; running=true;
+  document.getElementById("runDots").innerHTML=plan.map((_,i)=>`<i class="${i<=idx?'on':''}"></i>`).join("");
+  const head = lang==="zh"
+    ? `第${week}周 · 第${idx+1}／共${plan.length}个环节 · ${L.tags[d.tag]}`
+    : `${L.week} ${week} · ${L.station} ${idx+1} ${L.of} ${plan.length} · ${L.tags[d.tag]}`;
+  document.getElementById("runBody").innerHTML=`
+    <div class="runtag">${head}</div><h2>${x.n}</h2><div class="clock" id="clock">--:--</div>
+    <div class="runhow"><b>${L.setUp}:</b> ${x.setup}<br><br>${x.how}</div>
+    <div class="runcue">“${x.cue}”</div>
+    <div class="runctl"><button class="ghost" id="pauseB">${L.pause}</button>
+    <button id="nextB">${idx===plan.length-1?L.finishB:L.next}</button></div>`;
+  document.getElementById("pauseB").onclick=togglePause;
+  document.getElementById("nextB").onclick=()=>{idx++;loadStation();};
+  paint(); clearInterval(tick);
+  tick=setInterval(()=>{ if(running&&remain>0){remain--;paint();} },1000);
+}
+function paint(){
+  const c=document.getElementById("clock"); if(!c) return;
+  c.textContent=Math.floor(remain/60)+":"+String(remain%60).padStart(2,"0");
+  c.classList.toggle("done",remain===0);
+}
+function togglePause(){ running=!running; document.getElementById("pauseB").textContent=running?t().pause:t().resume; }
+function finishRun(){
+  clearInterval(tick);
+  const L=t(), W=dl(SEASON[sport][week-1]);
+  document.getElementById("runBody").innerHTML=`
+    <div class="finish"><div class="big">🙌</div><h2>${L.doneH}</h2>
+      <p style="opacity:.92;font-size:17px;max-width:360px;margin:0 auto 18px">${L.doneP}</p>
+      <p style="opacity:.85;font-size:15.5px;max-width:360px;margin:0 auto 26px"><b>${L.thisMile}</b> ${W.m}</p>
+      <div class="runctl"><button class="ghost" id="markB">${L.markB}</button>
+      <button id="doneB2">${L.backB}</button></div></div>`;
+  document.getElementById("doneB2").onclick=quitRun;
+  document.getElementById("markB").onclick=async()=>{
+    done[key(week,ab)]=true; await save("bc3:done",done);
+    renderPlan(); renderSeason(); quitRun();
+  };
+  document.getElementById("runDots").innerHTML=plan.map(()=>`<i class="on"></i>`).join("");
+}
+function quitRun(){ clearInterval(tick); running=false; document.getElementById("run").classList.remove("on"); }
+document.getElementById("runQuit").onclick=quitRun;
+document.getElementById("runSkip").onclick=()=>{idx++;loadStation();};
+document.getElementById("startBtn").onclick=startRun;
+
+/* ============ NAV ============ */
+function go(tb){
+  document.querySelectorAll("nav button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.t===tb));
+  ["basics","season","practice","gear","coach"].forEach(s2=>
+    document.getElementById("tab-"+s2).classList.toggle("hide",s2!==tb));
+  window.scrollTo(0,0);
+}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>go(b.dataset.t));
+document.querySelectorAll("#sportsw button").forEach(b=>b.onclick=()=>{
+  sport=b.dataset.s; document.body.dataset.sport=sport; ab="a";
+  document.querySelectorAll("#sportsw button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  document.querySelectorAll("#abrow button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.ab==="a"));
+  renderAll(); window.scrollTo(0,0);
+});
+document.querySelectorAll("#langsw button").forEach(b=>b.onclick=async()=>{
+  lang=b.dataset.l; await savePrefs(); renderAll();
+});
+function renderAll(){ paintChrome(); renderBasics(); renderSeason(); buildPlan(); renderPlan(); renderGear(); }
+
+/* ============ INIT ============ */
+(async()=>{ await loadAll(); renderAll(); })();
+
+/* ============ FIGURES ============ */
+const A=(x1,y1,x2,y2)=>`<path class="ln" d="M${x1} ${y1}L${x2} ${y2}" marker-end="url(#ar)"/>`;
+const DEFS='<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--accent)"/></marker></defs>';
+
+const FIG={
+soccerField:F=>`<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">${DEFS}
+ <rect class="fld" x="30" y="20" width="340" height="200" rx="3"/>
+ <rect class="ln" x="30" y="20" width="340" height="200" rx="3"/>
+ <path class="ln" d="M200 20v200"/><circle class="ln" cx="200" cy="120" r="34"/>
+ <rect class="ln" x="30" y="70" width="46" height="100"/><rect class="ln" x="324" y="70" width="46" height="100"/>
+ <rect class="dk" x="20" y="98" width="10" height="44"/><rect class="dk" x="370" y="98" width="10" height="44"/>
+ <text class="txs" x="8" y="92">${F.goal}</text><text class="txs" x="352" y="92">${F.goal}</text>
+ <text class="txs" x="152" y="14">${F.half}</text>
+ ${A(150,240,250,240)}<text class="txs" x="110" y="245" text-anchor="end">${F.attack}</text></svg>`,
+soccerSwarm:F=>`<svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+ <rect class="fld" x="20" y="15" width="360" height="160" rx="3"/><rect class="ln" x="20" y="15" width="360" height="160" rx="3"/>
+ <circle class="dk" cx="185" cy="95" r="8"/>
+ ${[[160,72],[210,74],[158,118],[212,120],[186,62],[186,128]].map(([x,y])=>`<circle class="sld" cx="${x}" cy="${y}" r="9"/>`).join('')}
+ <circle class="ln2" cx="320" cy="50" r="9"/><circle class="ln2" cx="70" cy="145" r="9"/>
+ <text class="txs" x="248" y="98">${F.swarmA}</text><text class="txs" x="292" y="34">${F.swarmB}</text></svg>`,
+baseDiamond:F=>`<svg viewBox="0 0 400 265" xmlns="http://www.w3.org/2000/svg">${DEFS}
+ <path class="fld" d="M200 235L40 120A210 210 0 0 1 360 120Z"/>
+ <path class="ln2" d="M200 235L40 120M200 235L360 120"/>
+ <path class="ln" d="M200 225L285 148L200 71L115 148Z"/>
+ <rect class="dk" x="192" y="219" width="16" height="14" rx="2"/>
+ <rect class="sld" x="277" y="140" width="16" height="16" rx="2"/>
+ <rect class="sld" x="192" y="63" width="16" height="16" rx="2"/>
+ <rect class="sld" x="107" y="140" width="16" height="16" rx="2"/>
+ <circle class="ln" cx="200" cy="148" r="13"/>
+ <text class="tx" x="200" y="255" text-anchor="middle">${F.home}</text>
+ <text class="tx" x="303" y="152">${F.first}</text>
+ <text class="tx" x="200" y="52" text-anchor="middle">${F.second}</text>
+ <text class="tx" x="98" y="152" text-anchor="end">${F.third}</text>
+ <text class="txs" x="200" y="152" text-anchor="middle">${F.mound}</text>
+ ${A(228,214,268,178)}${A(288,124,248,88)}${A(152,88,112,124)}${A(92,178,132,214)}</svg>`,
+baseRun:F=>`<svg viewBox="0 0 400 175" xmlns="http://www.w3.org/2000/svg">${DEFS}
+ ${[[45,F.s1],[145,F.s2],[245,F.s3],[345,F.s4]].map(([x,l],i)=>
+  `<circle class="${i===0?'sld':'ln'}" cx="${x}" cy="55" r="26"/>
+   <text class="tx" x="${x}" y="61" text-anchor="middle" fill="${i===0?'#fff':'var(--accent)'}">${i+1}</text>
+   <text class="txs" x="${x}" y="112" text-anchor="middle">${l}</text>`).join('')}
+ ${A(78,55,112,55)}${A(178,55,212,55)}${A(278,55,312,55)}
+ <text class="txs" x="200" y="150" text-anchor="middle">${F.runNote}</text></svg>`,
+fbField:F=>`<svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">${DEFS}
+ <rect class="fld" x="20" y="30" width="360" height="130" rx="3"/><rect class="ln" x="20" y="30" width="360" height="130" rx="3"/>
+ <rect class="sld" x="20" y="30" width="58" height="130" opacity=".28"/>
+ <rect class="sld" x="322" y="30" width="58" height="130" opacity=".28"/>
+ <path class="ln" d="M78 30v130M322 30v130"/>
+ <path class="ln2" d="M139 30v130M200 30v130M261 30v130"/>
+ <text class="txs" x="49" y="22" text-anchor="middle">${F.ez}</text>
+ <text class="txs" x="351" y="22" text-anchor="middle">${F.ez}</text>
+ ${A(150,178,265,178)}<text class="txs" x="140" y="182" text-anchor="end">${F.attack}</text></svg>`,
+fbPlay:F=>`<svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">${DEFS}
+ <rect class="fld" x="20" y="20" width="360" height="150" rx="3"/><rect class="ln" x="20" y="20" width="360" height="150" rx="3"/>
+ <rect class="sld" x="322" y="20" width="58" height="150" opacity=".28"/><path class="ln" d="M322 20v150"/>
+ <path class="ln2" d="M105 20v150"/>
+ <circle class="dk" cx="80" cy="95" r="10"/><text class="txs" x="80" y="122" text-anchor="middle">${F.p1}</text>
+ <circle class="sld" cx="150" cy="128" r="10"/><text class="txs" x="150" y="155" text-anchor="middle">${F.p2}</text>
+ ${A(92,99,138,122)}
+ <path class="ln" d="M162 126C210 120 250 90 290 78" marker-end="url(#ar)"/>
+ <path d="M282 62l16 16M298 62l-16 16" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+ <text class="txs" x="248" y="52" text-anchor="middle">${F.p3}</text>
+ <text class="txs" x="351" y="14" text-anchor="middle">${F.ez}</text></svg>`
+};
+
+/* ============ SPORT PRIMERS ============ */
+const BASICS={
+soccer:{
+ fig:"soccerField", fig2:"soccerSwarm",
+ en:{one:"Two teams try to kick a ball into the other team's goal. Nobody except the goalkeeper may use their hands. The team with more goals wins. That is genuinely the whole sport — soccer's rules are the simplest of the three.",
+  labels:{goal:"GOAL",half:"halfway line",attack:"your team attacks this way",swarmA:"the ball",swarmB:"the one kid picking daisies"},
+  cap:"A full-size pitch. Your backyard version is the same shape, just much smaller — two goals, and everything happens in between them.",
+  cap2:"What a real under-6 game looks like: every child in one clump around the ball, and one child somewhere else entirely. This is normal and you should not try to fix it.",
+  game:"The ball starts in the middle. Both teams chase it. When it goes over a side line, the other team throws it back in with two hands over their head. When it goes over an end line, play restarts with a kick. There are two halves with a break in between. At age four, games are usually 4-a-side or smaller, often with no goalkeeper, and nobody keeps score.",
+  score:"One point — a goal — every time the whole ball crosses the goal line between the posts. That's it. There is no other way to score.",
+  rules:[["No hands","Only the goalkeeper may touch the ball with hands or arms, and only inside their own box. At age four there is often no goalkeeper at all, which removes the exception entirely."],
+   ["Throw-in","Ball off the side of the field: the other team throws it back in, two hands, over the head, both feet on the ground. Many youth leagues allow a kick-in instead because the throw is hard for small children."],
+   ["Corner and goal kick","Ball off the end line: if the defending team touched it last, the attacking team gets a corner kick. If the attacking team touched it last, the defending team kicks from their box."],
+   ["Offside — ignore it","Real soccer has an offside rule to stop players camping by the goal. It is not used in under-6 soccer and you should not try to teach it. Mentioning it now only causes confusion."],
+   ["Fouls","Pushing, tripping, holding. At this age the referee — you — just says 'careful' and restarts. Never call a foul on a four-year-old with a serious face."]],
+  words:[["Dribble","Running while keeping the ball at your feet with small touches."],["Pass","Kicking the ball to a teammate on purpose."],["Shot","A kick aimed at the goal."],["Goalkeeper","The one player allowed to use hands, inside their own box."],["Throw-in","Two-handed throw from the sideline to restart play."],["Half","One of the two periods of a game."],["Pitch","The field. British word you'll hear often in soccer."],["Touch","One contact between foot and ball."]],
+  age4:"Expect a swarm. Every child will run at the ball together, nobody will pass, and at least one will be looking at a plane. Positions, passing and tactics are years away — the entire goal at four is that the child ends up touching the ball a lot and wants to come back next week."},
+ zh:{one:"两队互相把球踢进对方的球门。除了守门员，谁都不能用手。进球多的一队赢。真的就这么简单 —— 三项运动里，足球的规则是最简单的。",
+  labels:{goal:"球门",half:"中线",attack:"你的队往这边进攻",swarmA:"球在这里",swarmB:"那个在发呆的孩子"},
+  cap:"这是标准球场。你家院子里的版本形状一样，只是小得多 —— 两个球门，所有事情都发生在中间。",
+  cap2:"六岁以下的真实比赛就是这样：所有孩子挤成一团围着球，另外有一个孩子在完全不相干的地方。这很正常，别去纠正。",
+  game:"球从中间开出，两队一起去抢。球出了边线，由对方用双手从头顶把球扔回场内。球出了底线，用踢球的方式重新开始。比赛分上下半场，中间休息。四岁的比赛通常是四人制或更少，往往连守门员都没有，而且不记分。",
+  score:"整个球完全越过两根门柱之间的球门线，就是一分（一个进球）。就这一种得分方式，没有别的。",
+  rules:[["不能用手","只有守门员可以用手或手臂碰球，而且只能在自己的禁区内。四岁的比赛经常根本没有守门员，那这条例外就完全不存在了。"],
+   ["界外球","球出了边线：由对方双手过头把球扔回场内，双脚要着地。很多青少年联赛允许改成脚踢，因为这个扔球动作对小孩子来说很难。"],
+   ["角球和球门球","球出了底线：如果最后碰球的是防守方，进攻方获得角球；如果最后碰球的是进攻方，防守方从自己禁区内开球。"],
+   ["越位 —— 忽略它","正式足球有越位规则，是为了防止球员一直守在球门口。六岁以下的比赛不使用这条规则，你也不要试图去教。现在提它只会造成混乱。"],
+   ["犯规","推人、绊人、拉扯。这个年纪，裁判（也就是你）只要说一句“小心点”然后重新开球就行。永远不要板着脸对一个四岁孩子判犯规。"]],
+  words:[["带球","一边跑一边用小幅触球把球控制在脚下。"],["传球","有意识地把球踢给队友。"],["射门","朝球门踢出的一脚。"],["守门员","唯一允许在自己禁区内用手的球员。"],["界外球","从边线双手把球扔回场内，重新开始比赛。"],["半场","比赛两个时段中的一个。"],["球场","足球场。"],["触球","脚和球的一次接触。"]],
+  age4:"你会看到一群孩子挤在一起。所有人一起冲向球，没有人会传球，至少有一个在抬头看飞机。位置、传球、战术都是好几年以后的事 —— 四岁阶段唯一的目标，就是让孩子多碰到球，并且下周还想再来。"},
+ es:{one:"Dos equipos intentan meter el balón en la portería del otro. Nadie excepto el portero puede usar las manos. Gana el equipo con más goles. Ese es literalmente todo el deporte — las reglas del fútbol son las más simples de los tres.",
+  labels:{goal:"PORTERÍA",half:"línea de medio campo",attack:"tu equipo ataca hacia acá",swarmA:"el balón",swarmB:"el niño distraído"},
+  cap:"Una cancha de tamaño completo. Tu versión de patio tiene la misma forma, solo mucho más chica — dos porterías, y todo pasa entre ellas.",
+  cap2:"Así se ve un partido real de menores de 6: todos los niños en bola alrededor del balón, y uno completamente en otro lado. Es normal y no deberías intentar corregirlo.",
+  game:"El balón empieza en el centro. Ambos equipos lo persiguen. Cuando sale por una línea lateral, el otro equipo lo devuelve con las dos manos por encima de la cabeza. Cuando sale por la línea de fondo, se reanuda con un tiro. Hay dos tiempos con descanso. A los cuatro años se juega 4 contra 4 o menos, muchas veces sin portero, y nadie lleva el marcador.",
+  score:"Un punto — un gol — cada vez que el balón completo cruza la línea de meta entre los postes. Ya. No hay otra forma de anotar.",
+  rules:[["Sin manos","Solo el portero puede tocar el balón con manos o brazos, y solo dentro de su área. A los cuatro años muchas veces no hay portero, lo que elimina la excepción por completo."],
+   ["Saque de banda","Balón fuera por el lateral: el otro equipo lo lanza con las dos manos por encima de la cabeza y los dos pies en el suelo. Muchas ligas infantiles permiten un saque con el pie porque el lanzamiento es difícil para niños pequeños."],
+   ["Tiro de esquina y saque de meta","Balón fuera por la línea de fondo: si lo tocó por último la defensa, hay tiro de esquina para el ataque. Si lo tocó por último el ataque, la defensa saca desde su área."],
+   ["Fuera de juego — ignóralo","El fútbol real tiene la regla de fuera de juego para evitar que los jugadores se planten junto a la portería. No se usa en menores de 6 y no deberías intentar enseñarla. Mencionarla ahora solo causa confusión."],
+   ["Faltas","Empujar, zancadillear, agarrar. A esta edad el árbitro — tú — solo dice 'cuidado' y reanuda. Nunca marques una falta a un niño de cuatro con cara seria."]],
+  words:[["Driblar","Correr manteniendo el balón en los pies con toques pequeños."],["Pase","Patear el balón a un compañero a propósito."],["Tiro","Un disparo dirigido a la portería."],["Portero","El único jugador que puede usar las manos, dentro de su área."],["Saque de banda","Lanzamiento con dos manos desde el lateral para reanudar."],["Tiempo","Cada uno de los dos periodos del partido."],["Cancha","El campo de juego."],["Toque","Un contacto entre el pie y el balón."]],
+  age4:"Espera un enjambre. Todos correrán hacia el balón juntos, nadie pasará, y al menos uno estará mirando un avión. Las posiciones, los pases y la táctica están a años de distancia — la única meta a los cuatro es que el niño toque el balón muchas veces y quiera volver la próxima semana."}},
+
+baseball:{
+ fig:"baseDiamond", fig2:"baseRun",
+ en:{one:"One team bats, the other fields. A batter hits the ball and then runs around four bases in order. Getting all the way back to where you started scores a point. In t-ball there is no pitcher at all — the ball sits still on a stand, which is why it's where every child begins.",
+  labels:{home:"HOME PLATE",first:"1st",second:"2nd",third:"3rd",mound:"pitcher",ez:"",s1:"hit",s2:"1st",s3:"2nd",s4:"3rd → home",runNote:"always run this way — never backwards",attack:""},
+  cap:"The diamond. The batter stands at home plate, hits, then runs the bases in the direction of the arrows — always counter-clockwise. The curved line is the outfield boundary.",
+  cap2:"The batting sequence. Hit the ball, then run to first. Keep going if you can. Touching home again after all four is one run.",
+  game:"Teams take turns batting. When your team bats, each child hits and tries to reach a base safely. When your team fields, you try to catch or field the ball and get it to a base before the runner. After a set number of batters — or after everyone has batted, in t-ball — the teams swap. A round of both teams batting is called an inning.",
+  score:"A run is scored when a player touches all four bases in order and gets back to home plate. Most runs at the end wins. In t-ball, scores usually aren't kept at all.",
+  rules:[["The tee replaces the pitcher","In t-ball the ball rests on an adjustable stand. Nobody throws it. This removes the hardest skill in baseball — hitting a moving ball — so that a four-year-old can succeed on the very first swing."],
+   ["Run counter-clockwise","First base is to the batter's right. Then second, then third, then home. Running the wrong way is the single most common four-year-old mistake and is always funny."],
+   ["An out","A fielder catches the ball in the air, or touches the base before the runner gets there. Three outs and the teams swap. In most t-ball, outs are not enforced and everybody bats every round."],
+   ["Foul ball","A ball hit outside the two lines running out from home plate. It doesn't count as a hit. At this age just let them re-hit it."],
+   ["Drop the bat","The single most important safety rule. Children swing and then run while still holding the bat. Teach 'drop it' from day one, every single time."]],
+  words:[["At bat","Your turn to hit."],["Tee","The stand the ball sits on."],["Base","One of the four corners the runner must touch."],["Run","One point, scored by getting all the way home."],["Out","A way of ending a batter or runner's turn."],["Inning","One round of both teams batting."],["Fielder","A player on the team that isn't batting."],["Grounder","A ball hit along the ground."]],
+  age4:"Expect swings that miss a stationary ball, runs to third base instead of first, and every fielder chasing the same ball at once. Nobody will stay in a position. The wins at this age are: hit the ball off the tee, drop the bat, and run in roughly the right direction."},
+ zh:{one:"一队击球，另一队防守。击球员把球打出去，然后按顺序绕四个垒跑。跑回出发的地方就得一分。T-ball（棒球启蒙）根本没有投手 —— 球是静止放在架子上的，所以所有孩子都从这里开始。",
+  labels:{home:"本垒",first:"一垒",second:"二垒",third:"三垒",mound:"投手丘",ez:"",s1:"击球",s2:"一垒",s3:"二垒",s4:"三垒→本垒",runNote:"永远往这个方向跑 —— 不能倒着跑",attack:""},
+  cap:"这就是“棒球菱形”。击球员站在本垒击球，然后按箭头方向跑垒 —— 永远是逆时针。弧线是外野的边界。",
+  cap2:"击球到得分的顺序：打中球，跑向一垒，能继续就继续。四个垒都踩过再回到本垒，算一分。",
+  game:"两队轮流击球。轮到你的队击球时，每个孩子都上场打，尽量安全跑上垒。轮到防守时，要接住球或捡起球，赶在跑垒员之前把球送到垒上。打满一定人数后 —— T-ball里通常是所有人都打过一轮 —— 两队交换。两队各打一轮叫做一“局”。",
+  score:"一名球员按顺序踩过四个垒并回到本垒，就得一分。最后得分多的队赢。不过T-ball阶段通常根本不计分。",
+  rules:[["打击架代替投手","T-ball里球放在一个可调高度的架子上，没有人投球。这就去掉了棒球里最难的一项技能 —— 打移动中的球 —— 让四岁孩子第一次挥棒就有可能成功。"],
+   ["逆时针跑垒","一垒在击球员的右手边，然后二垒、三垒、本垒。跑错方向是四岁孩子最常见的错误，而且每次都很好笑。"],
+   ["出局","防守方在空中接住球，或者在跑垒员到达之前先碰到垒。三人出局就交换攻守。不过大多数T-ball根本不执行出局，每一轮所有人都能打。"],
+   ["界外球","打到本垒两侧那两条线以外的球，不算有效击球。这个年纪就让他重打一次。"],
+   ["把棒子丢掉","这是最重要的一条安全规则。孩子挥完棒经常会拿着棒子就跑。从第一天起就教“丢掉”，每一次都要教。"]],
+  words:[["打席","轮到你击球。"],["打击架","放球的架子。"],["垒","跑垒员必须踩到的四个角之一。"],["得分","跑回本垒得到的一分。"],["出局","结束一名击球员或跑垒员回合的方式。"],["局","两队各击球一轮。"],["野手","防守方的球员。"],["地滚球","沿着地面滚过去的击球。"]],
+  age4:"你会看到：对着静止的球挥空、跑向三垒而不是一垒、所有防守球员一起追同一个球。没有人会待在自己的位置上。这个年纪的“成功”只有三件事：把架子上的球打出去、把棒子丢掉、往大致正确的方向跑。"},
+ es:{one:"Un equipo batea y el otro fildea. El bateador golpea la pelota y luego corre alrededor de cuatro bases en orden. Regresar hasta donde empezó anota un punto. En t-ball no hay lanzador — la pelota está quieta sobre un soporte, y por eso es donde empiezan todos los niños.",
+  labels:{home:"HOME",first:"1ª",second:"2ª",third:"3ª",mound:"lanzador",ez:"",s1:"batea",s2:"1ª",s3:"2ª",s4:"3ª → home",runNote:"corre siempre en este sentido — nunca al revés",attack:""},
+  cap:"El diamante. El bateador se para en home, batea y corre las bases en el sentido de las flechas — siempre en contra de las manecillas del reloj. La línea curva es el límite del jardín.",
+  cap2:"La secuencia del bateo. Golpea la pelota y corre a primera. Sigue si puedes. Tocar home otra vez después de las cuatro es una carrera.",
+  game:"Los equipos se turnan para batear. Cuando tu equipo batea, cada niño golpea e intenta llegar salvo a una base. Cuando fildeas, intentas atrapar la pelota y llevarla a una base antes que el corredor. Después de cierto número de bateadores — o de que todos batearon, en t-ball — los equipos cambian. Una ronda de ambos equipos bateando se llama entrada.",
+  score:"Se anota una carrera cuando un jugador toca las cuatro bases en orden y regresa a home. Gana quien tenga más carreras. En t-ball normalmente no se lleva marcador.",
+  rules:[["El tee reemplaza al lanzador","En t-ball la pelota descansa sobre un soporte ajustable. Nadie la lanza. Esto elimina la habilidad más difícil del béisbol — batear una pelota en movimiento — para que un niño de cuatro tenga éxito desde el primer swing."],
+   ["Corre en contra de las manecillas","Primera base está a la derecha del bateador. Luego segunda, tercera y home. Correr al revés es el error más común a los cuatro años y siempre es gracioso."],
+   ["Un out","Un fildeador atrapa la pelota en el aire, o toca la base antes que el corredor. Tres outs y cambian los equipos. En la mayoría del t-ball no se aplican outs y todos batean cada ronda."],
+   ["Foul","Una pelota bateada fuera de las dos líneas que salen desde home. No cuenta como hit. A esta edad simplemente déjalos batear de nuevo."],
+   ["Suelta el bate","La regla de seguridad más importante. Los niños batean y corren todavía con el bate en la mano. Enseña 'suéltalo' desde el primer día, siempre."]],
+  words:[["Turno al bate","Tu turno de batear."],["Tee","El soporte donde descansa la pelota."],["Base","Una de las cuatro esquinas que el corredor debe tocar."],["Carrera","Un punto, anotado al llegar de vuelta a home."],["Out","Una forma de terminar el turno de un bateador o corredor."],["Entrada","Una ronda de ambos equipos bateando."],["Fildeador","Un jugador del equipo que no batea."],["Roletazo","Una pelota bateada por el suelo."]],
+  age4:"Espera swings que fallan una pelota quieta, carreras hacia tercera en vez de primera, y todos los fildeadores persiguiendo la misma pelota. Nadie se quedará en su posición. Los logros a esta edad son: pegarle a la pelota en el tee, soltar el bate y correr más o menos en la dirección correcta."}},
+
+football:{
+ fig:"fbField", fig2:"fbPlay",
+ en:{one:"One team has the ball and tries to carry or throw it into the far end of the field. The other team tries to stop them. In flag football — the only version a four-year-old should play — you stop someone by pulling a fabric flag off their belt instead of tackling them. There is no contact at all.",
+  labels:{ez:"END ZONE",attack:"the offense moves this way",p1:"passer",p2:"runner",p3:"flag pulled = play over"},
+  cap:"The field. The shaded strips at each end are the end zones. The team with the ball is trying to reach the far one; the yard lines just measure how far they've come.",
+  cap2:"One play, start to finish. The ball is handed to a runner, the runner heads for the end zone, and the play ends the moment a defender pulls the flag from their belt.",
+  game:"One team is on offense — they have the ball. Play stops and restarts constantly: each attempt is called a down, and the offense gets four downs to advance the ball a set distance. If they make it, they get four more. If they don't, the other team takes over. Every play begins with the ball being handed backwards to start it, and ends when the ball carrier's flag is pulled or they cross the line.",
+  score:"A touchdown — six points — when a player carries the ball into the end zone or catches it there. Youth flag games usually skip the extra kick afterwards and simply count touchdowns.",
+  rules:[["Pulling a flag is a tackle","Every player wears a belt with two fabric flags. Pull one off and the play stops immediately. No grabbing, holding, pushing or tackling. This is the rule the whole youth game is built on."],
+   ["No contact at all","No blocking with the hands, no shoulder into a runner, no diving at legs. If it involves bodies colliding, it isn't in this version of the game — and no four-year-old should be wearing pads or a helmet."],
+   ["Downs","Four attempts to move the ball a set distance. This is the one rule that confuses new parents most. At age four it is usually dropped entirely: every child gets a turn carrying and every play ends in a touchdown."],
+   ["The snap","Every play starts with the ball passed backwards between the legs to a teammate. At four this can just be you handing the ball over — the ritual matters more than the mechanics."],
+   ["Forward pass","The ball may be thrown forward once per play. Catching a moving ball is very hard at this age, so most young play is running only."]],
+  words:[["Touchdown","Reaching the end zone with the ball. Six points."],["End zone","The scoring area at each end of the field."],["Down","One attempt to advance the ball."],["Snap","The backwards pass that starts every play."],["Handoff","Giving the ball directly to a teammate."],["Flag pull","Removing a flag from the belt to end the play."],["Offense","The team with the ball."],["Defense","The team trying to stop them."]],
+  age4:"Expect the whole group to chase the ball carrier in a pack, flags to fall off on their own constantly, and celebration dances to take longer than the plays. Downs, positions and passing routes are years away. At four the game is: hold the ball, run that way, someone grabs your flag, everyone laughs."},
+ zh:{one:"一队持球，想办法把球带到或传到球场另一端；另一队想办法拦住他们。在腰旗橄榄球里 —— 这是四岁孩子唯一该玩的版本 —— 拦人的方式不是擒抱，而是把对方腰带上的布旗抽下来。完全没有身体对抗。",
+  labels:{ez:"达阵区",attack:"进攻方往这个方向推进",p1:"传球的人",p2:"持球跑的人",p3:"旗被抽掉＝这一次进攻结束"},
+  cap:"这是球场。两端的阴影区就是达阵区。持球的一队要冲到远端那个达阵区；中间那些线只是用来量他们推进了多远。",
+  cap2:"一次完整的进攻。球交到持球人手里，持球人朝达阵区跑，防守方一抽掉他腰上的旗，这次进攻立刻结束。",
+  game:"一队是进攻方 —— 球在他们手上。比赛是不断停、不断重新开始的：每一次尝试叫做一“档”，进攻方有四档机会把球推进规定的距离。推进成功就再得四档；没成功，球权就交给对方。每次进攻都从把球向后传出开始，到持球人被抽掉旗子或者冲过线为止。",
+  score:"达阵得六分 —— 球员带球冲进达阵区，或者在达阵区里接住球。青少年腰旗比赛通常省略之后的加踢，直接数达阵次数。",
+  rules:[["抽旗就等于擒抱","每个球员腰上都系一条带两面布旗的腰带。抽掉一面，这次进攻立刻停止。不能抓、不能拉、不能推、不能扑倒。整个青少年版本的比赛都建立在这一条上。"],
+   ["完全不许身体接触","不能用手阻挡，不能用肩膀撞持球人，不能扑腿。只要涉及身体相撞，就不属于这个版本的比赛 —— 四岁孩子也不应该穿护具或戴头盔。"],
+   ["档数","四次机会把球推进规定距离。这是最让新手家长困惑的一条规则。四岁阶段通常直接不用：每个孩子轮流持球，每次进攻都以达阵收尾。"],
+   ["开球（Snap）","每次进攻都从两腿之间把球向后传给队友开始。四岁的时候，这一步可以简化成你直接把球递给他 —— 仪式感比动作规范重要。"],
+   ["前传","每次进攻允许向前传球一次。这个年纪接移动中的球非常难，所以小小孩的比赛基本上只跑不传。"]],
+  words:[["达阵","带球进入达阵区，得六分。"],["达阵区","球场两端的得分区域。"],["档","一次推进球的尝试机会。"],["开球","每次进攻开始时向后传的那一下。"],["交接球","直接把球递给队友。"],["抽旗","把旗从腰带上抽下来，结束这次进攻。"],["进攻方","持球的一队。"],["防守方","试图拦住他们的一队。"]],
+  age4:"你会看到：所有孩子一窝蜂追着持球的人跑、旗子动不动就自己掉下来、庆祝舞跳的时间比进攻本身还长。档数、位置、跑动路线都是好几年以后的事。四岁的比赛就是：抱住球、往那边跑、有人把你的旗抽走、大家一起笑。"},
+ es:{one:"Un equipo tiene el balón e intenta llevarlo o lanzarlo hasta el extremo opuesto del campo. El otro intenta detenerlo. En flag football — la única versión que debe jugar un niño de cuatro — detienes a alguien quitándole una tira de tela del cinturón en vez de taclearlo. No hay contacto de ningún tipo.",
+  labels:{ez:"ZONA DE ANOTACIÓN",attack:"la ofensiva avanza hacia acá",p1:"pasador",p2:"corredor",p3:"flag quitado = jugada terminada"},
+  cap:"El campo. Las franjas sombreadas de cada extremo son las zonas de anotación. El equipo con el balón intenta llegar a la del fondo; las líneas solo miden cuánto han avanzado.",
+  cap2:"Una jugada completa. El balón se entrega a un corredor, el corredor va hacia la zona de anotación, y la jugada termina en el momento en que un defensor le quita el flag del cinturón.",
+  game:"Un equipo está en ofensiva — tiene el balón. El juego se detiene y reinicia constantemente: cada intento se llama down, y la ofensiva tiene cuatro downs para avanzar cierta distancia. Si lo logra, obtiene cuatro más. Si no, el otro equipo toma el balón. Cada jugada empieza pasando el balón hacia atrás y termina cuando le quitan el flag al portador o cruza la línea.",
+  score:"Un touchdown — seis puntos — cuando un jugador lleva el balón a la zona de anotación o lo atrapa ahí. En ligas infantiles se suele omitir la patada extra y solo se cuentan los touchdowns.",
+  rules:[["Quitar el flag es taclear","Cada jugador lleva un cinturón con dos flags de tela. Quita uno y la jugada se detiene de inmediato. Nada de agarrar, sujetar, empujar ni taclear. Toda la versión infantil se construye sobre esta regla."],
+   ["Cero contacto","Sin bloqueo con las manos, sin hombro contra el corredor, sin lanzarse a las piernas. Si implica cuerpos chocando, no pertenece a esta versión — y ningún niño de cuatro debe usar hombreras ni casco."],
+   ["Downs","Cuatro intentos para avanzar cierta distancia. Es la regla que más confunde a los papás nuevos. A los cuatro años normalmente se elimina por completo: cada niño tiene su turno con el balón y cada jugada termina en touchdown."],
+   ["El snap","Cada jugada empieza pasando el balón hacia atrás entre las piernas a un compañero. A los cuatro puede ser simplemente que tú le entregues el balón — el ritual importa más que la mecánica."],
+   ["Pase hacia adelante","El balón puede lanzarse hacia adelante una vez por jugada. Atrapar un balón en movimiento es dificilísimo a esta edad, así que casi todo el juego infantil es de correr."]],
+  words:[["Touchdown","Llegar a la zona de anotación con el balón. Seis puntos."],["Zona de anotación","El área de anotación en cada extremo del campo."],["Down","Un intento de avanzar el balón."],["Snap","El pase hacia atrás que inicia cada jugada."],["Entrega","Dar el balón directamente a un compañero."],["Quitar el flag","Retirar un flag del cinturón para terminar la jugada."],["Ofensiva","El equipo con el balón."],["Defensiva","El equipo que intenta detenerlo."]],
+  age4:"Espera que todo el grupo persiga en bola al que lleva el balón, que los flags se caigan solos todo el tiempo, y que los bailes de celebración duren más que las jugadas. Los downs, las posiciones y las rutas de pase están a años de distancia. A los cuatro el juego es: agarra el balón, corre para allá, alguien te quita el flag, todos se ríen."}}
+};
+</script>
+</body>
+</html>
